@@ -13,20 +13,20 @@
             
                                 <!--- Seo Part-->
                                 
-                                    <link rel="canonical" href="https://chienboo.github.io/2023/05/06/网络安全学习笔记/"/>
+                                    <link rel="canonical" href="https://chienboo.github.io/2023/06/03/网络安全复习笔记/"/>
                                         <meta name="robots" content="index,follow">
                                         <meta name="googlebot" content="index,follow">
                                         <meta name="revisit-after" content="1 days">
                                         
-                                            <meta name="description" content="网络安全学习笔记第五章 Web应用安全注入攻击命令注入SQL 注入![](Screen Shot 2023-05-06 at 12.19.11 PM.png) 二阶段SQL注入主要分为3个步骤  先create一个恶意的账号，账号名经过精心设计 执行检索命令（例如查看自己的Profile）这样将会执行select 语句，在检索时，由于精心设计的账户名会导致user中admin的记录被修改（例如：修">
+                                            <meta name="description" content="题目总结针对物理层攻击侧信道信息窃取 注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第五章 Web应用安全注入攻击命令注入SQL 注入![](Screen Shot 2023-05-06">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络安全学习笔记">
-<meta property="og:url" content="https://chienboo.github.io/2023/05/06/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="网络安全复习笔记">
+<meta property="og:url" content="https://chienboo.github.io/2023/06/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Jianbo&#39;s blog">
-<meta property="og:description" content="网络安全学习笔记第五章 Web应用安全注入攻击命令注入SQL 注入![](Screen Shot 2023-05-06 at 12.19.11 PM.png) 二阶段SQL注入主要分为3个步骤  先create一个恶意的账号，账号名经过精心设计 执行检索命令（例如查看自己的Profile）这样将会执行select 语句，在检索时，由于精心设计的账户名会导致user中admin的记录被修改（例如：修">
+<meta property="og:description" content="题目总结针对物理层攻击侧信道信息窃取 注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第五章 Web应用安全注入攻击命令注入SQL 注入![](Screen Shot 2023-05-06">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-06T14:12:53.000Z">
-<meta property="article:modified_time" content="2023-05-06T14:43:43.755Z">
+<meta property="article:published_time" content="2023-06-03T07:15:53.000Z">
+<meta property="article:modified_time" content="2023-06-03T07:16:12.360Z">
 <meta property="article:author" content="Jianbo Chen">
 <meta name="twitter:card" content="summary">
                                                 
@@ -39,7 +39,7 @@
                                                         
                                                             <title>
                                                                 
-                                                                    网络安全学习笔记 -
+                                                                    网络安全复习笔记 -
                                                                         
                                                                             Jianbo_Blog
                                                             </title>
@@ -254,7 +254,7 @@
             
             
                 <div class="article-title">
-                    <h1 class="article-title-regular">网络安全学习笔记</h1>
+                    <h1 class="article-title-regular">网络安全复习笔记</h1>
                 </div>
             
                 
@@ -276,15 +276,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-05-06 22:12:53</span>
-        <span class="mobile">2023-05-06 22:12</span>
+        <span class="desktop">2023-06-03 15:15:53</span>
+        <span class="mobile">2023-06-03 15:15</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-05-06 22:43:43</span>
-            <span class="mobile">2023-05-06 22:43</span>
+            <span class="desktop">2023-06-03 15:16:12</span>
+            <span class="mobile">2023-06-03 15:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -308,30 +308,32 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="网络安全学习笔记"><a href="#网络安全学习笔记" class="headerlink" title="网络安全学习笔记"></a>网络安全学习笔记</h1><h2 id="第五章-Web应用安全"><a href="#第五章-Web应用安全" class="headerlink" title="第五章 Web应用安全"></a>第五章 Web应用安全</h2><h3 id="注入攻击"><a href="#注入攻击" class="headerlink" title="注入攻击"></a>注入攻击</h3><h4 id="命令注入"><a href="#命令注入" class="headerlink" title="命令注入"></a>命令注入</h4><h4 id="SQL-注入"><a href="#SQL-注入" class="headerlink" title="SQL 注入"></a>SQL 注入</h4><p>![](Screen Shot 2023-05-06 at 12.19.11 PM.png)</p>
-<h5 id="二阶段SQL注入"><a href="#二阶段SQL注入" class="headerlink" title="二阶段SQL注入"></a>二阶段SQL注入</h5><p>主要分为3个步骤</p>
+                <h1 id="题目总结"><a href="#题目总结" class="headerlink" title="题目总结"></a>题目总结</h1><h2 id="针对物理层攻击"><a href="#针对物理层攻击" class="headerlink" title="针对物理层攻击"></a>针对物理层攻击</h2><p>侧信道信息窃取</p>
+<p>注入式攻击</p>
+<h2 id="HTTP与HTTPS区别，SSL-握手协议"><a href="#HTTP与HTTPS区别，SSL-握手协议" class="headerlink" title="HTTP与HTTPS区别，SSL 握手协议"></a>HTTP与HTTPS区别，SSL 握手协议</h2><h2 id="3类Web安全问题、SQL注入案例"><a href="#3类Web安全问题、SQL注入案例" class="headerlink" title="3类Web安全问题、SQL注入案例"></a>3类Web安全问题、SQL注入案例</h2><h2 id="文件遍历流程与防御措施"><a href="#文件遍历流程与防御措施" class="headerlink" title="文件遍历流程与防御措施"></a>文件遍历流程与防御措施</h2><h2 id="ARP欺骗流程与防御"><a href="#ARP欺骗流程与防御" class="headerlink" title="ARP欺骗流程与防御"></a>ARP欺骗流程与防御</h2><h2 id="IP序列号欺骗与防御"><a href="#IP序列号欺骗与防御" class="headerlink" title="IP序列号欺骗与防御"></a>IP序列号欺骗与防御</h2><h2 id="Diffie-Hellman协议以及中间人攻击"><a href="#Diffie-Hellman协议以及中间人攻击" class="headerlink" title="Diffie-Hellman协议以及中间人攻击"></a>Diffie-Hellman协议以及中间人攻击</h2><h2 id="WEP加解密流程"><a href="#WEP加解密流程" class="headerlink" title="WEP加解密流程"></a>WEP加解密流程</h2><h2 id="缓冲区溢出流程和案例分析"><a href="#缓冲区溢出流程和案例分析" class="headerlink" title="缓冲区溢出流程和案例分析"></a>缓冲区溢出流程和案例分析</h2><h2 id="TCP三次握手，四次挥手"><a href="#TCP三次握手，四次挥手" class="headerlink" title="TCP三次握手，四次挥手"></a>TCP三次握手，四次挥手</h2><h1 id="第五章-Web应用安全"><a href="#第五章-Web应用安全" class="headerlink" title="第五章 Web应用安全"></a>第五章 Web应用安全</h1><h2 id="注入攻击"><a href="#注入攻击" class="headerlink" title="注入攻击"></a>注入攻击</h2><h3 id="命令注入"><a href="#命令注入" class="headerlink" title="命令注入"></a>命令注入</h3><h3 id="SQL-注入"><a href="#SQL-注入" class="headerlink" title="SQL 注入"></a>SQL 注入</h3><p>![](Screen Shot 2023-05-06 at 12.19.11 PM_2.png)</p>
+<h4 id="二阶段SQL注入"><a href="#二阶段SQL注入" class="headerlink" title="二阶段SQL注入"></a>二阶段SQL注入</h4><p>主要分为3个步骤</p>
 <ol>
 <li>先create一个恶意的账号，账号名经过精心设计</li>
 <li>执行检索命令（例如查看自己的Profile）这样将会执行select 语句，在检索时，由于精心设计的账户名会导致user中admin的记录被修改（例如：修改了admin的登陆密码）</li>
 <li>能够以admin身份登陆</li>
 </ol>
-<p>![](Screen Shot 2023-05-06 at 9.59.32 PM.png)</p>
-<h4 id="盲SQL-注入"><a href="#盲SQL-注入" class="headerlink" title="盲SQL 注入"></a>盲SQL 注入</h4><h5 id="与普通SQL注入的区别"><a href="#与普通SQL注入的区别" class="headerlink" title="与普通SQL注入的区别"></a>与普通SQL注入的区别</h5><p>盲SQL注入与普通的SQL注入类似，都是利用应用程序没有对用户输入的数据进行足够的过滤和验证，导致攻击者可以向数据库发送自己构造的恶意SQL语句。</p>
+<p>![](Screen Shot 2023-05-06 at 9.59.32 PM_2.png)</p>
+<h3 id="盲SQL-注入"><a href="#盲SQL-注入" class="headerlink" title="盲SQL 注入"></a>盲SQL 注入</h3><h4 id="与普通SQL注入的区别"><a href="#与普通SQL注入的区别" class="headerlink" title="与普通SQL注入的区别"></a>与普通SQL注入的区别</h4><p>盲SQL注入与普通的SQL注入类似，都是利用应用程序没有对用户输入的数据进行足够的过滤和验证，导致攻击者可以向数据库发送自己构造的恶意SQL语句。</p>
 <p><strong>但是不同之处在于</strong>，盲SQL注入攻击者无法直接获取查询结果，而只能通过<strong>推断和试错的方式</strong>来获取信息。盲SQL注入可以分为<strong>基于布尔逻辑的盲注</strong>和<strong>基于时间延迟的盲注</strong>两种类型。</p>
-<h5 id="基于布尔逻辑的盲注"><a href="#基于布尔逻辑的盲注" class="headerlink" title="基于布尔逻辑的盲注"></a>基于布尔逻辑的盲注</h5><p>攻击者通过构造特定的SQL语句，利用应用程序对查询结果的<strong>布尔逻辑</strong>判断返回<strong>不同的响应</strong>，从而推断出数据库中的信息。</p>
+<h4 id="基于布尔逻辑的盲注"><a href="#基于布尔逻辑的盲注" class="headerlink" title="基于布尔逻辑的盲注"></a>基于布尔逻辑的盲注</h4><p>攻击者通过构造特定的SQL语句，利用应用程序对查询结果的<strong>布尔逻辑</strong>判断返回<strong>不同的响应</strong>，从而推断出数据库中的信息。</p>
 <pre><code>SELECT * FROM users WHERE username = &#39;admin&#39; AND password LIKE &#39;%a%&#39; 
 </code></pre>
 <p>这个SQL查询语句包含了一个布尔逻辑判断条件，即<code>password</code>字段中是否包含字母<code>a</code>。如果该条件成立，应用程序会返回正常的查询结果，否则应用程序会返回错误信息。</p>
 <pre><code>SELECT * FROM users WHERE username = &#39;admin&#39; AND password LIKE &#39;a%&#39;
 </code></pre>
 <p>如果应用程序返回了正常的查询结果，说明<code>password</code>字段以字母<code>a</code>开头，否则说明不是。通过这种方式，攻击者可以逐个字母地推断出<code>password</code>字段的值，从而获取管理员账号的密码等敏感信息。</p>
-<h5 id="基于时间延迟的盲注"><a href="#基于时间延迟的盲注" class="headerlink" title="基于时间延迟的盲注"></a>基于时间延迟的盲注</h5><p>基于时间延迟的盲注是一种盲注攻击的变体，它通过在注入的SQL语句中嵌入条件，并利用应用程序的<strong>响应时间差异</strong>来推断条件的真假。</p>
+<h4 id="基于时间延迟的盲注"><a href="#基于时间延迟的盲注" class="headerlink" title="基于时间延迟的盲注"></a>基于时间延迟的盲注</h4><p>基于时间延迟的盲注是一种盲注攻击的变体，它通过在注入的SQL语句中嵌入条件，并利用应用程序的<strong>响应时间差异</strong>来推断条件的真假。</p>
 <p>攻击者可以构造带有时间延迟的SQL语句，并观察应用程序的响应时间来判断条件是否成立。例如，攻击者可以构造以下SQL语句：</p>
 <pre><code>SELECT * FROM users WHERE username=&#39;admin&#39; AND IF(SUBSTR(password,1,1)=&#39;a&#39; waitfor delay &#39;0:0:5&#39;;
 </code></pre>
 <p>如果密码的第一个字母是a，则会有5秒的延迟。</p>
 <p>如果应用程序响应时间较长，则说明条件成立，反之则说明条件不成立。通过逐个条件地推断，攻击者可以逐渐获取数据库中的信息，例如用户名、密码等敏感数据。</p>
-<h4 id="SQL注入攻击的预防"><a href="#SQL注入攻击的预防" class="headerlink" title="SQL注入攻击的预防"></a>SQL注入攻击的预防</h4><p>通过使用参数化查询（也称为预处理）而不是在查询中进行字符串拼接，可以防止大多数SQL注入攻击。以下代码由于用户输入直接被拼接到查询中，因此容易受到SQL注入攻击</p>
+<h3 id="SQL注入攻击的预防"><a href="#SQL注入攻击的预防" class="headerlink" title="SQL注入攻击的预防"></a>SQL注入攻击的预防</h3><p>通过使用参数化查询（也称为预处理）而不是在查询中进行字符串拼接，可以防止大多数SQL注入攻击。以下代码由于用户输入直接被拼接到查询中，因此容易受到SQL注入攻击</p>
 <pre><code>String query = &quot;SELECT * FROM products WHERE category = &#39;&quot; + input + &quot;&#39;&quot;;
 Statement statement = connection.createStatement();
 ResultSet resultSet = statement.executeQuery(query);
@@ -343,25 +345,100 @@ statement.setString(1 , input);
 //将input赋值给第 1 个参数
 ResultSet resultSet = statement.executeGuery();
 </code></pre>
-<h3 id="文件遍历"><a href="#文件遍历" class="headerlink" title="文件遍历"></a>文件遍历</h3><p>文件遍历攻击（也称为目录遍历攻击、路径遍历攻击或. .&#x2F;攻击）是一种常见的Web应用程序攻击，其目的是访问服务器上未经授权的文件或目录。攻击者通过构造包含特殊字符（如..&#x2F;）的URL或输入表单，试图跳出Web应用程序根目录，访问服务器上的其他目录或文件。</p>
+<h2 id="文件遍历"><a href="#文件遍历" class="headerlink" title="文件遍历"></a>文件遍历</h2><p>文件遍历攻击（也称为目录遍历攻击、路径遍历攻击或. .&#x2F;攻击）是一种常见的Web应用程序攻击，其目的是访问服务器上未经授权的文件或目录。攻击者通过构造包含特殊字符（如..&#x2F;）的URL或输入表单，试图跳出Web应用程序根目录，访问服务器上的其他目录或文件。</p>
 <p>一旦攻击成功，攻击者可以访问包含敏感信息的文件，如配置文件、密码文件、数据库文件等，从而对系统进行进一步的攻击或窃取敏感信息。</p>
-<h3 id="点击劫持"><a href="#点击劫持" class="headerlink" title="点击劫持"></a>点击劫持</h3><h3 id="跨站脚本攻击XSS"><a href="#跨站脚本攻击XSS" class="headerlink" title="跨站脚本攻击XSS"></a>跨站脚本攻击XSS</h3><h3 id="跨站请求伪造CSRF"><a href="#跨站请求伪造CSRF" class="headerlink" title="跨站请求伪造CSRF"></a>跨站请求伪造CSRF</h3>
+<h2 id="点击劫持"><a href="#点击劫持" class="headerlink" title="点击劫持"></a>点击劫持</h2><h2 id="跨站脚本攻击XSS"><a href="#跨站脚本攻击XSS" class="headerlink" title="跨站脚本攻击XSS"></a>跨站脚本攻击XSS</h2><h3 id="XSS反射型攻击"><a href="#XSS反射型攻击" class="headerlink" title="XSS反射型攻击"></a>XSS反射型攻击</h3><p>步骤</p>
+<p>1 钓鱼</p>
+<p>2 访问链接</p>
+<p>3 回来一个带恶意脚本的response</p>
+<p>4 获取一个cookies 返回去</p>
+<p>反射型XSS攻击的步骤通常如下：</p>
+<ol>
+<li><p>攻击者构造带有恶意脚本的URL，这个URL通常会伪装成一个正常的URL，比如通过发送给受害者一个带有恶意脚本的电子邮件，或者在社交媒体平台上发布一个包含恶意脚本的链接等方式来引诱受害者点击。</p>
+</li>
+<li><p>受害者点击链接后，浏览器会向服务器发送一个请求，<strong>请求会包含攻击者构造的恶意脚本</strong>。</p>
+</li>
+<li><p>服务器接收到请求后，会将恶意脚本<strong>作为响应的一部分</strong>返回给浏览器。</p>
+</li>
+<li><p><strong>受害者的浏览器解析</strong>服务器返回的响应，并<strong>执行</strong>其中包含的恶意脚本。</p>
+</li>
+<li><p>恶意脚本被执行后，可以窃取受害者的敏感信息，如登录凭据、会话令牌等，并将这些信息发送给攻击者。</p>
+</li>
+<li><p>攻击者接收到窃取的信息后，可以利用这些信息进行各种恶意行为，如冒充受害者进行欺诈、窃取个人信息等。</p>
+</li>
+</ol>
+<p>需要注意的是，反射型XSS攻击通常只能攻击单个受害者，因此攻击者通常需要通过大量的钓鱼邮件或社交媒体链接来引诱尽可能多的用户点击包含恶意脚本的链接，以增加攻击的成功率。</p>
+<p>如何构造恶意脚本的URL</p>
+<ol>
+<li>首先，攻击者需要找到目标网站上可以触发反射型XSS漏洞的页面。这通常需要对目标网站进行漏洞扫描或手动测试。</li>
+<li>然后，攻击者需要构造一个带有恶意脚本的URL。恶意脚本可以是JavaScript代码或其他客户端脚本，它通常被嵌入到URL的查询字符串参数中。例如，攻击者可以构造一个包含以下查询字符串参数的URL：<code>http://example.com/search?query=&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;</code></li>
+</ol>
+<p>在这个例子中，攻击者在查询字符串参数中嵌入了一个弹窗恶意脚本，当用户访问这个URL时，浏览器会执行这段脚本并显示一个弹窗。</p>
+<p>反射型XSS<strong>最大的特点</strong>：它的攻击方式：与其他类型的XSS攻击（如存储型XSS攻击）不同，反射型XSS攻击不需要攻击者将恶意脚本注入到服务器端的数据库中，而是<strong>利用受害者自己的浏览器来执行恶意脚本</strong>。</p>
+<p>“反射型XSS攻击”之所以被称为“反射型”，是因为攻击的<strong>核心机制</strong>是将恶意脚本通过受害者的请求“反射”回响应中，然后由浏览器解析和执行这些恶意脚本。</p>
+<h3 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h3><p>存储型XSS（Stored XSS）攻击是一种常见的Web应用程序漏洞，攻击者通过将恶意脚本存储到目标网站的数据库或文件系统中，从而在目标网站的页面中注入恶意脚本，达到攻击的目的。</p>
+<p><strong>存储型XSS攻击与反射型XSS攻击不同</strong>，存储型XSS攻击的恶意脚本并不是反射到响应中，而是存储在目标网站的数据库或文件系统中。攻击者通常通过提交恶意数据来触发存储型XSS漏洞，例如通过提交包含恶意脚本的评论、留言、表单数据等。一旦目标网站将恶意数据存储到数据库或文件系统中，并在后续的页面中展示这些数据，恶意脚本就会被执行，从而实现攻击者的目的。</p>
+<p><strong>简单的说</strong>，反射型是浏览器在提交请求时附带了恶意脚本，当服务器返回时，浏览器需要去处理服务器返回的，这叫做将恶意脚本<strong>反射</strong>到响应中；存储型XSS则是存储在目标网站中的，本地浏览器在展示目标网站页面的时候（评论，留言等）自然的会去执行恶意脚本代码</p>
+<h2 id="跨站请求伪造CSRF"><a href="#跨站请求伪造CSRF" class="headerlink" title="跨站请求伪造CSRF"></a>跨站请求伪造CSRF</h2><h3 id="CSRF-攻击的工作原理如下："><a href="#CSRF-攻击的工作原理如下：" class="headerlink" title="CSRF 攻击的工作原理如下："></a>CSRF 攻击的工作原理如下：</h3><ol>
+<li>用户登录：用户在一个网站（网站A）上进行登录，并获取了有效的会话凭证（例如，通过使用 cookie）。</li>
+<li>攻击网站准备：攻击者在另一个网站（网站B）上准备了一个恶意页面或陷阱。</li>
+<li>恶意页面包含请求：恶意页面中包含了针对网站A的恶意请求，例如转账、更改密码等操作。该请求通常是以隐藏的形式嵌入在页面的内容中。</li>
+<li>用户访问恶意页面：用户在未注销网站A的情况下，访问了网站B上的恶意页面。</li>
+<li>自动提交请求：恶意页面中的恶意请求被自动触发，由于用户已经在网站A上登录并具有有效的会话凭证，所以该请求会被发送到网站A。</li>
+<li>恶意请求执行：网站A接收到恶意请求并处理它，由于请求看起来是由受信任的用户发送的，因此网站A可能会执行该请求，并完成攻击者想要的恶意操作。</li>
+</ol>
+<p>能成功的原因是：在同一个浏览器下，无论是哪个页面或网站向a网站发送请求，请求头都会带上a.com域名下的cookie</p>
+<h3 id="CSRF防御技术"><a href="#CSRF防御技术" class="headerlink" title="CSRF防御技术"></a>CSRF防御技术</h3><h4 id="CSRF-token"><a href="#CSRF-token" class="headerlink" title="CSRF token"></a>CSRF token</h4><p>CSRF令牌（CSRF token）是一种常见的用于防御CSRF攻击的技术。CSRF令牌是一个随机生成的令牌（token），通常以密钥对的形式存在于用户的会话中。</p>
+<p>当用户登录到应用程序时，服务器会生成一个唯一的CSRF令牌并将其与用户的会话关联起来。在用户执行重要操作（如提交表单、更改密码等）时，应用程序会将CSRF令牌嵌入到请求中，通常以隐藏字段的形式添加到表单中或作为请求参数。</p>
+<p>当服务器接收到请求时，它会验证请求中的CSRF令牌是否与用户会话中的令牌匹配。如果匹配成功，则说明请求是合法的，服务器会处理该请求。如果令牌不匹配或缺失，则服务器会拒绝该请求，因为它可能是由攻击者发起的CSRF攻击。</p>
+<p>CSRF令牌是一种有效的防御技术，因为攻击者很难获取到用户的有效令牌，并且每个用户的令牌都是唯一的。通过使用CSRF令牌，应用程序能够验证请求的合法性，防止攻击者利用受信任用户的身份进行未经授权的操作。</p>
+<h3 id="CSRF-token能抵御XSS攻击吗？"><a href="#CSRF-token能抵御XSS攻击吗？" class="headerlink" title="CSRF token能抵御XSS攻击吗？"></a>CSRF token能抵御XSS攻击吗？</h3><p>假设服务器正确验证CSRF令牌并拒绝没有有效令牌的请求，那么令牌确实可以防止利用XSS漏洞。这里的关键在于名称中的”跨站脚本”，至少在反射型XSS的形式中，涉及到跨站请求。通过防止攻击者伪造跨站请求，应用程序可以防止对XSS漏洞的轻松利用。</p>
+<p>由于CSRF令牌需要与每个请求一起发送，并且攻击者无法获得受害者的有效令牌，因此攻击者无法构造包含正确令牌的跨站请求。这样，即使存在XSS漏洞，攻击者也无法通过利用该漏洞发起跨站请求，从而限制了XSS漏洞的利用能力。</p>
+<p>因此，在服务器正确验证CSRF令牌并拒绝无效令牌的情况下，CSRF令牌的确可以防止对XSS漏洞的利用。通过综合采用CSRF令牌和其他XSS防御措施，可以增强应用程序的安全性，减少跨站脚本攻击的风险。</p>
+<h2 id="CSRF与XSS的区别"><a href="#CSRF与XSS的区别" class="headerlink" title="CSRF与XSS的区别"></a>CSRF与XSS的区别</h2><p><strong>跨站脚本（XSS）</strong>允许攻击者在受害用户的浏览器中执行任意的JavaScript代码。</p>
+<p><strong>跨站请求伪造（CSRF）</strong>允许攻击者引导受害用户执行他们不打算执行的操作</p>
+<p>。XSS漏洞的后果通常比CSRF漏洞更严重：</p>
+<ul>
+<li>CSRF通常仅适用于用户能够执行的某些操作的<strong>子集</strong>。许多应用程序通常会实施CSRF防御，但可能会忽视其中一两个操作的保护。相比之下，成功的XSS利用可以诱使用户执行任何操作，而不受漏洞出现的功能的限制。</li>
+<li>CSRF可以被描述为<strong>“单向”漏洞</strong>，因为攻击者可以引导受害者发起HTTP请求，但他们无法检索该请求的响应。相比之下，XSS是<strong>“双向”的</strong>，攻击者注入的脚本可以发起任意请求，读取响应，并将数据泄漏到攻击者选择的外部域名。</li>
+</ul>
+<p>总结来说，<strong>XSS漏洞的后果通常比CSRF漏洞更严重</strong>。XSS漏洞可以使攻击者执行任意操作并从中获取数据，而CSRF漏洞仅限于特定的受影响操作。因此，在开发和维护应用程序时，需要同时关注XSS和CSRF防御，并采取适当的安全措施来减轻这些漏洞的风险。</p>
+<p><em>单向与双向是考试重点！！！</em>****</p>
+<h3 id="详细解释单向，双向"><a href="#详细解释单向，双向" class="headerlink" title="详细解释单向，双向"></a>详细解释单向，双向</h3><ol>
+<li>CSRF - “单向”漏洞：</li>
+</ol>
+<p>CSRF攻击利用了目标网站对用户身份验证不足的问题，攻击者可以通过某种方式引导受害者在目标网站上执行非预期的操作。这些操作是由受害者的浏览器自动发送的，攻击者并不能直接获取到该请求的响应。攻击者通常构造恶意网页或链接，诱使受害者点击，从而触发了事先构造好的请求。</p>
+<p>例如，假设受害者在一个社交媒体网站上已经登录，并且在同一个浏览器上打开了一个恶意网页。该恶意网页包含一个图片标签，其<code>src</code>属性指向一个修改用户密码的请求。浏览器会自动发送该请求，但受害者并不知情。攻击者无法获取到该请求的响应，因此无法直接读取或窃取数据。</p>
+<ol start="2">
+<li>XSS - “双向”漏洞：</li>
+</ol>
+<p>XSS攻击是通过在目标网站的页面中注入恶意脚本，然后在用户浏览器中执行该脚本来实现的。这使得攻击者可以与目标网站进行”双向”通信，包括发送请求、读取响应和窃取数据。</p>
+<p>通过XSS攻击，攻击者可以在受影响的网页中注入恶意脚本，并使其在用户的浏览器中执行。该脚本可以发起任意的HTTP请求，包括与目标网站的通信。攻击者可以通过这些请求读取目标网站的响应，并将获取到的数据发送到攻击者指定的外部域名。这使得攻击者能够窃取用户的敏感信息、劫持会话等。</p>
+<p>需要注意的是，XSS攻击的成功注入和执行恶意脚本通常需要滥用目标网站上的输入字段、评论区或其他用户可输入的地方。通过注入恶意脚本，攻击者可以控制用户浏览器中的页面内容和行为，以达到自己的目的。</p>
+<h2 id="多方Web应用交互安全"><a href="#多方Web应用交互安全" class="headerlink" title="多方Web应用交互安全"></a>多方Web应用交互安全</h2><p>多方Web应用交互安全是指在Web应用程序中涉及多个参与方的交互过程中确保安全性的一种方法和实践。这些参与方可以是用户、服务器、第三方服务提供商或其他外部系统。</p>
+<p>分为Multi-Party E-Commerce Applications（多方电子商务应用）与单点登录（Single Sign-On，简称SSO）</p>
+<h2 id="网络加密与密钥管理"><a href="#网络加密与密钥管理" class="headerlink" title="网络加密与密钥管理"></a>网络加密与密钥管理</h2><h3 id="双钥体制的密钥交换协议"><a href="#双钥体制的密钥交换协议" class="headerlink" title="双钥体制的密钥交换协议"></a>双钥体制的密钥交换协议</h3><p>中间人攻击是怎么产生的</p>
+<h3 id="联锁协议（会考试）"><a href="#联锁协议（会考试）" class="headerlink" title="联锁协议（会考试）"></a>联锁协议（会考试）</h3><p>先发一半的密文</p>
+<p>为什么可以阻止中间人攻击</p>
+<h3 id="第三方CA认证（源头解决问题）"><a href="#第三方CA认证（源头解决问题）" class="headerlink" title="第三方CA认证（源头解决问题）"></a>第三方CA认证（源头解决问题）</h3><p>Alice发给Bob的公钥是经过CA认证签名的，Bob收到后可以验证</p>
+<p>怎么验证呢？</p>
+
             </div>
 
             
                 <div class="post-copyright-info">
                     <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> 网络安全学习笔记</li>
+        <li><strong>Title:</strong> 网络安全复习笔记</li>
         <li><strong>Author:</strong> Jianbo</li>
-        <li><strong>Created at:</strong> 2023-05-06 22:12:53</li>
+        <li><strong>Created at:</strong> 2023-06-03 15:15:53</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-05-06 22:43:43
+                <strong>Updated at:</strong> 2023-06-03 15:16:12
             </li>
         
         <li>
-            <strong>Link:</strong> https://chienboo.github.io/2023/05/06/网络安全学习笔记/
+            <strong>Link:</strong> https://chienboo.github.io/2023/06/03/网络安全复习笔记/
         </li>
         <li>
             <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
@@ -383,10 +460,10 @@ ResultSet resultSet = statement.executeGuery();
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/04/26/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/"
+                            href="/2023/05/09/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">线性代数面试题目</span>
+                                    <span class="post-nav-title-item"></span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -451,8 +528,8 @@ ResultSet resultSet = statement.executeGuery();
                 <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">网络安全学习笔记</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="nav-text">网络安全学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8"><span class="nav-text">第五章 Web应用安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="nav-text">注入攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86"><span class="nav-text">文件遍历</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81"><span class="nav-text">点击劫持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BBXSS"><span class="nav-text">跨站脚本攻击XSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0CSRF"><span class="nav-text">跨站请求伪造CSRF</span></a></li></ol></li></ol></li></ol>
+        <div class="page-title">网络安全复习笔记</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93"><span class="nav-text">题目总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E7%89%A9%E7%90%86%E5%B1%82%E6%94%BB%E5%87%BB"><span class="nav-text">针对物理层攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E4%B8%8EHTTPS%E5%8C%BA%E5%88%AB%EF%BC%8CSSL-%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="nav-text">HTTP与HTTPS区别，SSL 握手协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E7%B1%BBWeb%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E3%80%81SQL%E6%B3%A8%E5%85%A5%E6%A1%88%E4%BE%8B"><span class="nav-text">3类Web安全问题、SQL注入案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1%E6%8E%AA%E6%96%BD"><span class="nav-text">文件遍历流程与防御措施</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">ARP欺骗流程与防御</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%BA%8F%E5%88%97%E5%8F%B7%E6%AC%BA%E9%AA%97%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">IP序列号欺骗与防御</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diffie-Hellman%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">Diffie-Hellman协议以及中间人攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEP%E5%8A%A0%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B"><span class="nav-text">WEP加解密流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%B5%81%E7%A8%8B%E5%92%8C%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">缓冲区溢出流程和案例分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-text">TCP三次握手，四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8"><span class="nav-text">第五章 Web应用安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="nav-text">注入攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="nav-text">命令注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B2SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">盲SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E7%9A%84%E9%A2%84%E9%98%B2"><span class="nav-text">SQL注入攻击的预防</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86"><span class="nav-text">文件遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81"><span class="nav-text">点击劫持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BBXSS"><span class="nav-text">跨站脚本攻击XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS%E5%8F%8D%E5%B0%84%E5%9E%8B%E6%94%BB%E5%87%BB"><span class="nav-text">XSS反射型攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%9E%8BXSS"><span class="nav-text">存储型XSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0CSRF"><span class="nav-text">跨站请求伪造CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-%E6%94%BB%E5%87%BB%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-text">CSRF 攻击的工作原理如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF%E9%98%B2%E5%BE%A1%E6%8A%80%E6%9C%AF"><span class="nav-text">CSRF防御技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-token%E8%83%BD%E6%8A%B5%E5%BE%A1XSS%E6%94%BB%E5%87%BB%E5%90%97%EF%BC%9F"><span class="nav-text">CSRF token能抵御XSS攻击吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF%E4%B8%8EXSS%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">CSRF与XSS的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A%E5%8D%95%E5%90%91%EF%BC%8C%E5%8F%8C%E5%90%91"><span class="nav-text">详细解释单向，双向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%96%B9Web%E5%BA%94%E7%94%A8%E4%BA%A4%E4%BA%92%E5%AE%89%E5%85%A8"><span class="nav-text">多方Web应用交互安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"><span class="nav-text">网络加密与密钥管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E9%92%A5%E4%BD%93%E5%88%B6%E7%9A%84%E5%AF%86%E9%92%A5%E4%BA%A4%E6%8D%A2%E5%8D%8F%E8%AE%AE"><span class="nav-text">双钥体制的密钥交换协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E9%94%81%E5%8D%8F%E8%AE%AE%EF%BC%88%E4%BC%9A%E8%80%83%E8%AF%95%EF%BC%89"><span class="nav-text">联锁协议（会考试）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9CA%E8%AE%A4%E8%AF%81%EF%BC%88%E6%BA%90%E5%A4%B4%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-text">第三方CA认证（源头解决问题）</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
