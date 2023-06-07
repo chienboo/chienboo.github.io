@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Jianbo">
+    
+            <meta name="author" content="Jianbo">
+            <!-- preconnect -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link rel="preconnect" href="https://evan.beee.top" crossorigin>
+            
+                                <!--- Seo Part-->
+                                
+                                    <link rel="canonical" href="https://chienboo.github.io/2023/06/05/密码学复习/"/>
+                                        <meta name="robots" content="index,follow">
+                                        <meta name="googlebot" content="index,follow">
+                                        <meta name="revisit-after" content="1 days">
+                                        
+                                            <meta name="description" content="title: 密码学复习笔记 date: 2023-06-06 21:00:00 tags:  多表&#x2F;码加密多码加密•多码加密法是为了用来对付频率分析工具。 •多码加密法也是一种替换加密法。 •多码加密法的目的是通过用多个密文字母来替换同一个明文字母，从而消除字母的特性。 •经典的古典多码加密：Playfair密码、Hill密码、Vigenere密码 多码加密法是一种替换加密法，旨在对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jianbo&#39;s blog">
+<meta property="og:url" content="https://chienboo.github.io/2023/06/05/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Jianbo&#39;s blog">
+<meta property="og:description" content="title: 密码学复习笔记 date: 2023-06-06 21:00:00 tags:  多表&#x2F;码加密多码加密•多码加密法是为了用来对付频率分析工具。 •多码加密法也是一种替换加密法。 •多码加密法的目的是通过用多个密文字母来替换同一个明文字母，从而消除字母的特性。 •经典的古典多码加密：Playfair密码、Hill密码、Vigenere密码 多码加密法是一种替换加密法，旨在对">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-05T11:29:54.402Z">
+<meta property="article:modified_time" content="2023-06-06T23:25:27.836Z">
+<meta property="article:author" content="Jianbo Chen">
+<meta name="twitter:card" content="summary">
+                                                
+                                                    <!--- Icon Part-->
+                                                    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+                                                    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+                                                    <meta name="theme-color" content="#A31F34">
+                                                    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+                                                        <!--- Page Info-->
+                                                        
+                                                            <title>
+                                                                
+                                                                            Jianbo_Blog
+                                                            </title>
+                                                            
+<link rel="stylesheet" href="/css/style.css">
+
+                                                                
+<link rel="stylesheet" href="/assets/fonts.css">
+
+                                                                    <!--- Font Part-->
+                                                                    
+                                                                            
+                                                                                    
+                                                                                            
+
+                                                                                                    <!--- Inject Part-->
+                                                                                                    
+                                                                                                                                        <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"chienboo.github.io","root":"/","language":"en"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[""]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true},"home_banner":{"enable":true,"image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Jianbo Blog","subtitle":{"text":["青山深处，静心听鸟鸣","看灯火铺开长夜，赏夜星坠入天空","青山灼灼，星光杳杳"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Status":{"path":"https://status.evanluo.top/","icon":"fa-regular fa-chart-bar"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                                                                                                                                            <!--- Fontawesome Part-->
+                                                                                                                                            
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+                                                                                                                                                
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+                                                                                                                                                    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+                                                                                                                                                        
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+                                                                                                                                                            
+                                                                                                                                                                        
+                                                                                                                                                                                    
+                                                                                                                                                                                                
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Jianbo_Blog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        ARCHIVES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    target="_blank" rel="noopener" href="https://status.evanluo.top/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-chart-bar"></i>
+                                        
+                                        STATUS
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                ARCHIVES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        target="_blank" rel="noopener" href="https://status.evanluo.top/"  >
+                             
+                                
+                                    <i class="fa-regular fa-chart-bar"></i>
+                                
+                                STATUS
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular"></h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Jianbo</span>
+                            
+                                <span class="author-label"></span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-06-05 19:29:54</span>
+        <span class="mobile">2023-06-05 19:29</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-06-07 07:25:27</span>
+            <span class="mobile">2023-06-07 07:25</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <hr>
+<p>title: 密码学复习笔记</p>
+<p>date: 2023-06-06 21:00:00</p>
+<p>tags:</p>
+<hr>
+<h1 id="多表-x2F-码加密"><a href="#多表-x2F-码加密" class="headerlink" title="多表&#x2F;码加密"></a>多表&#x2F;码加密</h1><h2 id="多码加密"><a href="#多码加密" class="headerlink" title="多码加密"></a>多码加密</h2><p>•多码加密法是为了用来对付频率分析工具。</p>
+<p>•多码加密法也是一种替换加密法。</p>
+<p>•多码加密法的目的是通过用多个密文字母来替换同一个明文字母，从而消除字母的特性。</p>
+<p>•经典的古典多码加密：Playfair密码、Hill密码、Vigenere密码</p>
+<p>多码加密法是一种替换加密法，旨在对抗频率分析工具，消除字母的特性。它通过使用多个密文字母来替换同一个明文字母，增加了加密的复杂性。</p>
+<p>攻击者在破解多码加密法时具有一些优势和特定目标。他们知道加密方法是基于关键词加密的，这为他们提供了一些线索。他们的目标是尝试发现关键词和明文。</p>
+<p>以下是一些可用的信息来解密多码加密法：</p>
+<ol>
+<li><p>多码加密的基础仍然是关键词加密。关键词在明文中重复出现，这可能导致一个字母对应多个替换。</p>
+</li>
+<li><p>关键词在明文中重复出现。重复明文之间的间距可能是关键词长度的整数倍，这样可以使得关键词本身与重复的明文对齐。</p>
+</li>
+<li><p>密钥的重复部分与明文中的重复部分存在关联。在密文中，这些重复部分也会产生对应的重复部分。</p>
+</li>
+</ol>
+<p>根据上述信息，可以尝试以下步骤来破解多码加密法：</p>
+<ol>
+<li><p>查找密文中重复的字符部分，并计算它们之间的距离（以字符数表示）。</p>
+</li>
+<li><p>计算所有距离的因子。</p>
+</li>
+<li><p>最大公约数很可能是关键词的长度。</p>
+</li>
+</ol>
+<p>通过这种方法，可以推测出关键词的长度，从而有助于解密多码加密法。</p>
+<h1 id="密码学基础"><a href="#密码学基础" class="headerlink" title="密码学基础"></a>密码学基础</h1><h3 id="扩散，混淆的概念，关系和区别"><a href="#扩散，混淆的概念，关系和区别" class="headerlink" title="扩散，混淆的概念，关系和区别"></a>扩散，混淆的概念，关系和区别</h3><p>扩散（Diffusion）和混淆（Confusion）是两个重要的概念，用于描述加密算法的特性。它们在提高密码算法的安全性和强度方面起着关键的作用</p>
+<h4 id="扩散"><a href="#扩散" class="headerlink" title="扩散"></a>扩散</h4><p>扩散是指在加密过程中，明文中的每一个位（比特）都对应着密文中的多个位（比特）的改变。换句话说，扩散要求对明文中的微小变化产生较大的影响，使得密文中的每一个位都与明文和密钥的每一个位相关。通过扩散，加密算法可以将输入的信息尽可能均匀地分散到整个密文中，增加了密文与明文之间的复杂关系，提高了抵抗密码分析的能力。</p>
+<h4 id="混淆"><a href="#混淆" class="headerlink" title="混淆"></a>混淆</h4><p>混淆是指通过加入随机性和复杂性，使得密钥和密文之间的关系变得非常复杂和不可预测。混淆的目的是隐藏明文和密钥之间的关联性，使得攻击者无法通过分析密文推断出明文或密钥的信息。通过混淆，加密算法可以增加密码系统的复杂性，提高攻击者对密钥和密文的分析难度。</p>
+<h4 id="关系和区别"><a href="#关系和区别" class="headerlink" title="关系和区别"></a>关系和区别</h4><ul>
+<li><strong>关系：</strong>扩散和混淆是加密算法设计中两个重要的概念，它们常常是同时存在的。扩散和混淆的目标都是增加加密算法的安全性，通过增加密文与明文、密钥之间的关联性，使得密码分析更加困难。</li>
+<li><strong>区别：</strong>扩散和混淆在实现上有一些不同之处。扩散主要是通过改变明文的每一个位对应的多个密文位来实现，以达到信息的均匀分散。而混淆则是通过引入随机性和复杂性来增加密钥和密文之间的关系，使其更难以被破解。扩散和混淆通常是通过不同的加密算法设计和操作步骤来实现的，但它们的目标是相同的，即增强加密算法的安全性。</li>
+</ul>
+<h1 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h1><h1 id="对称密码体制"><a href="#对称密码体制" class="headerlink" title="对称密码体制"></a>对称密码体制</h1><p>核心：加密密钥与解密密钥是一样的</p>
+<p><strong>DES这个算法中， 加密密钥和解密密钥是一样的吗？有什么区别和共同点</strong></p>
+<p><strong>加密</strong> <strong>k1 - k16</strong> </p>
+<p><strong>解密是反的</strong></p>
+<p><strong>工作模式 有3页纸 （电子编码薄 CEC 计数器不考 输出反馈模式 密码反馈模式）这4个模式了然入心</strong></p>
+<p><strong>100%</strong> <strong>考</strong></p>
+<h2 id="流密码"><a href="#流密码" class="headerlink" title="流密码"></a>流密码</h2><p>•<strong>流密码</strong>是将明文划分成字符(如单个字母)，或其编码的基本单元(如按位)，字符分别与密钥流作用进行加密，解密时以同步产生的同样的密钥流实现。</p>
+<p>•流密码强度完全依赖于密钥序列的<strong>随机性</strong>(Randomness)和<strong>不可预测性</strong>(Unpredictability)。</p>
+<p>•核心问题是密钥流的产生——密钥流生成器的设计</p>
+<p>保持收发两端密钥流的精确同步是实现可靠解密的关键技术</p>
+<p>•<strong>流密码的基本思想：</strong>假设存在着明文串<em>x</em> &#x3D; <em>x</em>0<em>x</em>1<em>x</em>2…</p>
+<p>•利用密钥<em>k</em>和密钥流发生器<em>f</em>产生一个密钥流<em>z</em> &#x3D; <em>z</em>0<em>z</em>1<em>z</em>2…。其中，<em>zi</em> &#x3D; <em>f</em>(<em>k</em>,<em>δi</em>)，<em>δ**i</em>是加密器中的记忆元件在时刻<em>i</em>的状态，<em>f</em>是以密钥<em>k</em>和<em>δ</em>i作为输入参数的函数；</p>
+<p>•<strong>加密</strong>： <em>y</em> &#x3D; <em>y</em>0<em>y</em>1<em>y</em>2… &#x3D; <em>Ez</em>0(<em>x</em>0) <em>Ez</em>1(<em>x</em>1) <em>Ez</em>1(<em>x</em>1)…；</p>
+<h3 id="同步流密码"><a href="#同步流密码" class="headerlink" title="同步流密码"></a>同步流密码</h3><ul>
+<li><p><strong>同步流密码</strong>：加密器中记忆元件的存储状态<em>δ**i</em>独立于明文字符。</p>
+</li>
+<li><p><strong>同步流密码加密器</strong></p>
+<ul>
+<li>密钥流产生器</li>
+<li>加密变换器</li>
+</ul>
+</li>
+<li><p>加密变换器一般采用二元逻辑运算XOR，即有限域GF(2)上讨论的二元加密流密码，变换表示为：</p>
+</li>
+</ul>
+<p>​			<em>yi</em> &#x3D; <em>zi</em>⊕<em>xi</em></p>
+<ul>
+<li><strong>一次一密乱码本</strong>是加法流密码的原型</li>
+</ul>
+<h3 id="密钥流生成器的设计原则"><a href="#密钥流生成器的设计原则" class="headerlink" title="密钥流生成器的设计原则"></a>密钥流生成器的设计原则</h3><ul>
+<li><p><strong>足够长的周期</strong></p>
+</li>
+<li><p><strong>高线性复杂度</strong></p>
+</li>
+<li><p><strong>统计性能良好</strong></p>
+</li>
+<li><p><strong>足够的“混乱”</strong></p>
+<p>强调密钥的作用，增加密钥与密文之间关系的复杂性</p>
+</li>
+<li><p><strong>足够的“扩散”</strong></p>
+<p>小扰动的影响波及到全局密文没有统计特征，明文一位影响密文的多位，增加密文与明文之间关系的复杂性</p>
+</li>
+<li><p><strong>抵抗不同形式的攻击</strong></p>
+</li>
+</ul>
+<h3 id="有限状态自动机-FA"><a href="#有限状态自动机-FA" class="headerlink" title="有限状态自动机(FA)"></a>有限状态自动机(FA)</h3><p>•具有离散输入和输出(输入集和输出集均有限)的一种数学模型</p>
+<p>•有限状态集<em>S</em>&#x3D;{<em>si</em>|<em>i</em>&#x3D;1,2,…,<em>l</em>}</p>
+<p>•有限输入字符集<em>X&#x3D;</em>{<em>Xi</em>*|i&#x3D;*1,2,…,<em>m</em>}</p>
+<p>•有限输出字符集<em>Y&#x3D;</em>{<em>Yk</em>*|k&#x3D;*1,2,…,<em>n</em>}</p>
+<p>•转移函数</p>
+<p>•<em>Yj</em>＝<em>f1(sj</em>, <em>Xj</em>)</p>
+<p>•<em>Sj+1 ＝</em>f*2(<em>sj</em>, <em>Xj</em>) 　</p>
+<p>即在状态<em>sj</em>，输入字符<em>Xj</em>时，输出为<em>Yj</em>，状态转移为*Sj+*1。</p>
+<p>![Screen Shot 2023-06-06 at 23.54.42](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 23.54.42.png)</p>
+<h3 id="基于FA的密钥流产生器"><a href="#基于FA的密钥流产生器" class="headerlink" title="基于FA的密钥流产生器"></a>基于FA的密钥流产生器</h3><p>•同步流密码的密钥流产生器可看为一个参数为<em>k</em>的FA：输出集<em>Z</em>，状态集<em>Σ</em>，状态转移函数<em>φ</em>和输出函数<em>ψ</em>，初态<em>s</em>0</p>
+<p>•设计的关键是<em>φ</em>(phi fai)和<em>ψ</em>(psi psai)</p>
+<p>![image-20230606235602572](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230606235602572.png)</p>
+<p>•<strong>一个良好的密钥流产生器</strong></p>
+<p>•极大的周期</p>
+<p>•良好的统计特性</p>
+<p>•抗线性分析</p>
+<p>•抗统计分析</p>
+<p>•具有非线性的<em>φ</em>的FA理论很不完善，通常采用线性<em>φ</em>以及非线性的<em>ψ</em>。可将此类产生器分为<strong>驱动部分</strong>和<strong>非线性组合</strong>部分。</p>
+<p>•驱动部分控制状态转移</p>
+<p>非线性组合部分提供统计特性良好的序列</p>
+<h3 id="两种常见的密钥流生成器"><a href="#两种常见的密钥流生成器" class="headerlink" title="两种常见的密钥流生成器"></a>两种常见的密钥流生成器</h3><p>![Screen Shot 2023-06-07 at 00.01.41](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.01.41.png)</p>
+<p>LFSR：线性<strong>反馈移位寄存器</strong>——流密码产生密钥流的主要组成部分。</p>
+<p>反馈移位寄存器：</p>
+<p>•<strong>基本概念</strong></p>
+<p>•<strong>级数</strong>(Stages)：存储单元数<em>n</em></p>
+<p>•<strong>状态</strong>(State)：<em>n</em>个存储单元的存数(<em>k**i</em>, …, <em>k**i</em>+<em>n</em>-1) </p>
+<p>•<strong>反馈函数：f(ki, ki+1, …, ki+n-1)是状态(k</strong>i,<em>…, k**i</em>+*n-1)的函数</p>
+<p>•<strong>线性反馈移位寄存器</strong>**(LFSR)：f 为线性函数</p>
+<p><strong>非线性反馈移位寄存器：</strong> <em>f</em> 为非线性函数</p>
+<p>![Screen Shot 2023-06-07 at 00.14.35](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.14.35.png)</p>
+<h3 id="LFSR和JK触发器的关系"><a href="#LFSR和JK触发器的关系" class="headerlink" title="LFSR和JK触发器的关系"></a>LFSR和JK触发器的关系</h3><p>通过将LFSR的输出连接到JK触发器的输入端，可以将LFSR的输出序列作为输入驱动到JK触发器中，从而产生复杂的非线性动态。这样的结构可以产生更加复杂和随机的序列，并且可以用于密码学中的加密算法，如流密码。</p>
+<p>在这种情况下，LFSR的输出序列通过触发器的状态更新和反馈来推动整个系统。通过适当选择LFSR的多项式和触发器的连接方式，可以实现高度复杂和随机的序列生成，提供更强的密码学安全性。</p>
+<p>•这就是所谓<strong>非线性前馈序列生成器</strong>。</p>
+<p>•LFSR用来保证密钥流的周期长度、平衡性等；</p>
+<p>•非线性组合函数用来保证密钥流的各种密码性质，以抗击各种可能的攻击。</p>
+<p>![Screen Shot 2023-06-07 at 00.21.16](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.21.16.png)</p>
+<p>![Screen Shot 2023-06-07 at 00.23.21](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.23.21.png)</p>
+<p>![Screen Shot 2023-06-07 at 00.23.36](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.23.36.png)</p>
+<h2 id="RC4"><a href="#RC4" class="headerlink" title="RC4"></a>RC4</h2><p><strong>RC4</strong></p>
+<p>•序列密码簇(<strong>何为簇?????????</strong>)</p>
+<p>在密码学中，”簇”（cluster）是指一组相似或相关的密码算法或密码协议的集合。这些算法或协议通常在某些方面具有共同的特点、性质或设计原则。</p>
+<p>密码簇可以是基于相同的加密原理或数学算法，或者它们可能在相似的应用领域中使用。这样的集合通常被称为簇，以强调它们之间的关联性。</p>
+<p>序列密码簇（sequence cipher cluster）是一种特定类型的密码簇，它涉及到序列密码（sequence ciphers）。序列密码是一类密码算法，它们将输入数据处理为一个或多个密钥序列。这些密钥序列可以是伪随机数序列（pseudo-random sequence）或真正的随机数序列（random sequence），用于加密或解密数据。</p>
+<p><strong>序列密码簇包括了多种不同的序列密码算法</strong>，例如：</p>
+<ol>
+<li>线性反馈移位寄存器（Linear Feedback Shift Registers，LFSR）：使用线性反馈移位寄存器产生伪随机数序列。</li>
+<li>带反馈移位寄存器（Feedback Shift Registers，FSR）：类似于LFSR，但可以具有非线性反馈。</li>
+<li>同步序列密码（Synchronous Stream Ciphers）：使用密钥序列与明文流进行异或操作来生成密文流。</li>
+<li>序列密码生成器（Sequence Cipher Generators）：用于生成伪随机数序列或密钥序列的特定算法或协议。</li>
+</ol>
+<p>这些序列密码算法在实际应用中具有不同的特点和性能，并被广泛用于数据加密、随机数生成、密钥生成等领域。通过将这些算法组织为序列密码簇，可以更好地研究、分析和比较它们的性能和安全性。</p>
+<p>•RSA公司由Ron Rivest于1987年设计</p>
+<p>•1994年被运用逆向工程的分析方法得到算法(1997年正式公开)</p>
+<p>•被人匿名的张贴于一个邮件列表前端</p>
+<p><strong>RC4</strong>应用场景</p>
+<p>•使用安全套接字层<strong>SSL</strong>协议的Internet通信</p>
+<p>•无线通信领域的信息安全</p>
+<p>•作为无线局域网标准IEEE 802.11中WEP协议的一部分</p>
+<p>RC4的工作模式是<strong>OFB（输出反馈模式）</strong></p>
+<p>![image-20230606201747393](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230606201747393.png)</p>
+<h3 id="算法核心思想"><a href="#算法核心思想" class="headerlink" title="算法核心思想"></a>算法核心思想</h3><ul>
+<li><p><strong>随机密钥</strong></p>
+<ul>
+<li>密钥调度算法KSA</li>
+<li>伪随机数生成算法PRGA</li>
+</ul>
+</li>
+<li><p><strong>算法基本流程</strong></p>
+<ul>
+<li>密钥调度算法将一个随机密钥变换成一个初始置换</li>
+<li>随机数生成算法PRGA利用初始置换生成一个伪随机输出序列</li>
+<li>用该伪随机序列与待处理字节异或——加密&#x2F;解密</li>
+<li>待处理字节——明文&#x2F;密文</li>
+</ul>
+</li>
+<li><p><strong>初始置换</strong></p>
+<ul>
+<li>初始化<em>S</em>盒<ul>
+<li>线性填充：<em>S</em>_0&#x3D;0, <em>S</em>_1&#x3D;1, …, <em>S</em>_255&#x3D;255</li>
+</ul>
+</li>
+<li>密钥K表<ul>
+<li>用种子密钥填充另一个256字节的K表</li>
+</ul>
+</li>
+<li><em>S</em>盒置换<ul>
+<li>交换<em>Si</em>和<em>Sj</em><ul>
+<li>不断重复密钥K(长度为<em>L</em>字节)直至扫描完整个数组S[255]</li>
+<li>对于<em>i</em> &#x3D; 0至255： <em>j</em> &#x3D; (<em>j</em> + <em>Si</em> + <em>K{i</em> mod <em>L</em>}) mod 256 （<em>j</em>初始值为0）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>伪随机序列的生成</strong></p>
+<ul>
+<li><p>创建两个计数器：<em>i</em>和<em>j</em>(初始值为0)</p>
+</li>
+<li><p><em>i</em> &#x3D; (<em>i</em> + 1) mod 256</p>
+</li>
+<li><p><em>j</em> &#x3D; (<em>j</em> + <em>Si</em>) mod 256</p>
+</li>
+<li><p>交换<em>Si</em>和<em>Sj</em></p>
+</li>
+<li><p><em>t</em> &#x3D; (<em>Si</em> + <em>Sj</em>) mod 256</p>
+</li>
+<li><p><em>K</em> &#x3D; <em>St</em></p>
+</li>
+</ul>
+</li>
+<li><p>加密&#x2F;解密</p>
+<p><em>message</em> ⊕<em>K</em></p>
+</li>
+</ul>
+<h2 id="分组密码"><a href="#分组密码" class="headerlink" title="分组密码"></a>分组密码</h2><h3 id="工作模式（！！！书本P88）"><a href="#工作模式（！！！书本P88）" class="headerlink" title="工作模式（！！！书本P88）"></a>工作模式（！！！书本P88）</h3><h4 id="电子密码本-ECB"><a href="#电子密码本-ECB" class="headerlink" title="电子密码本(ECB)"></a>电子密码本(ECB)</h4><p>用<strong>相同的密钥</strong>分别对明文分组<strong>单独加密</strong></p>
+<p>![Screen Shot 2023-06-05 at 20.42.19](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-05 at 20.42.19.png)</p>
+<p><strong>优点：</strong>每个数据块<strong>独立加密</strong>，可<strong>并行加密</strong>，实现简单</p>
+<p><strong>缺点：</strong>相同明文产生相同的密文（缺乏混淆和扩散），不具备数据完整保护性</p>
+<p><strong>适用：</strong>短消息的加密传输</p>
+<h4 id="密码分组链接-CBC"><a href="#密码分组链接-CBC" class="headerlink" title="密码分组链接(CBC)"></a>密码分组链接(CBC)</h4><p>将<strong>前一个密文块</strong>与当前明文块进行<strong>异或运算</strong>之后再加密</p>
+<p>![Screen Shot 2023-06-05 at 20.45.47](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-05 at 20.45.47.png)</p>
+<p><strong>优点：</strong>每个密文块的加密<strong>依赖</strong>前一个密文块，具备数据完整性保护</p>
+<p><strong>缺点</strong>：错误传播，不适合<strong>并行</strong>处理</p>
+<p><strong>适用：</strong>常规文件加密，非实时加密等场景</p>
+<h4 id="输出反馈模式-OFB"><a href="#输出反馈模式-OFB" class="headerlink" title="输出反馈模式(OFB)"></a>输出反馈模式(OFB)</h4><p>将<strong>前一个加密算法的输出</strong>作为<strong>输入</strong>进行<strong>加密</strong>，生成一个<strong>密钥流</strong>，再与<strong>当前明文块</strong>进行<strong>异或</strong>运算得到密文块</p>
+<p>![Screen Shot 2023-06-05 at 21.07.08](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-05 at 21.07.08.png)</p>
+<p><strong>优点：</strong>可变长度的加密；实时性；对密文分组的错误不敏感（密钥流与明&#x2F;密文没有关系，因此即使明&#x2F;密文被篡改也不会影响）支持并行加密</p>
+<p><strong>缺点：</strong>传输错误不可恢复；无法提供数据完整性保护</p>
+<p><strong>适用：</strong>实时数据流加密和随机访问的场景</p>
+<h4 id="密码反馈模式-CFB"><a href="#密码反馈模式-CFB" class="headerlink" title="密码反馈模式(CFB)"></a>密码反馈模式(CFB)</h4><p>将前一个密文块作为输入进行加密，生成一个<strong>密钥流</strong>，再与当前明文块进行<strong>异或运算</strong>得到密文块</p>
+<p>![Screen Shot 2023-06-05 at 20.55.33](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-05 at 20.55.33.png)</p>
+<p><strong>优点：</strong>可变长度<strong>的加密操作；</strong>实时<strong>性；可以</strong>部分解密数据</p>
+<p><strong>缺点：</strong>密文分组的错误传播敏感；不适合并行处理；需要保证初始向量的唯一性和完整性</p>
+<p><strong>适用：</strong>流密码和对特定部分数据进行<strong>随机访问</strong>的场景</p>
+<h3 id="异同"><a href="#异同" class="headerlink" title="异同"></a>异同</h3><h4 id="CFB与OFB"><a href="#CFB与OFB" class="headerlink" title="CFB与OFB"></a>CFB与OFB</h4><p>![Screen Shot 2023-06-05 at 21.09.12](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-05 at 21.09.12.png)</p>
+<p>共同点：<strong>明文</strong>都<strong>不</strong>参与<strong>加密算法</strong>的运算，明文与密钥流进行异或</p>
+<p>密钥流的生成是需要经过加密算法的</p>
+<h3 id="相关问答题"><a href="#相关问答题" class="headerlink" title="相关问答题"></a>相关问答题</h3><ol>
+<li><p><strong>为什么 CBC（密码分组链接） 可以用来做MAC消息认证码</strong></p>
+<p>CBC模式通过使用<strong>前一个密文块</strong>与<strong>当前明文块</strong>进行异或运算来增加密码的随机性和扩散性。在CBC-MAC中，密钥被用于加密<strong>每个明文块</strong>，并将最后一个密文块作为MAC输出。由于使用了密钥加密所有的明文块，因此只有拥有正确密钥的人才能生成正确的MAC值。这样，当接收方收到消息和MAC值时，可以使用相同的密钥对接收到的消息进行加密，并将结果与接收到的MAC值进行比较。如果两者匹配，那么可以确信消息的完整性和认证性。</p>
+</li>
+<li><p><strong>为什么密码反馈模式（CFB）适合在无线环境下进行消息传输</strong></p>
+<p>原因有以下几点：</p>
+<ul>
+<li>！！<strong>流式处理</strong>：CFB模式将块密码转换为流密码，使得数据可以以流的方式进行加密和解密。这对于无线环境中实时传输和处理数据非常有用，因为数据可以逐个比特地处理，而不需要等待整个块。</li>
+<li>！！<strong>错误传播限制</strong>：CFB模式具有错误传播限制的特性。即如果某个密文块发生错误，那么只会影响该密文块及其后续的明文块，不会影响前面的明文块。这对于<strong>无线环境</strong>中可能存在的传输错误和干扰非常有用，因为<strong>错误不会扩散到整个消息，只会影响到部分数据</strong>。</li>
+<li><strong>随机性和保密性</strong>：CFB模式<strong>使用前一个密文块作为加密输入</strong>，<strong>增加了密码的随机性和扩散性</strong>。这有助于提高数据的保密性，使得相邻的明文块之间没有直接的关联性。</li>
+</ul>
+</li>
+<li><p><strong>在电子密码本模式（ECB）中，为什么相同的明文块会生成相同的密文块？</strong></p>
+<p><strong>答：</strong></p>
+<p>在电子密码本模式（ECB）中，相同的明文块会生成相同的密文块的原因如下：</p>
+<ol>
+<li><p>块独立加密：ECB模式将每个明文块独立地进行加密，每个块之间没有联系。相同的明文块会经过相同的加密算法处理，得到相同的密文块。这意味着在相同的密钥和相同的明文块下，加密操作是确定性的，不会引入随机性。</p>
+</li>
+<li><p>缺乏混淆和扩散：ECB模式没有引入混淆和扩散机制，即相同的明文块将直接映射到相同的密文块。这使得ECB模式容易受到一些攻击，如明文模式攻击和重放攻击，因为攻击者可以通过观察和分析相同的明文块对应的密文块来获取信息。</p>
+</li>
+</ol>
+<p>因此，ECB模式中相同的明文块会生成相同的密文块，这会导致一些安全隐患和可预测性问题，因此在实际应用中，通常会选择其他更安全的加密模式。</p>
+</li>
+<li><p><strong>在密码分组链接模式（CBC）中，为什么需要初始向量（IV）？</strong></p>
+<p><strong>答：</strong></p>
+<p>在密码分组链接模式（CBC）中，初始向量（IV）的作用如下：</p>
+<ol>
+<li><p>提供随机性：初始向量（IV）是一个随机的、与明文无关的输入值。在CBC模式中，每个明文块在加密之前都会与前一个密文块进行异或运算。初始向量作为第一个密文块的输入，为加密过程引入了随机性，确保每次加密操作都是不同的，即使是相同的明文输入。</p>
+</li>
+<li><p>引入链接性：初始向量（IV）与前一个密文块进行异或运算后的结果作为当前明文块的输入。这种链接性使得每个明文块都依赖于前面的数据块，从而增加了加密的强度和不可预测性。</p>
+</li>
+<li><p>防止重放攻击：初始向量（IV）的随机性和唯一性可以防止重放攻击。重放攻击是指攻击者截获并恶意重放以前的密文块，以欺骗接收方。通过使用不同的初始向量，每次加密生成的密文块都是唯一的，攻击者无法简单地重放以前的密文块来达到</p>
+</li>
+</ol>
+</li>
+<li><p><strong>流密码</strong>和<strong>分组密码的四个工作模式</strong>（电子密码本，密码分组链接，输出反馈模式，密码反馈模式）有什么关系，异同点，因为密码反馈模式和输出反馈模式好像也涉及到密钥流？</p>
+<p><strong>答：</strong></p>
+<p>流密码和分组密码是两种常见的加密算法类型，它们之间有一些区别和异同点。而电子密码本（ECB），密码分组链接（CBC），输出反馈模式（OFB）和密码反馈模式（CFB）是分组密码的四种工作模式。</p>
+<ol>
+<li><p>流密码：流密码是一种将明文逐位与密钥流进行异或运算的加密算法。密钥流是一个按位生成的伪随机数序列，用于将明文转换为密文。流密码可以实现高速加密和解密，适用于连续的数据流。它不需要对数据进行分组，因此在传输过程中可以按需加密和解密。</p>
+</li>
+<li><p>分组密码：分组密码是一种将明文分成固定大小的块，并使用密钥对每个块进行加密的算法。分组密码的加密和解密是在块的级别上进行的，每个块的大小通常是64位或128位。常见的分组密码算法包括DES和AES。</p>
+</li>
+</ol>
+<p>下面是四种工作模式的介绍以及它们与密钥流的关系：</p>
+<ol>
+<li><p>电子密码本模式（ECB）：在ECB模式下，明文被分成固定大小的块，然后每个块都被独立地加密。这意味着相同的明文块将始终被加密为相同的密文块，因此ECB模式不适合加密具有重复模式的数据。与密钥流没有直接关系。</p>
+</li>
+<li><p>密码分组链接模式（CBC）：在CBC模式下，每个明文块先与前一个密文块进行异或运算，然后再进行加密。这意味着加密一个块的输出依赖于前一个块的密文。为了增加安全性，还引入了初始向量（IV）作为第一个块的加密输入。与密钥流没有直接关系。</p>
+</li>
+<li><p>输出反馈模式（OFB）：在OFB模式下，先生成一个初始向量（IV），然后使用初始向量和密钥流生成伪随机序列。该序列与明文进行异或运算，产生密文。然后，将上一个密文块的一部分作为下一个密钥流的输入，这样就形成了一个反馈循环。OFB模式中使用的密钥流可以视为一种密钥流密码。</p>
+</li>
+<li><p>密码反馈模式（CFB）：在CFB模式下，类似于OFB模式，先生成一个初始向量（IV），然后使用初始向量和密钥流生成伪随机序列。不同的是，CFB模式将该序列的一部分与明文进行异或运算，产生密文，然后将</p>
+</li>
+</ol>
+<p>一部分密文作为下一个密钥流的输入。CFB模式中使用的密钥流可以视为一种密钥流密码。</p>
+<p>总结一下，<strong>OFB和CFB模式</strong>与<strong>密钥流</strong>的关系是密切的，因为它们使用生成的<strong>伪随机序列（密钥流）</strong>来加密和解密数据。这些模式通过反馈循环使用密钥流生成序列，并使用序列对明文进行异或运算以产生密文。而ECB和CBC模式则不直接涉及密钥流的使用。</p>
+</li>
+</ol>
+<h2 id="DES"><a href="#DES" class="headerlink" title="DES"></a>DES</h2><p>DES这个算法中， 加密密钥和解密密钥是一样的吗？有什么区别和共同点</p>
+<p>DES有一个<strong>初始密钥</strong>，这个里面的加密密钥和解密密钥是<strong>一模一样的</strong></p>
+<p>但是，加密密钥在使用的过程中有16轮迭代，这是加密，是k1,k2,…,k16</p>
+<p>解密，是反的，k16,k15,…,k1</p>
+<p><strong>使用顺序是反的</strong></p>
+<h2 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h2><p>- </p>
+<h1 id="非对称密码体制"><a href="#非对称密码体制" class="headerlink" title="非对称密码体制"></a>非对称密码体制</h1><p><strong>RSA</strong>是重点</p>
+<p>密钥生成过程</p>
+<p>1、 随机找两个质数 P 和 Q ,P 与 Q 越大，越安全；</p>
+<p>2、 计算他们的乘积 n &#x3D; P * Q</p>
+<p>3、 计算 n 的欧拉函数 φ(n)：φ(n) &#x3D; φ(P * Q)&#x3D; φ(P - 1)φ(Q - 1) &#x3D; (P - 1)(Q - 1)</p>
+<p>4、 随机选择一个整数 e，条件是 1&lt; e &lt; φ(n)，且 e 与 φ(n) 互质</p>
+<p>5、 计算e对于 φ(n) 的模反元素d，可以使得 ed 除以 φ(n) 的余数为 1</p>
+<p>( 1&lt;d&lt;e，且ed mod φ(n) &#x3D; 1 ) 即：d&#x3D;e^-1 ( mod φ(n) )</p>
+<p>6、 公钥（n，e)；私钥（n，d)；</p>
+<p>RSA使用公共指数e和私有指数d。指数e是每个人都知道的公钥(e, N)的一部分。使用公钥e加密的消息只能使用私钥d解密</p>
+<p>加解密过程</p>
+<p>c：密文</p>
+<p>m：明文</p>
+<p>加密：c &#x3D; m^e mod N</p>
+<p>解密：m &#x3D; c^d mod N</p>
+<p>反反复复看一看RSA加密算法（8行） 每一个形容词，副词，动作去理解 动机是什么 ：使得。。。存在着逆元</p>
+<p>双钥根基是 安全本原 </p>
+<h2 id="DH密钥分配协议"><a href="#DH密钥分配协议" class="headerlink" title="DH密钥分配协议"></a>DH密钥分配协议</h2><p>它不是真正意义上的非对称密码实例，仅仅是一个单向函数；</p>
+<p>算法的目的是使得两个用户安全地交换一个会话密钥。</p>
+<h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>![Screen Shot 2023-06-06 at 19.49.16](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 19.49.16.png)</p>
+<h3 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h3><p>![Screen Shot 2023-06-06 at 19.46.23](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 19.46.23.png)</p>
+<p>DH密钥交换协议<strong>不支持认证功能</strong>，需要额外的身份认证机制来保证安全性。</p>
+<h3 id="数学难题"><a href="#数学难题" class="headerlink" title="数学难题"></a>数学难题</h3><p>离散对数难题</p>
+<p>Diffie-Hellman密钥交换算法安全性源于在<strong>有限域上计算离散对数</strong>，它比计算指数更为困难。</p>
+<ul>
+<li><p>攻击者只知道<em>a</em>、<em>q</em>、<em>y</em>_A、<em>y</em>_B，除非计算离散对数，恢复<em>x</em>A、 <em>x</em>B，否则无济于事。</p>
+</li>
+<li><p>a和q的选取</p>
+<ul>
+<li>(<em>q</em>-1)&#x2F;2应该是一个素数，并且<em>q</em>应该足够大：系统的安全性取决于与<em>q</em>同样长度的数的因子分解的难度；</li>
+<li>可以选择任何模<em>n</em>的本原元<em>a</em>，通常选择最小的a(一般是一位数)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>![Screen Shot 2023-06-06 at 19.49.41](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 19.49.41.png)</p>
+<h2 id="RSA密码体制"><a href="#RSA密码体制" class="headerlink" title="RSA密码体制"></a>RSA密码体制</h2><p>由Rivest、Shamir、Adleman三位密码学家1978年发明的RSA算法是一种用数论构造的，迄今为止最为成熟完善的一个可逆的公钥密码体制，<strong>问题难度基于 大整数分解</strong>。</p>
+<p>RSA算法利用了单向陷门函数的原理：所谓的<strong>陷门信息</strong>( <strong>私钥</strong>(d,n) )</p>
+<p>RSA体制的几个组成部分</p>
+<ul>
+<li>密钥生成</li>
+<li>加密</li>
+<li>解密</li>
+</ul>
+<h3 id="代数系统的完备性"><a href="#代数系统的完备性" class="headerlink" title="代数系统的完备性"></a>代数系统的完备性</h3><p>在代数系统中，RSA（Rivest-Shamir-Adleman）加密算法并不是一个完备性证明。RSA是一种非对称加密算法，它基于数论中的大整数分解难题。RSA算法的安全性依赖于在合理时间内无法对大整数进行有效分解的假设。</p>
+<p>完备性是一个逻辑学中的概念，用于描述一个形式系统是否能够推导出所有正确的陈述。在代数系统中，完备性通常指的是形式系统是否能够推导出所有的合法等式或不等式。</p>
+<p>RSA加密算法并不是一个形式系统，而是一种加密技术。它的设计目的是提供一种可靠的加密方式，使得只有具有私钥的人能够解密密文。RSA的安全性基于数论中的数学难题，即大整数分解问题。这个问题目前被认为是非常困难的，因为没有已知的有效算法可以在合理的时间内对大整数进行分解。</p>
+<p>然而，RSA算法的安全性并不是通过完备性证明来证明的。相反，RSA的安全性是基于一个假设，即大整数分解问题的难度。虽然该假设在实践中一直得到验证，但它并没有通过完备性证明来得到严格的数学证明。</p>
+<p>因此，RSA加密算法的安全性不是建立在代数系统的完备性上，而是基于数论中的数学难题。</p>
+<h3 id="密钥生成"><a href="#密钥生成" class="headerlink" title="密钥生成"></a>密钥生成</h3><ol>
+<li><p>选取两个大的整数p，q，计算 n &#x3D; pq</p>
+</li>
+<li><p>随机选取加密密钥 e，使得e与(<em>p</em> - 1)(<em>q</em> - 1)互素[存在<strong>逆元</strong>]</p>
+</li>
+<li><p>用扩展欧几里德算法计算解密密钥<em>d</em>，以满足</p>
+<p>​	ed &#x3D; 1 <strong>mod</strong> (p-1)(q-1)  <strong>&#x3D;&gt;</strong>  d &#x3D; e^-1 <strong>mod</strong> (p-1)(q-1)</p>
+</li>
+<li><p>得到的公钥为(e,n)；私钥为(d,n)</p>
+</li>
+</ol>
+<p>&lt;选择一个e，且e与(p-1)(q-1)互素的动机是什么？因为非对称加密算法的公钥是e，私钥是d，他一定要使得e在(p-1)(q-1)下存在着逆元，他才可能使得 ed &#x3D; 1 mod (p-1)(q-1) ，而只有e与模数互素的时候才存在逆元&gt;</p>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><p>C &#x3D; M^e <strong>mod</strong> n</p>
+<h3 id="解密"><a href="#解密" class="headerlink" title="解密"></a>解密</h3><p>M &#x3D; C^d <strong>mod</strong> n</p>
+<h3 id="RSA的限制"><a href="#RSA的限制" class="headerlink" title="RSA的限制"></a>RSA的限制</h3><p>使用RSA的一些限制</p>
+<ul>
+<li><p>知道了对于一个给定模数的一个加&#x2F;解密密钥指数对，攻击者就能分解这个模数；</p>
+</li>
+<li><p>知道了对于一个给定模数的一个加&#x2F;解密密钥指数对，攻击者无需分解<em>n</em>就可以计算出别的加&#x2F;解密对；</p>
+</li>
+<li><p>在通信网络中，利用RSA的协议不应该使用公共模数；</p>
+</li>
+<li><p>消息应用随机数填充以避免对加密指数的攻击；</p>
+</li>
+<li><p>解密指数应该大。</p>
+</li>
+</ul>
+<h3 id="更高效的算法"><a href="#更高效的算法" class="headerlink" title="更高效的算法"></a>更高效的算法</h3><p>大指数模幂运算</p>
+<p>![Screen Shot 2023-06-06 at 20.08.56](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 20.08.56.png)</p>
+<h2 id="ECC"><a href="#ECC" class="headerlink" title="ECC"></a>ECC</h2><p><strong>椭圆曲线</strong> <strong>理解几何意义（特别是</strong> <strong>两倍点</strong> <strong>三倍点。</strong></p>
+<p><strong>可能要算</strong> <strong>P &#x3D; A + B</strong></p>
+<h3 id="椭圆曲线与两倍点，三倍点"><a href="#椭圆曲线与两倍点，三倍点" class="headerlink" title="椭圆曲线与两倍点，三倍点"></a>椭圆曲线与两倍点，三倍点</h3><p>![Screen Shot 2023-06-06 at 10.27.17](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 10.27.17.png)</p>
+<h4 id="P-x3D-A-B-点"><a href="#P-x3D-A-B-点" class="headerlink" title="P &#x3D; A+B 点"></a>P &#x3D; A+B 点</h4><p>![Screen Shot 2023-06-06 at 10.27.45](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 10.27.45.png)</p>
+<p>当B与A重合时，作切线得到的 P &#x3D; A + A &#x3D; 2A</p>
+<p>再过A与2A点连线，同样方法可以得到 三倍点 P’ &#x3D; A + 2A &#x3D; 3A</p>
+<h3 id="加密解密方法"><a href="#加密解密方法" class="headerlink" title="加密解密方法"></a>加密解密方法</h3><ol>
+<li>选择一条椭圆曲线Ep(a,b)，并取椭圆曲线上一点作为基点P</li>
+<li>选定一个大数k作为私钥，并生成公钥Q &#x3D; kP</li>
+<li><strong>加密：</strong>选择随机数r，将消息M生成密文C，密文是一个点对 C &#x3D; (rP,M+rQ)</li>
+<li><strong>解密</strong>：<strong>M</strong> + r<strong>Q</strong> - k(rP) &#x3D; M + r**(kP)** - k(rP) &#x3D; <strong>M</strong></li>
+</ol>
+<h3 id="计算举例"><a href="#计算举例" class="headerlink" title="计算举例"></a>计算举例</h3><p>需要注意的是：<strong>1&#x2F;2</strong> mod 23 &#x3D;&#x3D; <strong>12</strong> mod 23</p>
+<p>【n &#x3D;&#x3D; 1&#x2F;2 mod 23 <strong>&#x3D;&gt;</strong> 2n &#x3D;&#x3D; 1 &#x3D;&#x3D; 24 mod 23 <strong>&#x3D;</strong>&gt; <strong>n &#x3D; 12</strong> 】</p>
+<p><strong>分数取模运算</strong></p>
+<p>![Screen Shot 2023-06-06 at 10.39.15](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 10.39.15.png)</p>
+<h1 id="消息认证和散列（杂凑）函数"><a href="#消息认证和散列（杂凑）函数" class="headerlink" title="消息认证和散列（杂凑）函数"></a>消息认证和散列（杂凑）函数</h1><p>课上把认证的范畴放大了</p>
+<p>认证的范畴：</p>
+<ol>
+<li>完整性验证（hash，杂凑函数）</li>
+<li>身份验证（通常做法：id与消息串联起来；结合PKI，事实上可以通过传递你的数字证书（与非对称密钥息息相关）来实现）</li>
+</ol>
+<ul>
+<li><p><strong>保密服务与认证服务的区别</strong></p>
+<ul>
+<li>保密的目的是防止对手破译系统中的机密信息；</li>
+<li>认证(Authentication)是防止主动攻击的重要技术，如伪装、窜扰等，包括对消息的内容、顺序、和时间的窜改以及重发等。</li>
+</ul>
+</li>
+<li><p><strong>认证的分类</strong></p>
+<ul>
+<li><strong>实体认证</strong>：验证信息的发送者是真的，而不是冒充的，包括信源、信宿等的认证和识别；</li>
+<li><strong>消息认证</strong>：验证信息的完整性，验证数据在传送或存储过程中未被窜改、重放或延迟等。</li>
+</ul>
+</li>
+</ul>
+<h3 id="认证"><a href="#认证" class="headerlink" title="认证"></a>认证</h3><p>•<strong>认证系统的工作原理</strong></p>
+<p>•发送方利用底层的认证函数产生一个用来认证的认证标识；</p>
+<p>•消息接收方利用上层的认证协议基于认证标识验证真实性。</p>
+<p>•<strong>认证函数的分类</strong></p>
+<p>•<strong>加密函数</strong>：用整个消息的密文作为消息认证的认证标识；</p>
+<p>•<strong>消息认证码</strong>(MAC)<strong>：指消息被一密钥控制的公开函数作用后产生的、用作认证符的、固定长度的数值，也称为</strong>密码校验和；</p>
+<p>•<strong>散列函数</strong>：一个不需要密钥的公开函数，将任意长度的输入消息映射成一个固定长度的输出值，并以此值作为认证标识别。</p>
+<p><strong>对称加密体制实现认证的不足</strong></p>
+<p>•<strong>额外的差错检验：</strong>确保消息的完整性——<strong>帧校验序列</strong>。</p>
+<p>•<strong>不提供数字签名</strong>：接收方可以伪造，发送方可以否认。</p>
+<h4 id="基于消息认证码MAC的认证"><a href="#基于消息认证码MAC的认证" class="headerlink" title="基于消息认证码MAC的认证"></a>基于消息认证码MAC的认证</h4><p>•通信双方共享一个密钥<em>k</em>；</p>
+<p>•发送者使用密钥<em>k</em>和明文<em>m</em>一起产生一个短小的定长数据分组</p>
+<p><em>MAC</em> &#x3D; <em>C**k</em>(<em>m</em>)</p>
+<p>•接收者执行步骤二，将结果与收到的<em>MAC</em>进行比对。如果二者相等，则可判断</p>
+<p>p接收者确信报文未被更改过；</p>
+<p>p接收者确信报文来自声称的发送者。</p>
+<p>反之，则认证不通过(<strong>身份无效或者消息无效</strong>)。</p>
+<p>•<strong>MAC****实现认证的不足</strong></p>
+<p>•不提供数字签名(<em>认证编码密钥和认证译码密钥相同</em>)</p>
+<p>•不提供消息机密性(<em>MAC**函数无需可逆</em>)</p>
+<p>•<strong>改进版本</strong></p>
+<p><strong>![Screen Shot 2023-06-07 at 00.29.30](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-07 at 00.29.30.png)</strong></p>
+<h4 id="基于散列函数的认证"><a href="#基于散列函数的认证" class="headerlink" title="基于散列函数的认证"></a>基于散列函数的认证</h4><p>•<strong>散列函数****H</strong>：是一种公开的单向密码体制函数，将任意长的消息映射为较短的、固定长度的值H(<em>m</em>) ，又被称为<strong>HASH****函数</strong>、<strong>哈希函数</strong>)</p>
+<p>•<strong>单向性</strong>：将明文映射到密文，并且映射是不可逆的；</p>
+<p>•<strong>固定长度性</strong>：可以将任意长度的输入映射为固定长度的输出。</p>
+<p>p<strong>散列值</strong></p>
+<p>•将任意长度的消息或者数据块单向地映射成固定长度的输出结果，此输出结果被称为散列值(又被称为杂凑码、数字指纹、消息摘要)</p>
+<p>p散列函数在<strong>数据完整性验认证</strong>、<strong>数字签名</strong>等领域有广泛应用。</p>
+<p>MD5和SHA-1</p>
+<p>MD5（Message Digest Algorithm 5）和SHA-1（Secure Hash Algorithm 1）是哈希函数，用于将任意长度的数据转换成固定长度的哈希值。它们被广泛用于数据完整性校验、密码存储和数字签名等领域。然而，需要注意的是，由于存在安全性漏洞，MD5和SHA-1已经不再被推荐用于安全性要求较高的应用。</p>
+<p>MD5是一种128位哈希算法，它将输入数据转换为一个128位的哈希值。MD5具有较快的计算速度和较小的哈希值输出，因此在某些非安全性要求较高的场景下仍有一些应用。然而，由于MD5存在多个漏洞，包括碰撞攻击和预映像攻击，它已被证明不安全。碰撞攻击指的是找到两个不同的输入，它们产生相同的MD5哈希值；预映像攻击指的是找到与给定MD5哈希值相对应的输入。</p>
+<p>SHA-1是一种160位的哈希算法，它将输入数据转换为一个160位的哈希值。SHA-1相对于MD5提供了更高的安全性，但在近年来也被证明存在安全性漏洞。与MD5类似，SHA-1也受到碰撞攻击和预映像攻击的威胁。因此，SHA-1已经不再被广泛推荐用于安全性要求较高的应用。</p>
+<p>区别：</p>
+<ol>
+<li>长度：MD5生成的哈希值为128位，而SHA-1生成的哈希值为160位，因此SHA-1提供了比MD5更大的哈希空间。</li>
+<li>安全性：SHA-1相对于MD5提供了更高的安全性。然而，随着时间的推移，SHA-1也被发现存在漏洞，并逐渐被认为不安全。</li>
+<li>碰撞攻击：MD5和SHA-1都受到碰撞攻击的威胁，但SHA-1的碰撞攻击难度更高。</li>
+<li>计算速度：MD5的计算速度相对较快，而SHA-1稍微慢一些。</li>
+</ol>
+<p>综上所述，由于MD5和SHA-1存在安全性漏洞，它们不再适用于对数据进行安全性保护的应用。现在推荐使用更安全的哈希算法，如SHA-256、SHA-3等。这些算法提供更大的哈希空间和更高的安全性，以满足现代安全需求。</p>
+<h1 id="密钥管理"><a href="#密钥管理" class="headerlink" title="密钥管理"></a>密钥管理</h1><h2 id="PKI数字验证"><a href="#PKI数字验证" class="headerlink" title="PKI数字验证"></a>PKI数字验证</h2><h3 id="PKI术语"><a href="#PKI术语" class="headerlink" title="PKI术语"></a>PKI术语</h3><ul>
+<li><p><strong>X.509</strong></p>
+<p>X.509是一个由ITU-T(ISO&#x2F;IEC)针对公钥证书和属性证书框架提出的建议。</p>
+</li>
+<li><p><strong>Repository</strong>(存储库)</p>
+<p>一个数据库，可以存储证书或CRLs等信息，允许进行不可靠的信息检索。存储库应包括目录服务，但不限于目录服务。</p>
+</li>
+<li><p><strong>Certification binding</strong>(认证绑定)</p>
+<p>“密钥”和“名字”能够被公钥证书绑定到一起。绑定可以是非直接的：例如，代替密钥的是密钥的散列值，或者是对另外一个包含密钥的证书的引用。</p>
+</li>
+<li><p>**Trust(信任)<strong>及</strong>Chain of Trust(**信任链)</p>
+<p>一个信任链使用了信任的传递性。例如，当证书不是由一个本地的证书中心发布的，在验证这个证书的过程中会形成一个信任链。在这个情况下，每个CA信任链中的下一个CA。链中相邻实体的信任通过对链中的后继的公钥的持有来形成，这个公钥用来验证后继的签名。</p>
+</li>
+</ul>
+<h3 id="PKI基本组件"><a href="#PKI基本组件" class="headerlink" title="PKI基本组件"></a>PKI基本组件</h3><ul>
+<li><p><strong>CA:</strong> 证书操作管理规范CPS-Certification Practices Statement。</p>
+</li>
+<li><p><strong>RA:</strong> 负责申请者的登记和初始鉴别，它的职责是将来自某个具有合法资格并且经过认证的人的证书请求向上提交。</p>
+</li>
+<li><p><strong>证书服务器</strong>:根据注册过程中提供的信息生成证书的及其或者服务。</p>
+</li>
+<li><p><strong>证书库</strong>: 通常是一个公开访问的目录，比如X.500目录或LDAP目录。</p>
+</li>
+<li><p><strong>证书验证</strong>:验证签名，检查有效期，检查证书的用途是否符合CPS的说明，确认该证书没有被CA撤销。</p>
+</li>
+<li><p><strong>密钥恢复服务</strong>: 使得加密密钥能够被恢复。</p>
+</li>
+<li><p><strong>时间服务器</strong>:须为一个单调增加的时间源，且需对时间进行签名。</p>
+</li>
+</ul>
+<h3 id="PKI基本框架"><a href="#PKI基本框架" class="headerlink" title="PKI基本框架"></a>PKI基本框架</h3><p>假设Alice希望与Bob安全的通信，但是她还没有获得自己的通信所需要的密钥和证书：</p>
+<ul>
+<li><p>Alice首先通过类似RSA的公钥算法产生一个公&#x2F;私钥对。然后她创建一个证书请求，这个请求包括一个Alice的唯一名字，可能还包括与她相关的其它附加信息，这个请求还包括Alice的公钥；</p>
+</li>
+<li><p>Alice必须使用注册中心的公钥加密此请求然后将其提交给注册中心，或者通过不同频道信号传输完成这一步骤；</p>
+</li>
+<li><p>接下来，注册中心要决定是否批准这个请求，结果将是批准或不批准。</p>
+</li>
+<li><p>如果批准，那么这个请求将被提交到CA批准和签署。一个签名的请求是Alice的新证书，将被通过RA送回到她的手中。</p>
+</li>
+<li><p>因为Alice拥有了有效的证书，Bob就可以解密Alice发给他的信息了，这个信息是用Bob的公钥加密并用Alice的私钥签名的。但是首先Bob必须收到Alice的证书并验证它。通常，证书都保存在存储库中，并从那里取得。</p>
+</li>
+</ul>
+<p>![image-20230606202949677](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230606202949677.png)</p>
+<h1 id="密码学的应用"><a href="#密码学的应用" class="headerlink" title="密码学的应用"></a>密码学的应用</h1><h2 id="PGP-Pretty-Good-Privacy"><a href="#PGP-Pretty-Good-Privacy" class="headerlink" title="PGP**(Pretty Good Privacy)**"></a>PGP**(Pretty Good Privacy)**</h2><p>PGP是一个完整的电子邮件安全软件包，包括<strong>加密、鉴别、电子签名和压缩</strong>等技术。</p>
+<p>PGP并没有使用什么新的概念，它只是将现有的一些算法如 MD5，RSA，以及 IDEA 等综合在一起而已。</p>
+<p>先 P 算哈希值(指纹，摘要，完整性验证用) &#x3D;&gt; 发送方RSA私钥签名 H &#x3D;&gt; M &#x3D;  P｜H 拼接 <strong>压缩</strong> &#x3D;&gt; 对称密钥k加密 Ek(M.zip)，用接收方RSA公钥加密k后，<strong>W &#x3D; (Ek(M.zip) | E(k))</strong> &#x3D;&gt; 放网络上</p>
+<p>![Screen Shot 2023-06-06 at 12.56.30](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 12.56.30.png)</p>
+<p>![Screen Shot 2023-06-06 at 12.56.43](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 12.56.43.png)</p>
+<h1 id="重点安全协议"><a href="#重点安全协议" class="headerlink" title="重点安全协议"></a>重点安全协议</h1><h2 id="重点协议"><a href="#重点协议" class="headerlink" title="重点协议"></a>重点协议</h2><ul>
+<li>基于拉格朗日插值的秘密共享方案</li>
+<li>比特承诺</li>
+<li>1-out-2不经意传输</li>
+</ul>
+<h3 id="基于拉格朗日插值的秘密共享方案"><a href="#基于拉格朗日插值的秘密共享方案" class="headerlink" title="基于拉格朗日插值的秘密共享方案"></a>基于拉格朗日插值的秘密共享方案</h3><p>基于拉格朗日插值的秘密共享方案是一种使用多项式插值来实现秘密分割和重构的方法。它可以将一个秘密信息分割为多个部分，分发给不同的参与者，只有当足够的参与者合作时，才能将秘密信息恢复出来。</p>
+<ol>
+<li><p>秘密分割</p>
+<ul>
+<li><p>传统秘密保持的缺陷</p>
+<p>集中式的秘密保持导致风险集中、权力集中</p>
+</li>
+<li><p>秘密分割</p>
+<p>把一个消息分成<em>n</em>块，单独的每一块看起来没有意义，但所有的块集合起来能恢复出消息</p>
+</li>
+<li><p>例1：商店的保险箱可能要求同时用经理的钥匙和运钞车司机的钥匙才能打开</p>
+<ul>
+<li><p>避免不诚实的经历或运钞车司机偷窃钱财</p>
+</li>
+<li><p>防止歹徒威胁手无寸铁的经理</p>
+</li>
+</ul>
+</li>
+<li><p>例2：在可信第三方<em>Trent</em>的主导下将某秘密进行分割在<em>Alice</em>与<em>Bob</em>之间共享的简单协议</p>
+<ul>
+<li><p><strong>秘密分割</strong></p>
+<ul>
+<li>Trent<em>产生一随机比特</em>R*(<em>R</em>和<em>M</em>一样长度)*</li>
+<li>Trent用R异或M得到S &#x3D; R ⊕ M</li>
+<li>Trent将R给Alice，将S给Bob</li>
+</ul>
+</li>
+<li><p><strong>秘密重构</strong></p>
+<p>Alice和Bob将他们的消息异或就可以得到消息M &#x3D; R ⊕ S</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>秘密共享</p>
+<p>•<strong>基于主密钥的信息安全系统的缺陷</strong></p>
+<p>•主密钥偶然或有意地被泄露，系统中的秘密信息会遭受攻击</p>
+<p>•主密钥丢失或损坏，系统中的秘密信息将无法恢复</p>
+<p>•主密钥的解决方案导致权力过于集中——密钥管理</p>
+<p>•<strong>秘密共享</strong></p>
+<p>•将秘密分割存储的密码技术</p>
+<p>•目的是阻止秘密过于集中，以达到分散风险和容忍入侵的目的</p>
+</li>
+<li><p><strong>最常用的秘密共享方案——</strong>门限方案</p>
+<p>门限方案：实现门限访问结构的秘密共享</p>
+<p>一个(<em>m</em>,<em>n</em>)的门限访问结构</p>
+<p><em>m</em>为门限值</p>
+<p>秘密SK被拆分为<em>n</em>个份额的共享秘密</p>
+<p>利用任意<em>m</em>个或更多个共享份额可以恢复秘密<em>SK</em></p>
+<p>任何<em>m</em>-1或更少的共享份额是不能得到关于秘密<em>SK</em>的任何有用信息![Screen Shot 2023-06-06 at 22.06.52](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 22.06.52.png)</p>
+</li>
+<li><p>基于拉格朗日插值多项式的秘密共享(m,n)门限方案</p>
+<ul>
+<li><p>假定在<em>n</em>个人中共享密钥<em>k</em>，使得任意<em>m</em>个人可以相互协作获取密钥</p>
+</li>
+<li><p>秘密分割</p>
+<ul>
+<li>生成比<em>k</em>大的随机素数<em>p</em></li>
+<li>生成<em>m</em>-1个随机整数<em>R</em>1,<em>R</em>2,…,<em>Rm</em>，每一都比<em>p</em>小</li>
+<li>使用<em>F</em>(<em>x</em>)定义为有限域上的多项式</li>
+<li>通过定义<em>ki</em> &#x3D; <em>F</em>(<em>xi</em>)生成<em>F</em>的<em>n</em>个“影子”（<em>xi</em>取值不同）</li>
+<li>[<em>p</em>,<em>xi</em>,<em>ki</em>]作为标识为i的秘密共享者秘密分量，并销毁<em>R</em>1,<em>R</em>2,…,<em>Rm</em>和<em>k</em></li>
+</ul>
+</li>
+<li><p>秘密重构</p>
+<ul>
+<li><em>m</em>个线性方程可以构造重构<em>F</em>(<em>x</em>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>![Screen Shot 2023-06-06 at 22.12.30](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 22.12.30.png)</p>
+<p>首先，你将使用拉格朗日插值多项式的方法生成一个多项式，其中多项式的次数为m-1。多项式的系数是你的秘密信息。然后，你会从这个多项式中选择n个不同的点，并将每个点的坐标（x, y）分发给参与者。</p>
+<p>现在，每个参与者都持有一个点的坐标（x, y），其中x是唯一的，并且y是根据多项式计算得出的。没有人知道完整的多项式，因此无法独自从点的坐标中推断出秘密信息。</p>
+<p>当足够数量的参与者聚集在一起时，他们可以通过使用拉格朗日插值多项式的方法，将他们的点的坐标组合起来，从而重构出完整的多项式。一旦多项式被恢复，他们可以使用多项式中的系数来计算出秘密信息。</p>
+<h3 id="比特承诺"><a href="#比特承诺" class="headerlink" title="比特承诺"></a>比特承诺</h3><p>什么是比特承诺</p>
+<p>•Alice想对Bob承诺一个预测（即1bit或bit序列），但直到某个时间以后才揭示她的预测。而另一方面，Bob想确信在Alice承诺了她的预测后，她<strong>没有改变</strong>她的想法。 </p>
+<h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4><p>•承诺者Alice向接收者Bob承诺一个消息，承诺过程要求，Alice向Bob承诺时，Bob不可能获得关于被承诺消息的任何信息；</p>
+<p>•经过一段时间后，Alice能够向Bob证实她所承诺的消息，但是Alice无法欺骗Bob。 </p>
+<h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><ul>
+<li><p><em>Alice</em>把消息<em>m</em>放在一个箱子里并锁住（只有<em>Alice</em>有钥匙可以打开箱子）送给<em>Bob</em>；</p>
+</li>
+<li><p>当<em>Alice</em>决定向<em>Bob</em>证实消息时，<em>Alice</em>会把消息<em>m</em>及钥匙给<em>Bob</em>；</p>
+</li>
+<li><p><em>Bob</em>能够打开箱子并验证箱子里的消息与<em>Alice</em>出示的消息相同，并且<em>Bob</em>确信箱子里的消息在他的保管期间没有被篡改。</p>
+</li>
+</ul>
+<h4 id="关键核心"><a href="#关键核心" class="headerlink" title="关键核心"></a>关键核心</h4><p><strong>两个重要性质</strong></p>
+<ul>
+<li><p><strong>隐蔽性</strong></p>
+<p>即接收者不能通过接收的箱子来确定承诺值<em>m</em></p>
+</li>
+<li><p><strong>约束性</strong></p>
+<p>发送者不能改变箱子中的承诺值<em>m</em></p>
+</li>
+</ul>
+<p><strong>构造比特承诺的两大元素</strong></p>
+<ul>
+<li><p>哈希函数</p>
+</li>
+<li><p>加密&#x2F;签名</p>
+</li>
+</ul>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>![Screen Shot 2023-06-06 at 17.40.35](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 17.40.35.png)</p>
+<p>![Screen Shot 2023-06-06 at 17.40.43](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 17.40.43.png)</p>
+<p>![Screen Shot 2023-06-06 at 17.40.53](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 17.40.53.png)</p>
+<h2 id="几种攻击"><a href="#几种攻击" class="headerlink" title="几种攻击"></a>几种攻击</h2><p>记住分析的<strong>对象</strong></p>
+<p>算法有他的作用，考试有时候不考安全缺陷，一上来说挺好的…?</p>
+<ul>
+<li>窃听、篡改</li>
+<li><strong>重放&#x2F;预重放</strong></li>
+<li><strong>反射</strong></li>
+<li>拒绝服务</li>
+<li><strong>类型攻击</strong></li>
+<li>密码分析</li>
+<li><strong>证书操纵</strong></li>
+<li>协议交互</li>
+</ul>
+<h3 id="重放-x2F-预重放"><a href="#重放-x2F-预重放" class="headerlink" title="重放&#x2F;预重放"></a>重放&#x2F;预重放</h3><ul>
+<li><strong>重放</strong></li>
+</ul>
+<p>攻击者把之前运行协议中的消息或部分消息插入到当前运行的协议</p>
+<ul>
+<li><strong>预重放</strong></li>
+</ul>
+<p>重放攻击的一种扩展攻击</p>
+<p>敌手Malice首先窃听Alice和Bob的通信</p>
+<p>Malice用真实的身份分别与Alice和Bob通信</p>
+<p>Malice利用“1”中的部分信息诱使Alice和Bob透露部分秘密信息</p>
+<p>Malice利用得到的秘密信息计算出Alice和Bob通信的密钥</p>
+<h3 id="反射攻击"><a href="#反射攻击" class="headerlink" title="反射攻击"></a>反射攻击</h3><p>典型情形——<strong>重放的一种很重要的特例</strong></p>
+<p>相同协议的并行运行——并行会话攻击</p>
+<p>在密码学中，重放攻击是指攻击者拦截并记录了合法的通信数据包，然后将这些数据包在<strong>稍后的时间内重新发送</strong>给目标系统，目的是<strong>欺骗目标系统</strong>接受重复的请求或操作，从而导致安全漏洞或破坏系统的完整性。</p>
+<p>而<strong>反射攻击</strong>是重放攻击的一种特殊情况，攻击者在该攻击中使用<strong>目标系统作为反射点</strong>，将合法的请求发送给目标系统，然后将目标系统的响应<strong>反射回受害者</strong>，使受害者误以为响应来自目标系统。这种攻击通常发生在协议中没有适当的身份验证或安全验证机制的情况下。</p>
+<p>[如果对受害者直接使用重放攻击的话，那就是攻击者直接截获系统发送给受害者的的数据包，一段时间后重复发送，而反射则是：攻击者利用系统，先发送请求给系统，让系统来再次发送给受害者数据包]</p>
+<p>反射攻击可以被用来进行欺骗、伪装或模拟身份，攻击者可以利用它来绕过某些安全措施或执行未经授权的操作。例如，在网络身份验证过程中，攻击者可以拦截合法的身份验证请求并将其重放给服务器，以获取未经授权的访问权限。</p>
+<p><strong>实例</strong></p>
+<p><em>Alice</em>和<em>Bob</em>通过表明知道共享的密钥<em>K</em>来达到相互认证</p>
+<p>![Screen Shot 2023-06-06 at 13.22.08](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 13.22.08.png)</p>
+<ol>
+<li><p>Alice发送一个随机数NA给Bob，使用密钥K进行加密。这是Alice向Bob发起认证的第一步。</p>
+</li>
+<li><p>Bob接收到Alice的消息后，生成自己的随机数NB，并使用密钥K加密后发送给Alice。同时，Bob也将Alice之前发送的NA包含在响应中。</p>
+</li>
+<li><p>Alice接收到Bob的消息后，提取出NB，并将NB发送给Bob。这是Alice向Bob发起认证的第二步，以确认Bob的身份。</p>
+<hr>
+</li>
+<li><p>Alice误将NA加密后发送给了Malice（攻击者）。</p>
+</li>
+<li><p>Malice收到Alice发送的消息后，解密得到NA，然后将NA加密后发送给Alice。</p>
+</li>
+<li><p>Alice接收到Malice发送的消息后，误以为这是Bob发来的消息，并将N’A（可能是Malice生成的伪随机数）加密后发送给Malice，同时将自己之前发送的NA包含在响应中。</p>
+</li>
+<li><p>Malice收到Alice发送的消息后，解密得到N’A，并将N’A加密后发送给Alice。</p>
+</li>
+</ol>
+<p>最后两个步骤以相同的方式继续进行。</p>
+<p>从上述流程可以看出，攻击者Malice成功地伪造了Bob的身份，Alice错误地认为自己正在与Bob进行安全的通信。这种攻击被称为中间人攻击（Man-in-the-Middle Attack），其中攻击者能够拦截和篡改通信，导致双方之间的认证和密钥交换过程受到破坏。</p>
+<h3 id="类型攻击"><a href="#类型攻击" class="headerlink" title="类型攻击"></a>类型攻击</h3><p>类型攻击是一种安全漏洞，它利用了数据类型的不正确解释或处理来实施攻击。在该攻击中，攻击者将一种数据类型的信息错误地解释为另一种类型的信息，从而导致意外的行为或安全问题。</p>
+<p>一个常见的实例是将实体的标识符错误地解释为密钥。假设用户接收到一个二进制串，攻击者可能会通过伪装或篡改该二进制串，使其看起来像是一个密钥。用户由于无法准确判断数据类型，可能会错误地将该二进制串解释为密钥，并在后续的操作中使用<strong>该密钥</strong>，从而导致安全漏洞。</p>
+<p>![Screen Shot 2023-06-06 at 17.03.04](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 17.03.04.png)</p>
+<p>这是Otway-Rees协议的一个示例，其中Alice、Bob和Server之间进行了安全通信。然而，该协议存在类型攻击的漏洞，可能导致安全问题。下面是对该协议中的类型攻击进行分析：</p>
+<ol>
+<li><p><strong>Alice-&gt;Bob: M, Alice, Bob, {NA, M, Alice, Bob}KAS</strong> </p>
+<p>Alice向Bob发送一条消息，其中包含了自己的<strong>标识符Alice、Bob的标识符Bob</strong>以及<strong>一个加密的信息组合</strong>，包括一个随机数NA、消息M、Alice和Bob的标识符。这里存在一个潜在的问题，攻击者可以将自己的标识符伪装成Alice或Bob的标识符。</p>
+</li>
+<li><p><strong>Bob-&gt;Server: M, Alice, Bob, {NA, M, Alice, Bob}KAS, {NB, M, Alice, Bob}KBS</strong> </p>
+<p>Bob将Alice发送的消息<strong>转发</strong>给Server，并在消息中附加了自己的标识符Bob以及加密的信息组合，包括Alice和Bob的标识符、之前收到的随机数NA和一个新的随机数NB。攻击者可能篡改该消息，伪装成Bob并欺骗Server。</p>
+</li>
+<li><p><strong>Server-&gt;Bob: M, {NA, KAB}KAS, {NB, KAB}KBS</strong> </p>
+<p>Server向Bob发送一条消息，其中包含了之前收到的随机数NA和NB，以及使用共享密钥KAB加密的信息。攻击者可能伪造该消息，伪装成Server并与Bob进行欺骗性通信。</p>
+</li>
+<li><p><strong>Bob-&gt;Alice: M, {NA, KAB}KAS</strong> </p>
+<p>Bob向Alice发送一条消息，其中包含了之前收到的随机数NA和使用共享密钥KAB加密的信息。这里没有直接涉及类型攻击。</p>
+</li>
+</ol>
+<p>在上述协议中，类型攻击的风险存在于Alice和Bob之间的通信以及Bob与Server之间的通信。攻击者可能伪装成Alice、Bob或Server的身份，导致身份伪造、信息篡改或密钥泄露等安全问题。</p>
+<p>为了防范类型攻击和其他安全问题，可以采取以下措施：</p>
+<ol>
+<li>使用数字签名：通过对通信中的消息进行数字签名，可以确保消息的真实性和完整性，防止篡改和身份伪造。</li>
+<li>安全密钥交换：使用安全的密钥交换协议，如Diffie-Hellman密钥交换协议，确保密钥的安全性和秘密性。</li>
+<li>双向认证：在通信过程中，双方应该进行身份验证，以确保彼此的身份是可信的。</li>
+<li>使用安全通道：通过使用安全的通信通道，如TLS&#x2F;SSL协议，可以提供加密和认证功能，确保通信的安全性。</li>
+</ol>
+<p>综上，Otway-Rees协议中存在类型攻击的漏洞，需要采取适当的安全措施来修复这些漏洞，以确保通信的安全和可靠性。</p>
+<h3 id="证书操纵"><a href="#证书操纵" class="headerlink" title="证书操纵"></a>证书操纵</h3><p>在正常情况下的例子中，Alice和Bob希望建立一个共享密钥KAB。他们采用了Diffie-Hellman密钥交换协议，并使用数字证书来验证彼此的身份。</p>
+<p>•当可信第三方没有证明相应的私钥真实的被这个声明拥有密钥对的实体所拥有时可以实施证书操纵攻击</p>
+<p>•攻击者可以获得合法的公钥证书，即使它不知道该公钥对应的私钥</p>
+<p>![Screen Shot 2023-06-06 at 17.28.35](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 17.28.35.png)</p>
+<p>交换过程如下：</p>
+<ol>
+<li>Alice生成一个随机数x，并计算gx，然后将gx和她的数字证书Cert(A)发送给Bob。</li>
+<li>Bob生成一个随机数y，并计算gy，然后将gy和他的数字证书Cert(B)发送给Alice。</li>
+<li>Alice和Bob使用对方发送的公钥和自己的私钥进行计算，得到共享密钥KAB &#x3D; g^(ay+bx)。</li>
+</ol>
+<p>在这种情况下，Alice和Bob都能够验证对方的身份，确保他们交换的公钥是合法的，并成功建立了共享密钥KAB。</p>
+<p>然而，在<strong>证书操纵攻击的例子</strong>中，有一个名为Malice的恶意第三方试图干扰密钥交换过程，并获得共享密钥的知识。攻击的步骤如下：</p>
+<ol>
+<li>Alice生成一个随机数x，并计算gx，然后将gx和她的数字证书Cert(A)发送给Malice而不是Bob。</li>
+<li>Malice接收到gx和Cert(A)，然后将Alice的g^x和伪造的数字证书Cert(C)发送给Bob。</li>
+<li>Bob生成一个随机数y，并计算gy，然后将gy和他的数字证书Cert(B)发送给Malice而不是Alice。</li>
+<li>Malice接收到gy和Cert(B)，然后将自己生成的g^{yc}和伪造的数字证书Cert(B)发送给Alice。</li>
+</ol>
+<p>在这种情况下，Alice和Bob都没有意识到他们正在与Malice通信。他们使用了Malice提供的伪造的公钥和证书，导致了错误的密钥计算。共享密钥KAB被计算为g^{acy+bx}，与Alice和Bob原本希望的不同。</p>
+<p>因此，这个攻击展示了在密钥交换过程中使用<strong>伪造证书</strong>会导致共享密钥的泄露给攻击者，从而破坏了通信的机密性和安全性。在实际应用中，确保数字证书的真实性和完整性对于保护密钥交换的安全至关重要。</p>
+<h3 id="安全协议的三大理论分析方法"><a href="#安全协议的三大理论分析方法" class="headerlink" title="安全协议的三大理论分析方法"></a>安全协议的三大理论分析方法</h3><ul>
+<li><p>安全多方计算</p>
+<p>•1982<strong>年姚期智给出概念，Goldreich、Micali、Wigderson</strong>给出一般描述</p>
+<p>•<strong>刻画了在不同环境下攻击者所具备的能力</strong></p>
+<p>•有利于澄清分布式计算中的一些最基本的安全性问题</p>
+<p>•有利于说明在既定的安全模型下哪些计算功能是可以安全实现的</p>
+<p>•给出设计分布式安全协议的一般技术和方法</p>
+<p>•有助于设计可应用于实际系统中的某些具体的方案和模块</p>
+<p><strong>任何安全多方计算问题可以通过电路计算协议来解决</strong></p>
+</li>
+<li><p>安全协议的形式化分析</p>
+<p>•采用一种正规的、标准的方法对协议进行分析，以检查协议是否满足其安全目标</p>
+<p>•有助于界定安全协议的边界，即协议系统与其运行环境的界面</p>
+<p>•有助于更准确地描述安全协议的行为</p>
+<p>•有助于更准确的定义安全协议的特性</p>
+<p>•有助于证明安全协议满足其说明，以及在何种情况不满足说明</p>
+<p>•<strong>研究动态</strong></p>
+<p>•BAN类逻辑——Dolev-Yao</p>
+<p>串空间(Strand Space)理论、Paulson的归纳方法</p>
+</li>
+<li><p>安全协议的可证明安全性理论</p>
+<p>•<strong>可证明安全性</strong></p>
+<p>•确定安全方案或协议的安全目标</p>
+<p>•构造一个形式攻击者模型，并定义它对安全方案或协议的安全性“意味”着什么</p>
+<p>•一般将安全协议归约到一个“极微本原”——它必须存在</p>
+<p>•挫败方案或协议的唯一方法是破译或解决“极微本原”</p>
+<p>•研究动态</p>
+<p>•标准模型——严重牺牲效率</p>
+<p>•RO模型——面向实用</p>
+</li>
+</ul>
+<h1 id="题目汇总"><a href="#题目汇总" class="headerlink" title="题目汇总"></a>题目汇总</h1><h2 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h2><ol>
+<li><p>今天后的第200天星期几？</p>
+<p>x &#x3D; 200 mod 7</p>
+<p>200  &#x3D; 25 x 8</p>
+<p>x &#x3D; 25 x 8 &#x3D; 4 x 1 &#x3D; 4 mod 7</p>
+<p><strong>x &#x3D; 4</strong></p>
+</li>
+<li><p>计算 2014^{2014} <strong>mod 41</strong></p>
+<p> [2023^{2023} <strong>mod 41</strong>]</p>
+<p>2014 &#x3D; <strong>5</strong> mod 41</p>
+<p> 2014^{2014} &#x3D; 5^{41} &#x3D; 5^{3x13+2} &#x3D; 25*2^13 &#x3D; 9 * 2 ^12 &#x3D; 9 *23 *23 &#x3D; <strong>5</strong> mod 41</p>
+<p>2023^2023 &#x3D; 14^2023 &#x3D; 14 * 14^{2*1011} &#x3D; 14 * 32^1011 &#x3D; 14 * (-9) * 9^1010 &#x3D; 14 *(-9) *81^505 &#x3D; 14 *(-9) * (-1)^505 &#x3D; 14 * 9 &#x3D; 126 &#x3D; <strong>3</strong> mod 41</p>
+</li>
+<li><p>计算欧拉算式fai(n)</p>
+<p>n为素数时：fai(p^k) &#x3D; p^k*(1-1&#x2F;p)</p>
+</li>
+<li><p>非对称密码体制RSA的<strong>单向陷门</strong>函数指的是什么？以双钥加密RSA与单钥加密DES为例，对比分析其加密性能和应用场景的差异。</p>
+<p><strong>答：</strong></p>
+<p>在RSA非对称密码体制中，<strong>单向陷门函数</strong>（One-Way Trapdoor Function）指的是一种数学函数，其在正常情况下<strong>易于计算</strong>，但要<strong>逆向计算却非常困难</strong>。这种函数的特点使得RSA算法能够实现公钥加密和数字签名。</p>
+<p>RSA的单向陷门函数是指，<strong>通过公钥进行加密操作是相对容易的，但通过公钥逆向计算出私钥进行解密操作则非常困难</strong>，需要巨大的计算量。</p>
+<p>对比DES和RSA：</p>
+<p><strong>加密性能：</strong></p>
+<ol>
+<li>RSA（双钥加密）：RSA算法的加密和解密速度相对较慢，尤其是在处理大量数据时。这是因为RSA算法涉及大数的计算和模幂运算，计算复杂度较高。</li>
+<li>DES（单钥加密）：DES算法相对于RSA来说，加密和解密的速度较快，因为DES算法使用了对称密钥，采用相对简单的位操作和置换。</li>
+</ol>
+<p><strong>应用场景：</strong></p>
+<ol>
+<li><p>RSA（双钥加密）：RSA广泛应用于安全通信、数字签名和密钥交换等领域。它适用于需要安全通信和身份验证的场景，例如在Web浏览器中使用HTTPS进行安全通信，或者进行数字签名来验证文件的完整性和身份。</p>
+</li>
+<li><p>DES（单钥加密）：DES算法主要用于对小量数据进行加密，例如密码保护文件、数据库中的敏感数据或通信链路中的数据保护。由于DES密钥较短（56位），安全性相对较弱，因此在一些安全要求较高的场景下，已被更强大的加密算法如AES所取代。</p>
+</li>
+</ol>
+</li>
+<li><p>列举<strong>替换加密</strong>与<strong>换位加密</strong>在对称加密DES、AES处理流程中的体现</p>
+<p><strong>答：</strong></p>
+<p><strong>替换加密</strong>主要涉及<strong>替换</strong>明文和密钥中的位，而<strong>换位加密</strong>主要涉及明文和密钥中位的<strong>重新排列</strong></p>
+<p>对称加密<strong>DES</strong>：</p>
+<ol>
+<li><strong>替换加密</strong>：DES算法在初始的明文加密过程中，使用了替换加密的操作。它将输入的64位明文块分成两个32位的半块，并对每个半块进行一系列的替换操作，包括初始置换（Initial Permutation）和最终置换（Final Permutation）。</li>
+<li><strong>换位加密</strong>：DES算法也使用了换位加密的操作。在明文的加密过程中，DES算法会对每个半块进行16轮的加密运算，每轮都涉及到换位操作，如扩展置换（Expansion Permutation）和逆置换（Inverse Permutation）。</li>
+</ol>
+<p>对称加密<strong>AES</strong>：</p>
+<ol>
+<li><p><strong>替换加密</strong>：AES算法在密钥扩展阶段（Key Expansion）中使用了替换加密的操作。它通过多次的字节替换操作，如字节替代（Byte Substitution）和行移位（Shift Rows），对密钥进行扩展，生成每轮加密所需的子密钥。</p>
+</li>
+<li><p><strong>换位加密</strong>：AES算法在加密和解密的过程中使用了换位加密的操作。在加密过程中，明文通过行移位（Shift Rows）和列混淆（Mix Columns）操作进行换位；在解密过程中，密文通过逆行移位（Inverse Shift Rows）和逆列混淆（Inverse Mix Columns）操作进行换位。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>“DES算法的核心是S盒”</strong>这句话怎么理解？而其中循环移位、扩展、交替迭代等所扮演的密码学角色又是什么？（10分）</p>
+<p><strong>答：</strong></p>
+<p>S盒（Substitution-box）是一种在对称密钥算法中进行替代操作的基本组件。在分组密码中，它们通常用于掩盖密钥和密文之间的关系，从而保证混淆性。数学上，S盒是一种向量布尔函数。</p>
+<p>DES算法中使用了八个S盒，每个S盒将6位输入替换为4位输出。S盒是DES算法中唯一的非线性部分，它们的非线性是算法的强度所在。S盒的设计经过了精心的调整，以增加抵抗差分密码分析等攻击方法的能力。</p>
+<p>因此，可以说S盒是DES算法的核心，它们决定了DES算法的安全性和效率。</p>
+<p>都是为了增加<strong>算法的混淆性和扩散性</strong>。</p>
+<ul>
+<li><p><strong>循环移位</strong>（cyclic rotation）是指将一个二进制串向左或向右移动一定的位数，并将移出的位数补充到另一端。在DES中，循环移位主要用于密钥扩展函数（key expansion function），它将64位的密钥分成两个28位的半密钥，并在每轮中对它们进行不同的循环移位，从而生成16个48位的子密钥。循环移位可以改变密钥的比特顺序。</p>
+</li>
+<li><p><strong>扩展</strong>（expansion）是指将一个二进制串扩充到更长的长度，并可能复制一些比特。在DES中，扩展主要用于Feistel函数（Feistel function），它将32位的右半块扩展到48位，并与子密钥进行异或运算。扩展可以使右半块与子密钥匹配长度。</p>
+</li>
+<li><p><strong>交替迭代</strong>（alternation iteration）是指将两个二进制串交替地进行某种运算，并重复多次。在DES中，交替迭代主要用于Feistel网络结构（Feistel network structure），它将左半块和右半块交替地进行异或运算和Feistel函数运算，并重复16轮。交替迭代可以使左半块和右半块相互影响。</p>
+</li>
+</ul>
+</li>
+<li><p>DH协议的中间人攻击体现的是对哪方面的攻击？可采用密码学中的什么技术解决？如何解决？</p>
+<p><strong>答：</strong></p>
+<p>DH协议的中间人攻击体现的是对通信方身份验证的攻击。可采用密码学中的数字签名技术解决。具体方法是在交换公钥时，使用私钥对公钥进行签名，并附上证书，接收方可以用证书中的公钥验证签名的有效性，从而确认公钥的真实性。</p>
+<p>![image-20230606191213560](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20230606191213560.png)</p>
+</li>
+<li><p>什么叫做<strong>单向函数</strong>，什么叫做<strong>单向陷门函数</strong></p>
+<p><strong>答：</strong></p>
+<ul>
+<li><p>单向函数是一种数学函数，它在一个方向上很容易计算，但在相反方向上却非常困难。具体来说，给定一个输入，通过单向函数可以快速计算出对应的输出，但从输出反推回输入却需要非常大的计算成本或几乎不可能。</p>
+</li>
+<li><p>单向陷门函数是一种特殊的单向函数，它不仅具有单向性质，而且还包含一个陷门（trapdoor），通过这个陷门，可以在给定某些特定的附加信息的情况下，从输出反推回输入。换句话说，单向陷门函数是一个在一个方向上很容易计算且难以反推，但在特定的陷门信息下可以实现逆向计算的函数。</p>
+</li>
+</ul>
+<p>单向函数和单向陷门函数是密码学中重要的概念，它们在各种密码学协议和安全机制中扮演着关键角色。例如，密码学中的哈希函数常常被当作单向函数使用，因为它们很容易计算出哈希值，但从哈希值反推回原始输入是非常困难的。而公钥加密算法和数字签名算法中使用的数学函数，例如RSA和椭圆曲线密码学，都包含了单向陷门函数的概念，通过使用私钥作为陷门，可以实现对应的解密和签名验证操作。</p>
+<p>在密码学中，单向函数和单向陷门函数的安全性是基于数学难题的复杂性，例如大整数的因子分解问题、离散对数问题等。它们的安全性还依赖于密钥长度的选择和算法的设计。在实际应用中，选择合适的单向函数和单向陷门函数对于保障密码协议和安全系统的安全性至关重要。</p>
+</li>
+<li><p>数字签名的操作模式一般是先摘要后签名，先摘要再签名与先签名再摘要的区别是什么？谈谈其密码学机理</p>
+<p><strong>答：</strong></p>
+<ul>
+<li><p>数字签名的操作模式一般是<strong>先摘要后签名</strong>，即先对原始消息进行散列函数运算，得到一个较短的摘要信息，然后用发送者的私钥对摘要信息进行加密，形成数字签名。这样做的好处是可以提高加密和解密的效率，因为摘要信息的长度是固定的，而且比原始消息短得多。另外，摘要信息也可以防止消息被篡改，因为只要消息发生一点变化，经过散列函数运算后得到的摘要也会完全不同</p>
+</li>
+<li><p><strong>先签名再摘要</strong>的意思是先用发送者的私钥对原始消息进行加密，形成数字签名，然后对数字签名进行散列函数运算，得到一个较短的摘要信息。这样做的<strong>缺点</strong>是加密和解密的效率会降低，因为原始消息的长度可能很长，而且不固定。另外，先签名再摘要也不能防止消息被篡改，因为攻击者可以对数字签名进行任意修改，然后重新计算摘要信息。</p>
+</li>
+</ul>
+</li>
+<li><p>学者Jadith Moore曾给出了使用RSA的一些限制，其中要求“消息应该使用<strong>随机数填充</strong>以避免对加密指数的攻击”，请简要说明如此处理的动机是什么？</p>
+<p><strong>答：</strong></p>
+<p>使用<strong>随机数填充RSA</strong>加密的动机是为了增强安全性和防止攻击。具体来说：</p>
+<p>RSA加密是一种非对称加密算法，它使用公钥和私钥来加密和解密消息。如果没有填充，那么相同的明文会产生相同的密文，这会使得攻击者可以通过比较或分析密文来猜测明文或密钥。</p>
+<p>RSA加密也有一些数学结构，导致了一些弱点。例如，如果明文是一个小于模数的整数，那么攻击者可以通过对密文进行开方运算来恢复明文。或者，如果明文可以被分解成两个较小的整数，那么攻击者可以通过对密文进行因式分解来恢复明文。</p>
+<p>使用正确的填充可以防止这些弱点。填充是在明文前面或后面添加一些随机数据，使得每次加密相同的明文都会产生不同的密文，并且增加了破解的难度。填充还可以确保明文不会过小或过大，从而避免上述攻击。</p>
+<p>常用的RSA填充方式有PKCS#1_v1.5和OAEP两种。PKCS#1_v1.5是由RSA公司设计的一种填充算法，它由几个固定位、随机数和明文消息组成。OAEP是一种更安全的填充算法，它使用了一个掩码生成函数和一个费斯妥网络来对明文进行两次变换。</p>
+</li>
+<li><p>基于<strong>LFSR</strong>的流密码体制其安全强度主要依赖于什么？提高其安全性的途径是什么？</p>
+<p><strong>答：</strong></p>
+<p>LFSR的流密码体制要求LFSR具有较长的长度、较复杂的反馈函数、较随机的初始状态和较复杂的组合方式，才能提高安全强度，抵抗各种攻击方法</p>
+<p><strong>LFSR****的长度：</strong>LFSR的长度决定了它的状态空间大小，也就是它能产生的不同的比特流的数量。LFSR的长度越长，状态空间越大，比特流越难被穷举破解。</p>
+<p><strong>LFSR****的反馈函数：</strong>LFSR的反馈函数决定了它的输出比特与哪些输入比特进行异或运算。LFSR的反馈函数越复杂，输出比特越随机，比特流越难被预测或分析。</p>
+<p><strong>LFSR****的初始状态：</strong>LFSR的初始状态决定了它开始生成比特流时的内部状态。LFSR的初始状态越随机，比特流越难被重现或重放。</p>
+<p><strong>LFSR****的组合方式：</strong>如果使用多个LFSR来生成比特流，那么它们的组合方式也会影响安全强度。LFSR的组合方式越复杂，比特流越难被分解或还原。</p>
+<p><strong>提高安全性的途径：</strong></p>
+<p>提高LFSR的流密码体制的安全性的途径有以下几种：</p>
+<ol>
+<li><p>使用更长的LFSR和更复杂的反馈函数，以增加状态空间和输出比特的随机性，抵抗穷举和分析攻击。</p>
+</li>
+<li><p>使用多个LFSR和非线性组合函数，以增加输出比特的非线性和复杂度，抵抗相关和猜测攻击。</p>
+</li>
+<li><p>使用现代的流密码算法，如Trivium或ChaCha20，它们基于LFSR的思想，但增加了更多的混淆和扩散操作，提高了密码强度和效率。</p>
+</li>
+<li><p>使用密钥&#x2F;初始向量（Key&#x2F;IV）模式，以避免重复使用相同的密钥或初始状态，防止重现或重放攻击。</p>
+</li>
+</ol>
+</li>
+<li><p>提高基于“LFSR+JK触发器”的流密码加密算法的安全性的途径是什么？</p>
+<p>提高基于“LFSR+JK触发器”的流密码加密算法的安全性的途径有以下几种：</p>
+<p>增加LFSR的级数，即寄存器的个数，从而增加LFSR的最大周期和状态数，使得攻击者更难猜测或分析LFSR的反馈函数和初始状态。</p>
+<p>选择合适的反馈函数，使得LFSR的特征多项式为本原多项式，从而产生m序列，即最大长度的伪随机序列。这样可以避免LFSR产生重复或简单的序列，降低攻击者利用已知明文或密文进行暴力破解或线性分析的可能性。</p>
+<p>使用非线性组合生成器，即将多个LFSR的输出进行非线性运算（如异或、与、或等），从而产生更复杂的密钥流。这样可以打破LFSR的线性结构，增加攻击者进行代数分析或相关攻击的难度。</p>
+<p>使用非线性反馈移位寄存器（NLFSR），即将LFSR的反馈函数替换为非线性函数（如S盒、布尔函数等），从而产生更不规则的密钥流。这样可以消除LFSR的线性相关性，增加攻击者进行伯努利分析或伪随机性检测的难度。</p>
+</li>
+<li><p>为什么非对称算法<strong>只用于传递比较短的</strong>，而一般不传递长度大于n的</p>
+<p>答：</p>
+<p>在使用RSA进行加密时，常常建议对长度不超过RSA密钥长度n的明文进行加密，而不是对长度大于n的明文进行加密。这是因为RSA加密算法的安全性与明文长度有关。</p>
+<p>RSA算法中，密钥的长度（通常以比特位数表示）决定了其安全性。较短的密钥长度容易受到攻击，而较长的密钥长度可以提供更高的安全性。一般而言，要保证安全性，RSA密钥的长度应该足够大，以使得攻击者在合理的时间内无法通过穷举法或其他方法破解密钥。</p>
+<p>当使用RSA加密时，明文的长度通常需要小于或等于密钥长度。如果明文长度超过了密钥长度，即长度大于n，就会导致加密结果的不可预测性和安全性下降。这是因为RSA算法对于超过密钥长度的明文进行加密时，会对明文进行分块处理。在分块处理中，明文被分割成较小的块，每个块分别进行加密。但是，由于明文长度大于密钥长度，可能会导致加密块的长度过小，使得加密结果易受到攻击。</p>
+<p>因此，为了保证RSA加密的安全性，建议将明文长度限制在不超过密钥长度的范围内。这样可以确保明文能够充分利用密钥的长度，从而提供较高的安全性。如果需要加密较长的数据，通常会采用对称加密算法，然后使用RSA加密对称密钥的方式来保护数据的安全性。</p>
+<p>&#x3D;&gt; 引申出第<strong>七</strong>题的<strong>随机填充</strong></p>
+</li>
+<li><p>简述 <strong>同模攻击</strong></p>
+<p>同模攻击（Common Modulus Attack）是一种针对使用相同模数的多个加密密钥进行加密的系统的攻击方法。在这种情况下，如果加密密钥之间存在某种共享的模数，攻击者可以利用这个共享模数来获取明文或密钥信息。</p>
+<p>同模攻击的基本原理是利用模数相同的性质。当使用相同模数对不同的明文进行加密时，对应的密文是具有一定关联的。攻击者可以通过观察这些关联，使用模重建技术（如中国剩余定理）来恢复出明文或密钥信息。</p>
+<p>具体来说，假设存在两个加密密钥对，分别为公钥1（e1, n）和公钥2（e2, n），它们的模数n是相同的。攻击者拥有两个密文，分别为c1和c2。攻击者可以通过以下步骤进行同模攻击：</p>
+<ol>
+<li><p>根据扩展的欧几里得算法，计算出两个公钥的互质线性组合，即计算出整数a和b，使得a * e1 + b * e2 &#x3D; 1。</p>
+</li>
+<li><p>使用模重建技术，根据c1^a * c2^b mod n的计算结果，恢复出明文的比特表示。</p>
+</li>
+<li><p>将明文的比特表示转换为可读的明文消息。</p>
+</li>
+</ol>
+<p>同模攻击的成功与否取决于模数的选择以及加密密钥的共享情况。如果在系统中使用相同的模数，并且多个加密密钥之间存在共享模数的情况下，同模攻击可能成为一个潜在的安全威胁。因此，在设计加密系统时，应避免出现同模攻击的漏洞，确保每个加密密钥都使用独立的模数。</p>
+</li>
+<li><p>电影《听风者》中男主演何兵（梁朝伟饰演）是一名优秀的侦听人员，该电影中设定监听敌对通过变换频道而防止监听，何兵只需搜索频道就能获知情报，<strong>从秘密通信角度来看电影中缺少了哪些技术环节</strong>？此外，对于代号“老鬼”的编码在电影中设定为多次通信都相同，利用<strong>秘密通信什么技术能其进行安全增强</strong>？</p>
+<p>答：</p>
+<p>从秘密通信的角度来看，电影中缺少了以下几个技术环节：</p>
+<ol>
+<li><p>加密通信：在现实世界中，敌对势力进行秘密通信时通常会使用加密技术来保护其消息内容。加密是将明文信息转换为密文，以确保只有授权的人能够解读。电影中没有提及任何加密措施，这使得敌对势力轻易地通过频道变换来防止监听。</p>
+</li>
+<li><p>密钥交换：在现实世界中，进行安全通信的双方需要通过安全渠道交换密钥。密钥是用于加密和解密通信内容的关键。电影中未涉及密钥交换过程，这使得何兵能够轻松地搜索频道并获得情报，而无需密钥。</p>
+</li>
+<li><p>身份验证：在现实世界中，为了确保通信的安全性，通信双方通常需要进行身份验证，以确认彼此的身份并防止中间人攻击。电影中未提及任何身份验证措施，这使得何兵能够自由地搜索频道并获得情报。</p>
+</li>
+<li><p>抗干扰技术：现实中的通信系统通常会采取一些抗干扰措施，以应对频道干扰和干扰信号的影响。电影中没有描述敌对势力如何应对干扰，而何兵却能够毫无困难地搜索并获取情报。</p>
+</li>
+</ol>
+<p>综上所述，从秘密通信的角度来看，电影中缺少了加密通信、密钥交换、身份验证和抗干扰技术等关键技术环节。这些环节在现实世界中是保护通信安全的重要组成部分，但在电影中被忽略了。</p>
+<p>如果代号”老鬼”的编码在电影中被设定为多次通信都相同，但你希望通过秘密通信进行安全增强，以下是一些技术选项：</p>
+<ol>
+<li><p>单次一次性密码（One-Time Pad）：这是一种非常安全的加密方法。它使用随机生成的一次性密钥，与明文一一对应进行异或操作来加密消息。每次通信都使用不同的密钥，因此即使多次通信使用相同的编码，也无法通过分析编码来推断出明文信息。</p>
+</li>
+<li><p>公钥加密：公钥加密使用一对密钥，即公钥和私钥。发送方使用接收方的公钥进行加密，只有接收方的私钥才能解密消息。这样，即使相同的编码被重复使用，只有接收方能够解密消息，他人无法获得明文信息。</p>
+</li>
+<li><p>消息认证码（MAC）：使用MAC技术可以验证消息的完整性和真实性，以防止消息被篡改或伪造。发送方使用密钥和消息一起生成一个MAC，并将其附加到消息中。接收方使用相同的密钥和收到的消息计算MAC，并将其与附加的MAC进行比较。如果两者匹配，则说明消息未被篡改。</p>
+</li>
+<li><p>安全随机数生成器：对于安全增强，关键是使用真正随机的密钥和编码。因此，确保使用安全的随机数生成器来生成密钥和编码是非常重要的。</p>
+</li>
+</ol>
+<p>这些技术可以用来增强秘密通信的安全性，即使相同的编码被重复使用。通过使用一次性密码、公钥加密、消息认证码以及安全的随机数生成器，可以更好地保护通信内容的机密性、完整性和真实性。</p>
+</li>
+</ol>
+<h2 id="设计题"><a href="#设计题" class="headerlink" title="设计题"></a>设计题</h2><ol>
+<li><p><strong>（送分题）<em><em>*<em>Alice</em>与*Bob</em>是国家安全保障监管部门的同事，负责重要涉密单位的日常监管和信息资产管理，现</em>Alice*现场采集到一个容量大于</strong>500M<strong>的监控视频，需利用</strong>公开网络<strong>发送给身处总部的<em>Bob</em>进行内容审查，该视频</strong>内容涉密<strong>，且存在敌特分子</strong>窃密、假冒<strong>的风险，网络服务质量一般（</strong>经常断线或不稳定<strong>），他们可利用的基础设施是各自的</strong>公钥证书<strong>，请利用所学知识，构建一套安全可信的完整解决方案</strong>[这题套PGP就好了]**</p>
+<p>(出一道题在两个实体之间进行秘密通信 什么方法密钥共享（对称算法，流密码） 通过密钥交换实现分发（非对称）下面用对称加密算法或者流密码解决信息加密传输的问题（对称，效率高）)</p>
+<ol>
+<li>密钥交换分发：先使用非对称密钥算法RSA或者密钥交换算法DH算法使得双方拥有一个对称密钥</li>
+<li>加密视频内容：使用<strong>对称加密算法</strong>，例如AES，对监控视频进行加密。选择一个强密码并生成一个随机的密钥，用于加密视频文件。确保密钥的安全性和机密性。</li>
+<li>数字签名：使用<em>Alice</em>的私钥对加密后的视频文件进行数字签名(签名生成过程通常包括对消息进行哈希计算，然后使用私钥对哈希值进行加密生成签名)。这将确保文件的完整性和认证性，使得<em>Bob</em>能够验证文件的来源和未被篡改。</li>
+<li>压缩和分割：由于网络服务质量一般，视频文件的大容量可能导致传输困难。因此，可以对<strong>加密后的</strong>视频文件进行压缩，以减小文件大小。接着，将压缩后的视频文件<strong>分割</strong>成多个较小的文件块。</li>
+<li>加密传输：<em>Alice</em> 将分割后的文件块通过公开网络传输给<em>Bob</em>。在传输过程中，可以使用传输层协议（例如SSL&#x2F;TLS）来提供安全的传输通道，以保护数据的机密性和完整性。</li>
+<li>传输完整性验证：为了确保文件块在传输过程中未被篡改，Bob在收到文件后，对文件块进行拼接，并使用Alice的公钥验证数字签名确保完整性。</li>
+<li>文件重组和解密：<em>Bob</em>使用密钥对文件进行解密，恢复原始的监控视频。</li>
+</ol>
+<p>DH算法流程图：</p>
+<p>基本的DH协议是没有数字证书步骤的</p>
+<p>![Screen Shot 2023-06-06 at 12.36.00](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 12.36.00.png)</p>
+<p>在基本的DH协议中，参与方（比如Alice和Bob）执行以下步骤：</p>
+<ol>
+<li>Alice选择一个私密随机数x，并计算公钥gx &#x3D; g^x。</li>
+<li>Bob选择一个私密随机数y，并计算公钥gy &#x3D; g^y。</li>
+<li>Alice将公钥gx发送给Bob，Bob收到后进行下一步。</li>
+<li>Bob将公钥gy发送给Alice。</li>
+<li>Alice使用Bob发送的公钥gy和自己的私密数x计算共享密钥KAB &#x3D; (gy)^x。</li>
+<li>Bob使用Alice发送的公钥gx和自己的私密数y计算共享密钥KAB &#x3D; (gx)^y。</li>
+<li>Alice和Bob计算出的共享密钥KAB相同，即 KAB &#x3D; g^(xy)。</li>
+</ol>
+<p>带数字证书的DH协议的基本流程：</p>
+<ol>
+<li>Alice生成一个私密随机数x，并计算公钥gx &#x3D; g^x。</li>
+<li>Alice获取自己的数字证书Cert(A)[g^a]，其中包含Alice的公钥和由认证机构签发的数字签名。</li>
+<li>Alice将gx和Cert(A)发送给Bob。</li>
+<li>Bob收到Alice的消息后，验证Cert(A)的数字签名，确保它是由受信任的认证机构签发的，并提取Alice的公钥。</li>
+<li>Bob生成一个私密随机数y，并计算公钥gy &#x3D; g^y。</li>
+<li>Bob获取自己的数字证书Cert(B)[g^b]，其中包含Bob的公钥和由认证机构签发的数字签名。</li>
+<li>Bob将gy和Cert(B)发送给Alice。</li>
+<li>Alice收到Bob的消息后，验证Cert(B)的数字签名，确保它是由受信任的认证机构签发的，并提取Bob的公钥。</li>
+<li>Alice使用Bob的Cert(B)和自己的g^x，自己的Cert(A)和Bob的g^y计算共享密钥KAB &#x3D; g^(bx+ay)</li>
+<li>Bob使用Alice的Cert(A)和自己的g^y，自己的Cert(B)和Alice的g^x计算共享密钥KAB &#x3D; g^(bx+ay)</li>
+<li>Alice和Bob计算出的共享密钥KAB相同，即 KAB &#x3D; g^(bx+ay)。</li>
+</ol>
+<p>RSA算法流程图</p>
+<p>![Screen Shot 2023-06-06 at 12.40.36](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 12.40.36.png)</p>
+<p>利用RSA算法的公钥私钥体系进行密钥传递</p>
+<p>![Screen Shot 2023-06-06 at 12.41.46](&#x2F;Users&#x2F;jianbo&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;Screen Shot 2023-06-06 at 12.41.46.png)</p>
+</li>
+<li><p>随着智能移动终端技术的飞速发展和应用普及，微商日益成为一种重要载体渠道，而商家与买家通常是不熟知的，信任的支撑是微信平台，请利用所学知识，构建一个基于微信平台的双向认证方案（包括流程图）</p>
+<p>针对商家和买家之间的双向认证需求，可以使用基于微信平台的以下方案：</p>
+<ol>
+<li><p>商家认证：</p>
+<ul>
+<li>商家在微信平台上注册并完成认证流程，提供必要的商家身份信息和资质证明。微信平台可以进行商家认证审核，确保商家的真实身份和合法性。</li>
+<li>商家可以选择开通微信支付功能，进一步加强其身份认证和支付信任度。</li>
+</ul>
+</li>
+<li><p>买家认证：</p>
+<ul>
+<li>买家可以通过微信平台进行实名认证，提供个人身份信息并完成验证。微信平台可以验证买家身份的真实性。</li>
+<li>买家可以关联自己的银行卡或其他支付方式进行支付设置，以提供额外的支付验证和信任度。</li>
+</ul>
+</li>
+<li><p>双向认证：</p>
+<ul>
+<li>商家和买家在进行交易前，双方可以通过微信平台的通信渠道进行身份验证和信任建立。</li>
+<li>商家可以在微信平台上展示认证标识，如认证图标或认证徽章，以增加买家对其身份和信任度的确认。</li>
+<li>买家可以通过商家的认证信息、评价和信誉等进行验证和评估，选择可信任的商家进行交易。</li>
+</ul>
+</li>
+<li><p>安全通信：</p>
+<ul>
+<li>商家和买家在微信平台上进行通信和交易时，可以使用微信平台提供的加密通信功能，确保通信内容的机密性和安全性。</li>
+<li>商家和买家可以通过微信平台上的加密支付功能进行安全的交易过程，保护支付信息的安全和隐私。</li>
+</ul>
+</li>
+<li><p>反欺诈机制：</p>
+<ul>
+<li>微信平台可以利用自身的反欺诈机制和风控系统，监测和防范潜在的欺诈行为和风险，保护商家和买家的利益。</li>
+<li>商家和买家可以向微信平台举报可疑行为，协助平台加强对不信任行为的处理和防范。</li>
+</ul>
+</li>
+</ol>
+<p>通过以上方案，商家和买家可以在微信平台上进行双向认证，建立起彼此的信任关系。商家的认证和信誉度可以通过平台的审核和用户评价来确认，买家的实名认证和支付设置可以增强其身份验证和支付信任度。微信平台的加密通信和支付功能提供了安全保障，而反欺诈机制和用户举报系统可以应对潜在的欺诈行为。这样，商家和买家可以更加安全和放心地在微信平台上进行交易和互动。</p>
+</li>
+<li><p>设计两个实体之间的通信：一次安全通信分为</p>
+<p><strong>两个阶段</strong>：1.密钥协商&#x2F;交换阶段；2.秘密通信阶段</p>
+</li>
+<li></li>
+</ol>
+<h2 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h2><ol>
+<li><p>MD5与SHA-1的处理流程大多相同，构建一个同时支持两者层次类图，包括基类和派生类，要求基本的属性和方法及其简单注释</p>
+<div class="highlight-container" data-rel="Lua"><figure class="iseeu highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">+<span class="comment">-------------------+</span></span><br><span class="line">|   HashAlgorithm   |</span><br><span class="line">+<span class="comment">-------------------+</span></span><br><span class="line">| - hash: <span class="built_in">string</span>    |</span><br><span class="line">+<span class="comment">-------------------+</span></span><br><span class="line">| + computeHash(data: <span class="built_in">string</span>): void |</span><br><span class="line">| + getHash(): <span class="built_in">string</span>               |</span><br><span class="line">+<span class="comment">-------------------+</span></span><br><span class="line"></span><br><span class="line">           ^</span><br><span class="line">           |</span><br><span class="line">           |</span><br><span class="line">           |</span><br><span class="line">+<span class="comment">------------------+</span></span><br><span class="line">|       MD5        |</span><br><span class="line">+<span class="comment">------------------+</span></span><br><span class="line"></span><br><span class="line">+<span class="comment">------------------+</span></span><br><span class="line">|      SHA1        |</span><br><span class="line">+<span class="comment">------------------+</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>注释：</p>
+<ul>
+<li><code>HashAlgorithm</code>：基类，表示哈希算法的抽象概念。具有一个私有属性 <code>hash</code> 用于存储哈希值。</li>
+<li><code>computeHash(data: string): void</code>：计算哈希值的抽象方法，需要子类实现具体的算法。</li>
+<li><code>getHash(): string</code>：获取计算得到的哈希值的方法。</li>
+<li><code>MD5</code>：派生类，表示MD5哈希算法。继承自 <code>HashAlgorithm</code> 类，并实现 <code>computeHash(data: string)</code> 方法来计算MD5哈希值。</li>
+<li><code>SHA1</code>：派生类，表示SHA-1哈希算法。继承自 <code>HashAlgorithm</code> 类，并实现 <code>computeHash(data: string)</code> 方法来计算SHA-1哈希值。</li>
+</ul>
+<p>这个类图展示了基类 <code>HashAlgorithm</code> 和两个派生类 <code>MD5</code> 和 <code>SHA1</code>，它们都具有共同的属性和方法，但根据具体的算法来实现哈希计算。这样的设计允许我们在应用程序中使用通用的 <code>HashAlgorithm</code> 接口，而不必关心具体的算法实现。</p>
+<hr>
+<p>当使用面向对象编程时，基类和派生类是继承关系中的两个重要概念。</p>
+<p><strong>基类（Base Class）</strong>，也称为父类或超类，是继承关系中处于更高层次的类。它定义了一组通用的属性和方法，可以被一个或多个派生类继承和重用。基类通常是抽象的，不能被直接实例化。它为派生类提供了一种共享行为和属性的机制。基类提供了一个通用的接口，派生类可以通过继承基类并添加自己的特定行为来实现具体功能。</p>
+<p><strong>派生类（Derived Class）</strong>，也称为子类或衍生类，是继承关系中处于更低层次的类。它继承了基类的属性和方法，并可以添加自己的特定属性和方法。派生类通过继承基类，获得了基类的行为和功能，同时可以根据自身的需求进行扩展或修改。派生类可以重写继承自基类的方法，以实现自己的行为。</p>
+<p>在上面的类图示例中，<code>HashAlgorithm</code> 是基类，它定义了一个哈希算法的通用接口，包括属性 <code>hash</code> 和方法 <code>computeHash()</code> 和 <code>getHash()</code>。基类提供了用于计算和获取哈希值的基本操作。</p>
+<p><code>MD5</code> 和 <code>SHA1</code> 是派生类，它们继承了 <code>HashAlgorithm</code> 的属性和方法，并实现了自己特定的哈希算法。派生类可以重写继承的方法以提供特定算法的实现。例如，<code>MD5</code> 类重写了 <code>computeHash()</code> 方法来计算MD5哈希值，而 <code>SHA1</code> 类重写了 <code>computeHash()</code> 方法来计算SHA-1哈希值。</p>
+<p>通过使用基类和派生类，我们可以实现代码的重用和灵活性。基类提供了一种统一的方式来处理不同类型的哈希算法，而派生类则可以根据需要扩展或修改基类的行为。这种继承关系可以帮助我们编写更简洁、可扩展和可维护的代码。</p>
+</li>
+<li><p>实现填充方法。（8分）</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">HashAlgorithm</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.<span class="built_in">hash</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">computeHash</span>(<span class="params">self, data</span>):</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">&quot;computeHash() method must be implemented in derived classes.&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getHash</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">hash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MD5</span>(<span class="title class_ inherited__">HashAlgorithm</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">computeHash</span>(<span class="params">self, data</span>):</span><br><span class="line">        md5_hash = hashlib.md5()</span><br><span class="line">        md5_hash.update(data.encode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">        self.<span class="built_in">hash</span> = md5_hash.hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SHA1</span>(<span class="title class_ inherited__">HashAlgorithm</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">computeHash</span>(<span class="params">self, data</span>):</span><br><span class="line">        sha1_hash = hashlib.sha1()</span><br><span class="line">        sha1_hash.update(data.encode(<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line">        self.<span class="built_in">hash</span> = sha1_hash.hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 测试代码</span></span><br><span class="line">data = <span class="string">&quot;Hello, world!&quot;</span></span><br><span class="line"></span><br><span class="line">md5 = MD5()</span><br><span class="line">md5.computeHash(data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;MD5 Hash:&quot;</span>, md5.getHash())</span><br><span class="line"></span><br><span class="line">sha1 = SHA1()</span><br><span class="line">sha1.computeHash(data)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;SHA-1 Hash:&quot;</span>, sha1.getHash())</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>在上面的代码中，我们使用了Python标准库中的 <code>hashlib</code> 模块来计算哈希值。在 <code>HashAlgorithm</code> 基类中，我们定义了一个抽象的 <code>computeHash()</code> 方法，该方法在派生类中需要被实现。然后，我们在 <code>MD5</code> 和 <code>SHA1</code> 派生类中重写了 <code>computeHash()</code> 方法，并使用 <code>hashlib.md5()</code> 和 <code>hashlib.sha1()</code> 创建了相应的哈希对象。接下来，我们使用 <code>update()</code> 方法将数据编码为字节流，并通过调用 <code>hexdigest()</code> 方法获取哈希值的十六进制表示形式。最后，我们在派生类中设置 <code>self.hash</code> 属性来存储计算得到的哈希值。</p>
+<p>在测试代码中，我们创建了一个 <code>MD5</code> 对象和一个 <code>SHA1</code> 对象，并分别调用它们的 <code>computeHash()</code> 方法来计算哈希值。然后，我们使用 <code>getHash()</code> 方法获取计算得到的哈希值，并打印输出。</p>
+<p>请注意，上述代码仅提供了一个基本的示例，实际的哈希算法实现可能需要更复杂的填充方式和处理逻辑，具体取决于算法的要求和应用的需求。</p>
+</li>
+<li><p>假如公钥加密算法RSA的模数位n，加密消息用变量Message表示，一个函数BitCount用于计算一个对象的位数长度，如果BitCount(Message) &gt; BitCount(n)，直接进行加密会存在什么问题，请给出你的解决方案。</p>
+<p>如果在RSA公钥加密算法中，加密消息的位数（BitCount(Message)）大于模数的位数（BitCount(n)），直接进行加密会导致数据溢出和加密结果失真的问题。RSA算法要求加密消息必须小于等于模数，否则会影响加密结果的正确性。</p>
+<p>为了解决这个问题，可以采用分段加密的方案。具体步骤如下：</p>
+<ol>
+<li>将待加密的消息 Message 分割成合适大小的块，使得每个块的位数小于等于模数的位数。</li>
+<li>对每个块分别进行加密。</li>
+<li>将加密后的每个块拼接在一起，形成最终的加密结果。</li>
+</ol>
+<p>这样做的好处是，即使消息的位数大于模数的位数，也能正确地加密每个块而不会导致溢出或加密结果失真。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Util <span class="keyword">import</span> number</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypt_rsa</span>(<span class="params">message, n, e</span>):</span><br><span class="line">    block_size = BitCount(n) - <span class="number">11</span>  <span class="comment"># 为了适应PKCS1填充，减去11个字节</span></span><br><span class="line">    encrypted_blocks = []</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 分割消息为合适大小的块</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(message), block_size):</span><br><span class="line">        block = message[i:i+block_size]</span><br><span class="line">        encrypted_block = <span class="built_in">pow</span>(<span class="built_in">int</span>.from_bytes(block.encode(), <span class="string">&#x27;big&#x27;</span>), e, n)</span><br><span class="line">        encrypted_blocks.append(encrypted_block)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 拼接加密后的块</span></span><br><span class="line">    encrypted_message = <span class="string">b&#x27;&#x27;</span>.join(number.long_to_bytes(block) <span class="keyword">for</span> block <span class="keyword">in</span> encrypted_blocks)</span><br><span class="line">    <span class="keyword">return</span> encrypted_message</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例用法</span></span><br><span class="line">message = <span class="string">&quot;This is a long message to be encrypted.&quot;</span></span><br><span class="line">n = <span class="number">1234567890</span>  <span class="comment"># 模数</span></span><br><span class="line">e = <span class="number">65537</span>  <span class="comment"># 公钥指数</span></span><br><span class="line"></span><br><span class="line">encrypted_message = encrypt_rsa(message, n, e)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Encrypted Message:&quot;</span>, encrypted_message)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>在上述示例代码中，我们使用了 <code>Crypto</code> 库中的 RSA 实现来进行加密操作。首先，我们根据模数的位数减去11个字节，得到每个块的合适大小。然后，我们对消息进行分块，并分别对每个块进行加密。最后，我们将加密后的块拼接在一起，形成最终的加密结果。</p>
+<p>请注意，上述代码仅提供了一个基本的示例，实际的实现可能需要考虑填充方案（如PKCS#1填充）以及其他安全性和性能方面的因素。</p>
+</li>
+<li><p>构建一个可支撑陌生实体之间的秘密通信方案，需要提供实体认证、密钥协商、消息认证、加密通信等功能，并可一定程度上防御重放攻击（提供流程图及关键实例算法）</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">+-------------+                  +----------------+                +----------------+</span><br><span class="line">|   实体 A    |                  	|   	服务器      |               	|   	实体 B     |</span><br><span class="line">+-------------+                  +----------------+                +----------------+</span><br><span class="line">      |                                 |                                |</span><br><span class="line">      |        发送认证请求       				|                                |</span><br><span class="line">      |--------------------------------&gt;|                                |</span><br><span class="line">      |                                 |   验证认证请求   								 |</span><br><span class="line">      |                                 |------------------------------&gt; |</span><br><span class="line">      |                                 |                                |</span><br><span class="line">      |                                 |  					发送认证响应   				 |</span><br><span class="line">      |                                 |&lt;------------------------------ |</span><br><span class="line">      |       验证认证响应     						|                                |</span><br><span class="line">      |&lt;--------------------------------|                                |</span><br><span class="line">      |                                 |                                |</span><br><span class="line">      |     	 生成临时密钥       				|                                |</span><br><span class="line">      |--------------------------------&gt;|                                |</span><br><span class="line">      |                                 |  生成临时密钥 								   |</span><br><span class="line">      |                                 |-------------------------------&gt;|</span><br><span class="line">      |                                 |                                |</span><br><span class="line">      |                                 |     	 发送加密消息  						 |</span><br><span class="line">      |        加密消息      					   |&lt;-------------------------------|</span><br><span class="line">      |&lt;--------------------------------|                                |</span><br><span class="line">      |                                 |                                |</span><br><span class="line">      |                                 | 					 验证消息认证码       	|</span><br><span class="line">      |                                 |&lt;-------------------------------|</span><br><span class="line">      |       验证消息认证码  						 |                                |</span><br><span class="line">      |--------------------------------&gt;|                                |</span><br><span class="line">      |                                 |                                |</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>关键实例算法：</p>
+<ol>
+<li><p>实体认证：</p>
+<ul>
+<li>实体 A 发送认证请求包含自己的身份信息和随机数。</li>
+<li>服务器验证认证请求，检查身份信息并生成随机数，用于后续密钥协商。</li>
+<li>服务器发送认证响应包含服务器的身份信息、随机数和加密的临时密钥给实体 A。</li>
+<li>实体 A 验证认证响应，检查服务器的身份信息和随机数，并获取加密的临时密钥。</li>
+<li>实体 A 和服务器完成实体认证。</li>
+</ul>
+</li>
+<li><p>密钥协商：</p>
+<ul>
+<li>实体 A 和服务器使用临时密钥生成加密通信所需的会话密钥。</li>
+<li>实体 A 和服务器拥有相同的会话密钥，用于加密和解密通信内容。</li>
+</ul>
+</li>
+<li><p>消息认证和加密通信：</p>
+<ul>
+<li>实体 A 使用会话密钥加密消息，并计算消息认证码（MAC）。</li>
+<li>实体 A 发送加密的消息和消息认证码给实体 B。</li>
+<li>实体 B 使用会话密钥解密消息，并验证消息认证码。</li>
+<li>实体 B 和实体 A 完成消息认证和解密，确保通信内容的完整性和机密性。</li>
+</ul>
+<p>这个流程图和关键实例算法提供了一个基本的框架，可以实现陌生实体之间的秘密通信，并包括实体认证、密钥协商、消息认证和加密通信的功能。但请注意，实际的实现可能需要考虑更多的细节和安全性措施，例如使用安全的加密算法、合适的密钥协商协议（如Diffie-Hellman）、安全的消息认证码算法（如HMAC）、防御重放攻击的措施（如使用随机数和时间戳）等。这些因素应根据具体的应用场景和安全需求来设计和实现。</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> hmac</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实体 A</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EntityA</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.identity = <span class="string">&quot;EntityA&quot;</span>  <span class="comment"># 实体 A 的身份信息</span></span><br><span class="line">        self.nonce = os.urandom(<span class="number">16</span>)  <span class="comment"># 实体 A 生成的随机数</span></span><br><span class="line">        self.session_key = <span class="literal">None</span>  <span class="comment"># 实体 A 和服务器之间的会话密钥</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">authenticate</span>(<span class="params">self, server</span>):</span><br><span class="line">        <span class="comment"># 发送认证请求</span></span><br><span class="line">        authentication_request = &#123;</span><br><span class="line">            <span class="string">&quot;identity&quot;</span>: self.identity,</span><br><span class="line">            <span class="string">&quot;nonce&quot;</span>: self.nonce</span><br><span class="line">        &#125;</span><br><span class="line">        server.validate_authentication_request(authentication_request)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">receive_authentication_response</span>(<span class="params">self, authentication_response</span>):</span><br><span class="line">        <span class="comment"># 验证认证响应</span></span><br><span class="line">        <span class="keyword">if</span> authentication_response[<span class="string">&quot;identity&quot;</span>] == <span class="string">&quot;Server&quot;</span>:</span><br><span class="line">            server_nonce = authentication_response[<span class="string">&quot;nonce&quot;</span>]</span><br><span class="line">            encrypted_temp_key = authentication_response[<span class="string">&quot;encrypted_temp_key&quot;</span>]</span><br><span class="line">            self.session_key = self.generate_session_key(server_nonce, encrypted_temp_key)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">generate_session_key</span>(<span class="params">self, server_nonce, encrypted_temp_key</span>):</span><br><span class="line">        <span class="comment"># 实体 A 使用临时密钥生成会话密钥</span></span><br><span class="line">        temp_key = self.decrypt_temp_key(encrypted_temp_key)</span><br><span class="line">        combined_nonce = self.nonce + server_nonce</span><br><span class="line">        session_key = hashlib.sha256(combined_nonce + temp_key).digest()</span><br><span class="line">        <span class="keyword">return</span> session_key</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">encrypt_message</span>(<span class="params">self, message</span>):</span><br><span class="line">        <span class="comment"># 使用会话密钥加密消息</span></span><br><span class="line">        cipher_text = self.session_key[:<span class="number">16</span>]  <span class="comment"># 使用会话密钥的前16字节作为AES密钥</span></span><br><span class="line">        iv = os.urandom(<span class="number">16</span>)  <span class="comment"># 生成随机的初始向量</span></span><br><span class="line">        encrypted_message = self.encrypt_with_aes(cipher_text, iv, message)</span><br><span class="line">        mac = self.calculate_mac(encrypted_message)</span><br><span class="line">        <span class="keyword">return</span> encrypted_message, mac</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">encrypt_with_aes</span>(<span class="params">self, key, iv, message</span>):</span><br><span class="line">        <span class="comment"># 使用AES加密消息</span></span><br><span class="line">        <span class="comment"># 实现AES加密的具体逻辑</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">calculate_mac</span>(<span class="params">self, message</span>):</span><br><span class="line">        <span class="comment"># 计算消息认证码</span></span><br><span class="line">        mac = hmac.new(self.session_key, message, hashlib.sha256).digest()</span><br><span class="line">        <span class="keyword">return</span> mac</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">send_encrypted_message</span>(<span class="params">self, entity_b, encrypted_message, mac</span>):</span><br><span class="line">        <span class="comment"># 发送加密的消息和消息认证码给实体 B</span></span><br><span class="line">        entity_b.receive_encrypted_message(encrypted_message, mac)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 服务器</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Server</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.identity = <span class="string">&quot;Server&quot;</span>  <span class="comment"># 服务器的身份信息</span></span><br><span class="line">        self.nonce = os.urandom(<span class="number">16</span>)  <span class="comment"># 服务器生成的随机数</span></span><br><span class="line">        self.temp_key = os.urandom(<span class="number">32</span>)  <span class="comment"># 服务器生成的临时密钥</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validate_authentication_request</span>(<span class="params">self, authentication_request</span>):</span><br><span class="line">        <span class="comment"># 验证认证请求</span></span><br><span class="line">        <span class="keyword">if</span> authentication_request[<span class="string">&quot;identity&quot;</span>] == <span class="string">&quot;EntityA&quot;</span>:</span><br><span class="line">            entity_a_nonce = authentication_request[<span class="string">&quot;nonce&quot;</span>]</span><br><span class="line">            self.send_authentication_response(entity_a_nonce)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">send_authentication_response</span>(<span class="params">self, entity_a_nonce</span>):</span><br><span class="line">        <span class="comment"># 发送认证响应</span></span><br><span class="line">        encrypted_temp_key = self.encrypt_temp_key(entity_a_nonce)</span><br><span class="line">        authentication_response = &#123;</span><br><span class="line">            <span class="string">&quot;identity&quot;</span>: self.identity,</span><br><span class="line">            <span class="string">&quot;nonce&quot;</span>: self.nonce,</span><br><span class="line">            <span class="string">&quot;encrypted_temp_key&quot;</span>: encrypted_temp_key</span><br><span class="line">        &#125;</span><br><span class="line">        entity_a.receive_authentication_response(authentication_response)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">encrypt_temp_key</span>(<span class="params">self, entity_a_nonce</span>):</span><br><span class="line">        <span class="comment"># 使用实体 A 的随机数和临时密钥加密临时密钥</span></span><br><span class="line">        combined_nonce = entity_a_nonce + self.nonce</span><br><span class="line">        encrypted_temp_key = hashlib.sha256(combined_nonce + self.temp_key).digest()</span><br><span class="line">        <span class="keyword">return</span> encrypted_temp_key</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">validate_mac</span>(<span class="params">self, message, mac</span>):</span><br><span class="line">        <span class="comment"># 验证消息认证码</span></span><br><span class="line">        calculated_mac = hmac.new(entity_b.session_key, message, hashlib.sha256).digest()</span><br><span class="line">        <span class="keyword">return</span> hmac.compare_digest(calculated_mac, mac)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实体 B</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">EntityB</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.session_key = <span class="literal">None</span>  <span class="comment"># 实体 B 和服务器之间的会话密钥</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">receive_encrypted_message</span>(<span class="params">self, encrypted_message, mac</span>):</span><br><span class="line">        <span class="comment"># 验证消息认证码</span></span><br><span class="line">        <span class="keyword">if</span> server.validate_mac(encrypted_message, mac):</span><br><span class="line">            decrypted_message = self.decrypt_message(encrypted_message)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Decrypted Message:&quot;</span>, decrypted_message)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decrypt_message</span>(<span class="params">self, encrypted_message</span>):</span><br><span class="line">        <span class="comment"># 使用会话密钥解密消息</span></span><br><span class="line">        <span class="comment"># 实现解密的具体逻辑</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化实体 A、实体 B 和服务器</span></span><br><span class="line">entity_a = EntityA()</span><br><span class="line">entity_b = EntityB()</span><br><span class="line">server = Server()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实体 A 和服务器进行实体认证和密钥协商</span></span><br><span class="line">entity_a.authenticate(server)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实体 A 加密消息并发送给实体 B</span></span><br><span class="line">message = <span class="string">&quot;This is a secret message.&quot;</span></span><br><span class="line">encrypted_message, mac = entity_a.encrypt_message(message)</span><br><span class="line">entity_a.send_encrypted_message(entity_b, encrypted_message, mac)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+<li><p>构建一个MD5类，要求有该类的属性和方法的简单注释</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MD5</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        初始化MD5类</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self._<span class="built_in">hash</span> = hashlib.md5()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">update</span>(<span class="params">self, data</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        更新要计算MD5的数据</span></span><br><span class="line"><span class="string">        参数:</span></span><br><span class="line"><span class="string">            - data: 要计算MD5的数据</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        self._<span class="built_in">hash</span>.update(data.encode())</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hexdigest</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        返回十六进制表示的MD5散列值</span></span><br><span class="line"><span class="string">        返回值:</span></span><br><span class="line"><span class="string">            - 十六进制表示的MD5散列值</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">return</span> self._<span class="built_in">hash</span>.hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 示例用法</span></span><br><span class="line">md5 = MD5()</span><br><span class="line">md5.update(<span class="string">&quot;Hello, World!&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(md5.hexdigest())</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>这个MD5类使用了Python的<code>hashlib</code>模块来计算MD5散列值。它包含了以下属性和方法：</p>
+<ul>
+<li>属性：<ul>
+<li><code>_hash</code>: 一个<code>hashlib.md5()</code>对象，用于计算MD5散列值。这是类的内部属性，用于存储计算中间结果。</li>
+</ul>
+</li>
+<li>方法：<ul>
+<li><code>__init__(self)</code>: 类的构造方法，初始化MD5类对象。在这里，我们创建了一个<code>hashlib.md5()</code>对象并将其赋值给<code>self._hash</code>属性。</li>
+<li><code>update(self, data)</code>: 更新要计算MD5的数据。参数<code>data</code>是要计算MD5的数据，它将被编码为字节串并传递给<code>self._hash.update()</code>方法。</li>
+<li><code>hexdigest(self)</code>: 返回十六进制表示的MD5散列值。它调用<code>self._hash.hexdigest()</code>方法来获取散列值，并将其作为返回值返回。</li>
+</ul>
+</li>
+</ul>
+<p>在示例用法中，我们创建了一个MD5类的实例<code>md5</code>，然后使用<code>update()</code>方法更新了要计算的数据。最后，我们调用<code>hexdigest()</code>方法获取并打印出计算得到的MD5散列值。</p>
+</li>
+<li></li>
+</ol>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> </li>
+        <li><strong>Author:</strong> Jianbo</li>
+        <li><strong>Created at:</strong> 2023-06-05 19:29:54</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-06-07 07:25:27
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://chienboo.github.io/2023/06/05/密码学复习/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/06/04/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">网络安全复习笔记</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://example.example.com',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title"></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%A1%A8-x2F-%E7%A0%81%E5%8A%A0%E5%AF%86"><span class="nav-text">多表&#x2F;码加密</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E7%A0%81%E5%8A%A0%E5%AF%86"><span class="nav-text">多码加密</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%AD%A6%E5%9F%BA%E7%A1%80"><span class="nav-text">密码学基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E6%95%A3%EF%BC%8C%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%8C%E5%85%B3%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB"><span class="nav-text">扩散，混淆的概念，关系和区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E8%AE%BA"><span class="nav-text">数论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6"><span class="nav-text">对称密码体制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E5%AF%86%E7%A0%81"><span class="nav-text">流密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%B5%81%E5%AF%86%E7%A0%81"><span class="nav-text">同步流密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E6%B5%81%E7%94%9F%E6%88%90%E5%99%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99"><span class="nav-text">密钥流生成器的设计原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E8%87%AA%E5%8A%A8%E6%9C%BA-FA"><span class="nav-text">有限状态自动机(FA)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8EFA%E7%9A%84%E5%AF%86%E9%92%A5%E6%B5%81%E4%BA%A7%E7%94%9F%E5%99%A8"><span class="nav-text">基于FA的密钥流产生器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AF%86%E9%92%A5%E6%B5%81%E7%94%9F%E6%88%90%E5%99%A8"><span class="nav-text">两种常见的密钥流生成器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LFSR%E5%92%8CJK%E8%A7%A6%E5%8F%91%E5%99%A8%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-text">LFSR和JK触发器的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RC4"><span class="nav-text">RC4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-text">算法核心思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81"><span class="nav-text">分组密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F%EF%BC%88%EF%BC%81%EF%BC%81%EF%BC%81%E4%B9%A6%E6%9C%ACP88%EF%BC%89"><span class="nav-text">工作模式（！！！书本P88）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%82%E5%90%8C"><span class="nav-text">异同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E9%97%AE%E7%AD%94%E9%A2%98"><span class="nav-text">相关问答题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DES"><span class="nav-text">DES</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AES"><span class="nav-text">AES</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%9E%E5%AF%B9%E7%A7%B0%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6"><span class="nav-text">非对称密码体制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DH%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D%E5%8D%8F%E8%AE%AE"><span class="nav-text">DH密钥分配协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-text">基础知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">中间人攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98"><span class="nav-text">数学难题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSA%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6"><span class="nav-text">RSA密码体制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7"><span class="nav-text">代数系统的完备性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90"><span class="nav-text">密钥生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86"><span class="nav-text">加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86"><span class="nav-text">解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-text">RSA的限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E7%AE%97%E6%B3%95"><span class="nav-text">更高效的算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ECC"><span class="nav-text">ECC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E4%B8%8E%E4%B8%A4%E5%80%8D%E7%82%B9%EF%BC%8C%E4%B8%89%E5%80%8D%E7%82%B9"><span class="nav-text">椭圆曲线与两倍点，三倍点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86%E6%96%B9%E6%B3%95"><span class="nav-text">加密解密方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E4%B8%BE%E4%BE%8B"><span class="nav-text">计算举例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B6%88%E6%81%AF%E8%AE%A4%E8%AF%81%E5%92%8C%E6%95%A3%E5%88%97%EF%BC%88%E6%9D%82%E5%87%91%EF%BC%89%E5%87%BD%E6%95%B0"><span class="nav-text">消息认证和散列（杂凑）函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E8%AF%81"><span class="nav-text">认证</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"><span class="nav-text">密钥管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PKI%E6%95%B0%E5%AD%97%E9%AA%8C%E8%AF%81"><span class="nav-text">PKI数字验证</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PKI%E6%9C%AF%E8%AF%AD"><span class="nav-text">PKI术语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PKI%E5%9F%BA%E6%9C%AC%E7%BB%84%E4%BB%B6"><span class="nav-text">PKI基本组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PKI%E5%9F%BA%E6%9C%AC%E6%A1%86%E6%9E%B6"><span class="nav-text">PKI基本框架</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E7%A0%81%E5%AD%A6%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text">密码学的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PGP-Pretty-Good-Privacy"><span class="nav-text">PGP**(Pretty Good Privacy)**</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E7%82%B9%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE"><span class="nav-text">重点安全协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%82%B9%E5%8D%8F%E8%AE%AE"><span class="nav-text">重点协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC%E7%9A%84%E7%A7%98%E5%AF%86%E5%85%B1%E4%BA%AB%E6%96%B9%E6%A1%88"><span class="nav-text">基于拉格朗日插值的秘密共享方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E7%89%B9%E6%89%BF%E8%AF%BA"><span class="nav-text">比特承诺</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E6%94%BB%E5%87%BB"><span class="nav-text">几种攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%94%BE-x2F-%E9%A2%84%E9%87%8D%E6%94%BE"><span class="nav-text">重放&#x2F;预重放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E5%B0%84%E6%94%BB%E5%87%BB"><span class="nav-text">反射攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E6%94%BB%E5%87%BB"><span class="nav-text">类型攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E4%B9%A6%E6%93%8D%E7%BA%B5"><span class="nav-text">证书操纵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE%E7%9A%84%E4%B8%89%E5%A4%A7%E7%90%86%E8%AE%BA%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95"><span class="nav-text">安全协议的三大理论分析方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%B1%87%E6%80%BB"><span class="nav-text">题目汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E7%AD%94%E9%A2%98"><span class="nav-text">简答题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E9%A2%98"><span class="nav-text">设计题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E9%A2%98"><span class="nav-text">算法题</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Jianbo</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.2</a>
+        </div>
+        
+        
+        
+            <div id="start_div" style="display:none">
+                2022/8/17 11:45:14
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/layouts/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

@@ -18,15 +18,15 @@
                                         <meta name="googlebot" content="index,follow">
                                         <meta name="revisit-after" content="1 days">
                                         
-                                            <meta name="description" content="题目总结针对物理层攻击侧信道信息窃取 注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第二章 缓冲区溢出攻击什么是shellcodeShellcode是一段特定的机器代码，通常用于利用软件">
+                                            <meta name="description" content="题目总结针对物理层攻击侧信道信息窃取，注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第二章 缓冲区溢出攻击什么是shellcodeShellcode是一段特定的机器代码，通常用于利用软件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络安全复习笔记">
 <meta property="og:url" content="https://chienboo.github.io/2023/06/04/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Jianbo&#39;s blog">
-<meta property="og:description" content="题目总结针对物理层攻击侧信道信息窃取 注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第二章 缓冲区溢出攻击什么是shellcodeShellcode是一段特定的机器代码，通常用于利用软件">
+<meta property="og:description" content="题目总结针对物理层攻击侧信道信息窃取，注入式攻击 HTTP与HTTPS区别，SSL 握手协议3类Web安全问题、SQL注入案例文件遍历流程与防御措施ARP欺骗流程与防御IP序列号欺骗与防御Diffie-Hellman协议以及中间人攻击WEP加解密流程缓冲区溢出流程和案例分析TCP三次握手，四次挥手第二章 缓冲区溢出攻击什么是shellcodeShellcode是一段特定的机器代码，通常用于利用软件">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-06-04T10:03:53.000Z">
-<meta property="article:modified_time" content="2023-06-04T12:08:48.208Z">
+<meta property="article:published_time" content="2023-06-04T13:30:53.000Z">
+<meta property="article:modified_time" content="2023-06-05T11:16:35.992Z">
 <meta property="article:author" content="Jianbo Chen">
 <meta name="twitter:card" content="summary">
                                                 
@@ -276,15 +276,15 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-06-04 18:03:53</span>
-        <span class="mobile">2023-06-04 18:03</span>
+        <span class="desktop">2023-06-04 21:30:53</span>
+        <span class="mobile">2023-06-04 21:30</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-06-04 20:08:48</span>
-            <span class="mobile">2023-06-04 20:08</span>
+            <span class="desktop">2023-06-05 19:16:35</span>
+            <span class="mobile">2023-06-05 19:16</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -308,9 +308,8 @@
             
 
             <div class="article-content markdown-body">
-                <h1 id="题目总结"><a href="#题目总结" class="headerlink" title="题目总结"></a>题目总结</h1><h2 id="针对物理层攻击"><a href="#针对物理层攻击" class="headerlink" title="针对物理层攻击"></a>针对物理层攻击</h2><p>侧信道信息窃取</p>
-<p>注入式攻击</p>
-<h2 id="HTTP与HTTPS区别，SSL-握手协议"><a href="#HTTP与HTTPS区别，SSL-握手协议" class="headerlink" title="HTTP与HTTPS区别，SSL 握手协议"></a>HTTP与HTTPS区别，SSL 握手协议</h2><h2 id="3类Web安全问题、SQL注入案例"><a href="#3类Web安全问题、SQL注入案例" class="headerlink" title="3类Web安全问题、SQL注入案例"></a>3类Web安全问题、SQL注入案例</h2><h2 id="文件遍历流程与防御措施"><a href="#文件遍历流程与防御措施" class="headerlink" title="文件遍历流程与防御措施"></a>文件遍历流程与防御措施</h2><h2 id="ARP欺骗流程与防御"><a href="#ARP欺骗流程与防御" class="headerlink" title="ARP欺骗流程与防御"></a>ARP欺骗流程与防御</h2><h2 id="IP序列号欺骗与防御"><a href="#IP序列号欺骗与防御" class="headerlink" title="IP序列号欺骗与防御"></a>IP序列号欺骗与防御</h2><h2 id="Diffie-Hellman协议以及中间人攻击"><a href="#Diffie-Hellman协议以及中间人攻击" class="headerlink" title="Diffie-Hellman协议以及中间人攻击"></a>Diffie-Hellman协议以及中间人攻击</h2><h2 id="WEP加解密流程"><a href="#WEP加解密流程" class="headerlink" title="WEP加解密流程"></a>WEP加解密流程</h2><h2 id="缓冲区溢出流程和案例分析"><a href="#缓冲区溢出流程和案例分析" class="headerlink" title="缓冲区溢出流程和案例分析"></a>缓冲区溢出流程和案例分析</h2><h2 id="TCP三次握手，四次挥手"><a href="#TCP三次握手，四次挥手" class="headerlink" title="TCP三次握手，四次挥手"></a>TCP三次握手，四次挥手</h2><h1 id="第二章-缓冲区溢出攻击"><a href="#第二章-缓冲区溢出攻击" class="headerlink" title="第二章 缓冲区溢出攻击"></a>第二章 缓冲区溢出攻击</h1><h2 id="什么是shellcode"><a href="#什么是shellcode" class="headerlink" title="什么是shellcode"></a>什么是shellcode</h2><p>Shellcode是一段特定的机器代码，通常用于利用软件漏洞或进行恶意操作。它是一系列计算机指令的二进制表示形式，设计用于在计算机系统上执行特定任务。</p>
+                <h1 id="题目总结"><a href="#题目总结" class="headerlink" title="题目总结"></a>题目总结</h1><h3 id="针对物理层攻击"><a href="#针对物理层攻击" class="headerlink" title="针对物理层攻击"></a>针对物理层攻击</h3><p>侧信道信息窃取，注入式攻击</p>
+<h3 id="HTTP与HTTPS区别，SSL-握手协议"><a href="#HTTP与HTTPS区别，SSL-握手协议" class="headerlink" title="HTTP与HTTPS区别，SSL 握手协议"></a>HTTP与HTTPS区别，SSL 握手协议</h3><h3 id="3类Web安全问题、SQL注入案例"><a href="#3类Web安全问题、SQL注入案例" class="headerlink" title="3类Web安全问题、SQL注入案例"></a>3类Web安全问题、SQL注入案例</h3><h3 id="文件遍历流程与防御措施"><a href="#文件遍历流程与防御措施" class="headerlink" title="文件遍历流程与防御措施"></a>文件遍历流程与防御措施</h3><h3 id="ARP欺骗流程与防御"><a href="#ARP欺骗流程与防御" class="headerlink" title="ARP欺骗流程与防御"></a>ARP欺骗流程与防御</h3><h3 id="IP序列号欺骗与防御"><a href="#IP序列号欺骗与防御" class="headerlink" title="IP序列号欺骗与防御"></a>IP序列号欺骗与防御</h3><h3 id="Diffie-Hellman协议以及中间人攻击"><a href="#Diffie-Hellman协议以及中间人攻击" class="headerlink" title="Diffie-Hellman协议以及中间人攻击"></a>Diffie-Hellman协议以及中间人攻击</h3><h3 id="WEP加解密流程"><a href="#WEP加解密流程" class="headerlink" title="WEP加解密流程"></a>WEP加解密流程</h3><h3 id="缓冲区溢出流程和案例分析"><a href="#缓冲区溢出流程和案例分析" class="headerlink" title="缓冲区溢出流程和案例分析"></a>缓冲区溢出流程和案例分析</h3><h3 id="TCP三次握手，四次挥手"><a href="#TCP三次握手，四次挥手" class="headerlink" title="TCP三次握手，四次挥手"></a>TCP三次握手，四次挥手</h3><h1 id="第二章-缓冲区溢出攻击"><a href="#第二章-缓冲区溢出攻击" class="headerlink" title="第二章 缓冲区溢出攻击"></a>第二章 缓冲区溢出攻击</h1><h2 id="什么是shellcode"><a href="#什么是shellcode" class="headerlink" title="什么是shellcode"></a>什么是shellcode</h2><p>Shellcode是一段特定的机器代码，通常用于利用软件漏洞或进行恶意操作。它是一系列计算机指令的二进制表示形式，设计用于在计算机系统上执行特定任务。</p>
 <p>Shellcode通常用于利用软件的安全漏洞，如<strong>缓冲区溢出、注入攻击</strong>等。攻击者通过将Shellcode注入到受攻击的程序中，可以在目标系统上执行任意指令，从而实现攻击的目的。这可能包括获取系统权限、执行恶意代码、绕过安全措施等。</p>
 <h2 id="缓冲区溢出攻击"><a href="#缓冲区溢出攻击" class="headerlink" title="缓冲区溢出攻击"></a>缓冲区溢出攻击</h2><ul>
 <li>基本原理：像缓冲区写入超出其容量的数据，覆盖相邻内存区域，特别是return address部分，并利用返回地址来跳转执行恶意代码shellcode</li>
@@ -325,29 +324,90 @@
 <h3 id="shellcode的设计"><a href="#shellcode的设计" class="headerlink" title="shellcode的设计"></a>shellcode的设计</h3><p>实行类似exec族函数获得被攻击主机的shell，以获得root权限</p>
 <p>只有shellcode的机器代码才能植入到缓冲区，所以要先编译成汇编代码之后再得到适合主机的机器代码</p>
 <p>exploit攻击程序的设计</p>
-<pre><code>char shellcode[] = &quot;......&quot; //45 chars的攻击机器码
-char large_string[128]; //128字节的大字符串
+<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> shellcode[] = <span class="string">&quot;......&quot;</span> <span class="comment">//45 chars的攻击机器码</span></span><br><span class="line"><span class="type">char</span> large_string[<span class="number">128</span>]; <span class="comment">//128字节的大字符串</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="type">char</span> buffer[<span class="number">96</span>]; <span class="comment">//缓冲区大小96字节</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="type">long</span> * long_ptr = (<span class="type">long</span> *) large_string; <span class="comment">//指针指向大字符串的首地址</span></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span> ; i &lt; <span class="number">32</span> ; i ++)</span><br><span class="line">    *(long_ptr + i) = (<span class="type">int</span>) buffer; <span class="comment">//将buffer的首地址填满long_string</span></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span> ; i &lt; <span class="built_in">strlen</span>(shellcode) ; i ++)</span><br><span class="line">    large_string[i] = shellcode[i]; <span class="comment">//shellcode内容复制到large_string</span></span><br><span class="line"><span class="built_in">strcpy</span>(buffer,large_string); <span class="comment">//缓冲区溢出攻击的重点</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-int main()&#123;
-char buffer[96]; //缓冲区大小96字节
-int i;
-long * long_ptr = (long *) large_string; //指针指向大字符串的首地址
-for(i = 0 ; i &lt; 32 ; i ++)
-    *(long_ptr + i) = (int) buffer; //将buffer的首地址填满long_string
-for(i = 0 ; i &lt; strlen(shellcode) ; i ++)
-    large_string[i] = shellcode[i]; //shellcode内容复制到large_string
-strcpy(buffer,large_string); //缓冲区溢出攻击的重点
-return 0;
-&#125;
-</code></pre>
-<h1 id="第三章-低层协议安全"><a href="#第三章-低层协议安全" class="headerlink" title="第三章 低层协议安全"></a>第三章 低层协议安全</h1><h1 id="第四章-高层协议安全"><a href="#第四章-高层协议安全" class="headerlink" title="第四章 高层协议安全"></a>第四章 高层协议安全</h1><h2 id="HTTP与HTTPS"><a href="#HTTP与HTTPS" class="headerlink" title="HTTP与HTTPS"></a>HTTP与HTTPS</h2><p>HTTP<strong>S</strong> &#x3D; HTTP <strong>+ 加密 + 认证 +完整性保护</strong></p>
+
+
+
+
+
+<h1 id="第三章-低层协议安全"><a href="#第三章-低层协议安全" class="headerlink" title="第三章 低层协议安全"></a>第三章 低层协议安全</h1><h2 id="TCP-x2F-IP协议栈"><a href="#TCP-x2F-IP协议栈" class="headerlink" title="TCP&#x2F;IP协议栈"></a>TCP&#x2F;IP协议栈</h2><h2 id="TCP-x2F-IP安全分析"><a href="#TCP-x2F-IP安全分析" class="headerlink" title="TCP&#x2F;IP安全分析"></a>TCP&#x2F;IP安全分析</h2><h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><p>地址解析协议，即ARP（Address Resolution Protocol），是<strong>根据IP地址</strong>获取<strong>物理地址</strong>的一个TCP&#x2F;IP协议。以太网中，主机发送信息时将<strong>包含目标IP地址的ARP request</strong>广播到网络上的所有主机，并<strong>接收返回ARP reply</strong>消息，以此<strong>确定目标的物理地址–MAC地址</strong>。收到返回消息后将该IP地址和物理地址存入本机ARP缓存中并保留一定时间，下次请求时直接查询ARP缓存以节约资源。</p>
+<h3 id="目的mac地址是如何得到的？"><a href="#目的mac地址是如何得到的？" class="headerlink" title="目的mac地址是如何得到的？"></a>目的mac地址是如何得到的？</h3><p>TCP&#x2F;IP里面是用的ARP协议。比如新建了一个内网，如果一台机器A找机器B，封装FRAME时（OSI的第二层用的数据格式），要封装对方的MAC，开始时A不知道B的MAC，只知道IP，它就发一个<strong>ARP包</strong>，源IP是自己的，目的IP是B的，源MAC是自己的，目的MAC是广播的。</p>
+<h4 id="内网"><a href="#内网" class="headerlink" title="内网"></a>内网</h4><p>然后这个请求包在内网内被广播，当其他机器接到这个包时，用目的IP和自己的IP比较，不是的话就丢弃。B接到时，发现IP与自己的一样，就答应这个包的请求，把自己的MAC送给A。</p>
+<h4 id="其他子网"><a href="#其他子网" class="headerlink" title="其他子网"></a>其他子网</h4><p>如果B是其他子网的机器，那么路由器会判断出B是其他子网，然后路由器把自己的MAC返回给A，A以后再给B发包时，目的MAC封装的是路由器的。</p>
+<p><strong>ARP(ARP spoofing) 欺骗攻击：</strong>一台不可信赖的计算机会发出<strong>假冒的</strong>ARP查询或应答信息，并将所有流向它的数据流转移，这样，它就可以伪装成某台机器</p>
+<h3 id="ARP欺骗——假冒网关（网关-用户）"><a href="#ARP欺骗——假冒网关（网关-用户）" class="headerlink" title="ARP欺骗——假冒网关（网关-用户）"></a>ARP欺骗——假冒网关（网关-用户）</h3><ul>
+<li>攻击者监听到洪泛的<strong>ARP Request</strong>后，广播假的网关<strong>ARP Reply</strong>报文给同网段主机</li>
+<li>主机访问网关的流量，被重定向到错误的MAC地址</li>
+</ul>
+<p>【更改的是<strong>用户</strong>ARP表里<strong>网关</strong>IP对应的MAC】</p>
+<h3 id="ARP欺骗——欺骗网关（用户-网关）"><a href="#ARP欺骗——欺骗网关（用户-网关）" class="headerlink" title="ARP欺骗——欺骗网关（用户-网关）"></a>ARP欺骗——欺骗网关（用户-网关）</h3><ul>
+<li>攻击者伪造虚假用户的ARP Request（除了之前的询问功能，也具有宣告自己存在的功能），发给网关</li>
+<li>网关将原来别的用户A的ip重定向到错误的MAC</li>
+<li>导致本该发给用户A的数据被窃取</li>
+</ul>
+<p>【更改的是<strong>网关</strong>ARP表里某用户的IP对应的MAC】</p>
+<h3 id="ARP欺骗——欺骗终端用户（用户-用户）"><a href="#ARP欺骗——欺骗终端用户（用户-用户）" class="headerlink" title="ARP欺骗——欺骗终端用户（用户-用户）"></a>ARP欺骗——欺骗终端用户（用户-用户）</h3><ul>
+<li>攻击者伪造虚假的用户ARP 报文，发给网内其他用户</li>
+<li>数据被窃取</li>
+</ul>
+<p>【更改的是别的<strong>用户</strong>ARP表里<strong>另一用户</strong>的IP对应的MAC】</p>
+<h3 id="ARP欺骗——如何防御？"><a href="#ARP欺骗——如何防御？" class="headerlink" title="ARP欺骗——如何防御？"></a>ARP欺骗——如何防御？</h3><ol>
+<li>没到老化<strong>时间之前</strong>不允许修改ARP表里的MAC地址</li>
+<li>对于MAC地址要<strong>修改</strong>的ARP报文，向原ARP表中对应的ip用户发送<strong>单播确认</strong>，收到应答后进行拒绝</li>
+<li>合法ARP静态绑定；ARP限速，防止ARP Flooding</li>
+</ol>
+<h4 id="客户端防御"><a href="#客户端防御" class="headerlink" title="客户端防御"></a>客户端防御</h4><ul>
+<li>合法<strong>网关</strong>ARP绑定，防止<strong>假冒网关攻击</strong></li>
+<li>绑定该主机的合法 IP- MAC，过滤掉所有非法的ARP报文</li>
+<li>ARP限速</li>
+</ul>
+<h4 id="网关防御"><a href="#网关防御" class="headerlink" title="网关防御"></a>网关防御</h4><ul>
+<li>合法ARP绑定，防止<strong>欺骗网关攻击</strong></li>
+<li>VLAN内的ARP学习数量限制，防御ARP洪范攻击</li>
+</ul>
+<h4 id="接入设备（交换机）防御"><a href="#接入设备（交换机）防御" class="headerlink" title="接入设备（交换机）防御"></a>接入设备（交换机）防御</h4><ul>
+<li>合法<strong>网关</strong>IP-MAC绑定，防御<strong>假冒网关攻击</strong></li>
+<li>ARP入侵检测</li>
+<li>ARP限速，防止大流量ARP报文冲击网络</li>
+<li>绑定<strong>用户</strong>的静态MAC</li>
+</ul>
+<h2 id="DNS与DDoS攻击"><a href="#DNS与DDoS攻击" class="headerlink" title="DNS与DDoS攻击"></a>DNS与DDoS攻击</h2><h3 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h3><p>UDP（User Datagram Protocol)数据传输过程中，<strong>没有纠错和重传机制，也没有检测丢包、复制或重新排序</strong>的机制，甚至误码检测也是可选项。</p>
+<h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><h3 id="利用UDP发动DoS攻击"><a href="#利用UDP发动DoS攻击" class="headerlink" title="利用UDP发动DoS攻击"></a>利用UDP发动DoS攻击</h3><h4 id="利用网络协议漏洞："><a href="#利用网络协议漏洞：" class="headerlink" title="利用网络协议漏洞："></a>利用网络协议漏洞：</h4><ol>
+<li><strong>Echo服务</strong>（TCP 7和UDP 7）会对接收到的每个字符进行回送（相同的字符）</li>
+<li><strong>Chargen服务</strong>（TCP 19和UDP 19）对接收到的每个数据包都返回一些随机生成的字符<ul>
+<li>如果与Chargen服务建立了链接，他会不断返回 乱字符 直到连接中断</li>
+</ul>
+</li>
+</ol>
+<h4 id="UDP-FLOOD–原理"><a href="#UDP-FLOOD–原理" class="headerlink" title="UDP FLOOD–原理"></a>UDP FLOOD–原理</h4><ol>
+<li><p>黑客C选择两个目标A和B</p>
+</li>
+<li><p>生成伪造的UDP包，目的地是B的Chargen端口，来源“假冒”为A的Echo端口</p>
+</li>
+<li><p>B的Chargen服务返回的随机字符发送给真实A的Echo服务</p>
+</li>
+<li><p>A再向B回送收到的字符，如此反复，最终导致这两台主机应接不暇而拒绝服务</p>
+</li>
+<li><p>A和B的内存和两者所在局域网的带宽都受到严重损耗</p>
+</li>
+</ol>
+<h4 id="UDP-FLOOD–对策"><a href="#UDP-FLOOD–对策" class="headerlink" title="UDP FLOOD–对策"></a>UDP FLOOD–对策</h4><ol>
+<li>Echo和Chargen对1024以下的端口置之不理【TCP&#x2F;IP实现所提供的服务用1-1023之间的端口，发送端口一般&gt;1024】</li>
+<li>减少开放不必要的服务</li>
+</ol>
+<h4 id="UDP-FLOOD–评价"><a href="#UDP-FLOOD–评价" class="headerlink" title="UDP FLOOD–评价"></a>UDP FLOOD–评价</h4><ol>
+<li>一箭双雕</li>
+<li>很有创意的攻击方法</li>
+</ol>
+<h1 id="第四章-高层协议安全"><a href="#第四章-高层协议安全" class="headerlink" title="第四章 高层协议安全"></a>第四章 高层协议安全</h1><h2 id="HTTP与HTTPS"><a href="#HTTP与HTTPS" class="headerlink" title="HTTP与HTTPS"></a>HTTP与HTTPS</h2><p>HTTP<strong>S</strong> &#x3D; HTTP <strong>+ 加密 + 认证 +完整性保护</strong></p>
 <h2 id="SSL-x2F-TLS安全套接字"><a href="#SSL-x2F-TLS安全套接字" class="headerlink" title="SSL&#x2F;TLS安全套接字"></a>SSL&#x2F;TLS安全套接字</h2><p>SSL（Secure Socket Layer）安全套接字提供<strong>两个基本的安全服务</strong>：<strong>鉴别</strong>和<strong>保密</strong></p>
 <p>SSL采用的加密技术为：对称加密技术</p>
 <p>分为<strong>三个协议</strong></p>
 <ul>
-<li>握手协议（Handshake Protocol）</li>
-<li>记录协议（Record Protocol）</li>
-<li>警报协议（Alert Protocol）</li>
+<li>握手协议（<strong>Handshake</strong> Protocol）</li>
+<li>记录协议（<strong>Record</strong> Protocol）</li>
+<li>警报协议（<strong>Alert</strong> Protocol）</li>
 </ul>
 <h3 id="握手协议"><a href="#握手协议" class="headerlink" title="握手协议"></a>握手协议</h3><ol>
 <li>客户端发起HTTPS请求（发送支持的加密协议+随机生成的不重数1）</li>
@@ -376,7 +436,7 @@ return 0;
 <li>参数化查询，将查询作为一个参数，而不是命令</li>
 <li>输入转义，将输入字符转为安全的等效形式</li>
 </ul>
-<h3 id="SQL-注入"><a href="#SQL-注入" class="headerlink" title="SQL 注入"></a>SQL 注入</h3><p>![](Screen Shot 2023-05-06 at 12.19.11 PM_4.png)</p>
+<h3 id="SQL-注入"><a href="#SQL-注入" class="headerlink" title="SQL 注入"></a>SQL 注入</h3><p>![](Screen Shot 2023-05-06 at 12.19.11 PM_5.png)</p>
 <h4 id="表格逆向"><a href="#表格逆向" class="headerlink" title="表格逆向"></a>表格逆向</h4><p>就是通过使用SQL语句对表格进行各种操作（order by, …）使得我们可以去逆向猜测出表格“长”什么样</p>
 <h5 id="Probing-NUMBER-of-columns-探测列的数量"><a href="#Probing-NUMBER-of-columns-探测列的数量" class="headerlink" title="Probing NUMBER of columns 探测列的数量"></a>Probing NUMBER of columns 探测列的数量</h5><p>通过ORDER BY&lt;number&gt;的方式可以猜测一个表格的列（column）的数量</p>
 <h5 id="Probing-Column-Names-探测列名"><a href="#Probing-Column-Names-探测列名" class="headerlink" title="Probing Column Names 探测列名"></a>Probing Column Names 探测列名</h5><p>通过在WHERE字段后面加 OR  &lt;column-name&gt; IS NULL</p>
@@ -392,38 +452,38 @@ return 0;
 <li>执行检索命令（例如查看自己的Profile）这样将会执行select 语句，在检索时，由于精心设计的账户名会导致user中admin的记录被修改（例如：修改了admin的登陆密码）</li>
 <li>能够以admin身份登陆</li>
 </ol>
-<p>![](Screen Shot 2023-05-06 at 9.59.32 PM_4.png)</p>
-<h5 id="二阶段SQL注入与普通注入的区别"><a href="#二阶段SQL注入与普通注入的区别" class="headerlink" title="二阶段SQL注入与普通注入的区别"></a>二阶段SQL注入与普通注入的区别</h5><p>普通注入是在单个请求中直接注入恶意的SQL代码，而二阶段SQL注入是在第一次注入时留下恶意数据，并在后续的操作中利用这些数据进行攻击。</p>
+<p>![](Screen Shot 2023-05-06 at 9.59.32 PM_5.png)</p>
+<h5 id="二阶段SQL注入与普通注入的区别"><a href="#二阶段SQL注入与普通注入的区别" class="headerlink" title="二阶段SQL注入与普通注入的区别"></a>二阶段SQL注入与普通注入的区别</h5><p><strong>普通注入</strong>是在单个请求中<strong>直接注入恶意的SQL代码</strong>，而<strong>二阶段SQL注入</strong>是在第一次注入时<strong>留下恶意数据</strong>，并在<strong>后续的操作中利用</strong>这些数据进行攻击。</p>
 <p>[个人理解：可以类比为XSS中的反射型XSS和存储型XSS]</p>
 <p><strong>普通注入</strong>是指直接将恶意的SQL代码注入到应用程序的用户输入字段中，然后通过执行注入的代码来绕过应用程序的安全机制，对数据库进行未经授权的访问或操作。这种注入方式通常发生在单个请求中，攻击者能够直接控制注入的数据内容，从而影响整个查询或命令的执行。</p>
 <p>而<strong>二阶段SQL注入</strong>则是在应用程序中，用户的输入数据被存储在数据库中，并在后续的查询或操作中被使用。攻击者在第一次注入时，可能并不会直接获得所需的结果，但他们将恶意的数据留在数据库中，并等待应用程序在后续的操作中使用这些数据。当应用程序执行后续操作时，恶意数据被再次使用，并导致注入攻击的成功。这种方式需要攻击者对应用程序的工作流程和数据库的结构有一定的了解，以便在后续的操作中利用之前注入的数据。</p>
 <h3 id="盲SQL-注入"><a href="#盲SQL-注入" class="headerlink" title="盲SQL 注入"></a>盲SQL 注入</h3><h4 id="与普通SQL注入的区别"><a href="#与普通SQL注入的区别" class="headerlink" title="与普通SQL注入的区别"></a>与普通SQL注入的区别</h4><p>盲SQL注入与普通的SQL注入类似，都是利用应用程序没有对用户输入的数据进行足够的过滤和验证，导致攻击者可以向数据库发送自己构造的恶意SQL语句。</p>
 <p><strong>但是不同之处在于</strong>，盲SQL注入攻击者无法直接获取查询结果，而只能通过<strong>推断和试错的方式</strong>来获取信息。盲SQL注入可以分为<strong>基于布尔逻辑的盲注</strong>和<strong>基于时间延迟的盲注</strong>两种类型。</p>
 <h4 id="基于布尔逻辑的盲注"><a href="#基于布尔逻辑的盲注" class="headerlink" title="基于布尔逻辑的盲注"></a>基于布尔逻辑的盲注</h4><p>攻击者通过构造特定的SQL语句，利用应用程序对查询结果的<strong>布尔逻辑</strong>判断返回<strong>不同的响应（是否返回错误信息）</strong>，从而推断出数据库中的信息。</p>
-<pre><code>SELECT * FROM users WHERE username = &#39;admin&#39; AND password LIKE &#39;%a%&#39; 
-</code></pre>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> username <span class="operator">=</span> <span class="string">&#x27;admin&#x27;</span> <span class="keyword">AND</span> password <span class="keyword">LIKE</span> <span class="string">&#x27;%a%&#x27;</span> </span><br></pre></td></tr></table></figure></div>
+
 <p>这个SQL查询语句包含了一个布尔逻辑判断条件，即<code>password</code>字段中是否包含字母<code>a</code>。如果该条件成立，应用程序会返回正常的查询结果，否则应用程序会返回错误信息。</p>
-<pre><code>SELECT * FROM users WHERE username = &#39;admin&#39; AND password LIKE &#39;a%&#39;
-</code></pre>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> username <span class="operator">=</span> <span class="string">&#x27;admin&#x27;</span> <span class="keyword">AND</span> password <span class="keyword">LIKE</span> <span class="string">&#x27;a%&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
 <p>如果应用程序返回了正常的查询结果，说明<code>password</code>字段以字母<code>a</code>开头，否则说明不是。通过这种方式，攻击者可以逐个字母地推断出<code>password</code>字段的值，从而获取管理员账号的密码等敏感信息。</p>
 <h4 id="基于时间延迟的盲注"><a href="#基于时间延迟的盲注" class="headerlink" title="基于时间延迟的盲注"></a>基于时间延迟的盲注</h4><p>基于时间延迟的盲注是一种盲注攻击的变体，它通过在注入的SQL语句中嵌入条件，并利用应用程序的<strong>响应时间差异</strong>来推断条件的真假。</p>
 <p>攻击者可以构造带有时间延迟的SQL语句，并观察应用程序的响应时间来判断条件是否成立。例如，攻击者可以构造以下SQL语句：</p>
-<pre><code>SELECT * FROM users WHERE username=&#39;admin&#39; AND IF(SUBSTR(password,1,1)=&#39;a&#39; waitfor delay &#39;0:0:5&#39;;
-</code></pre>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> username<span class="operator">=</span><span class="string">&#x27;admin&#x27;</span> <span class="keyword">AND</span> IF(SUBSTR(password,<span class="number">1</span>,<span class="number">1</span>)<span class="operator">=</span><span class="string">&#x27;a&#x27;</span> waitfor delay <span class="string">&#x27;0:0:5&#x27;</span>;</span><br></pre></td></tr></table></figure></div>
+
 <p>如果密码的第一个字母是a，则会有5秒的延迟。</p>
 <p>如果应用程序响应时间较长，则说明条件成立，反之则说明条件不成立。通过逐个条件地推断，攻击者可以逐渐获取数据库中的信息，例如用户名、密码等敏感数据。</p>
 <h3 id="SQL注入攻击的预防"><a href="#SQL注入攻击的预防" class="headerlink" title="SQL注入攻击的预防"></a>SQL注入攻击的预防</h3><p>通过使用<strong>参数化查询（也称为预处理）</strong>而不是在查询中进行字符串拼接，可以防止大多数SQL注入攻击。以下代码由于用户输入直接被拼接到查询中，因此容易受到SQL注入攻击</p>
-<pre><code>String query = &quot;SELECT * FROM products WHERE category = &#39;&quot; + input + &quot;&#39;&quot;;
-Statement statement = connection.createStatement();
-ResultSet resultSet = statement.executeQuery(query);
-</code></pre>
-<p>可以通过简单地重写该代码，防止用户输入干扰查询结构：</p>
-<pre><code>Prepared Statement statement = connection.prepareStatement(&quot;SELECT * FROM products WHERE category = ?&quot;);
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String query <span class="operator">=</span> &quot;SELECT * FROM products WHERE category = &#x27;&quot; <span class="operator">+</span> input <span class="operator">+</span> &quot;&#x27;&quot;;</span><br><span class="line">Statement statement <span class="operator">=</span> connection.createStatement();</span><br><span class="line">ResultSet resultSet <span class="operator">=</span> statement.executeQuery(query);</span><br></pre></td></tr></table></figure></div>
 
-statement.setString(1 , input);
-//将input赋值给第 1 个参数
-ResultSet resultSet = statement.executeGuery();
-</code></pre>
+
+
+<p>可以通过简单地重写该代码，防止用户输入干扰查询结构：</p>
+<div class="highlight-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Prepared Statement statement <span class="operator">=</span> connection.prepareStatement(&quot;SELECT * FROM products WHERE category = ?&quot;);</span><br><span class="line"></span><br><span class="line">statement.setString(<span class="number">1</span> , input);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>将input赋值给第 <span class="number">1</span> 个参数</span><br><span class="line">ResultSet resultSet <span class="operator">=</span> statement.executeGuery();</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
 <h2 id="文件遍历"><a href="#文件遍历" class="headerlink" title="文件遍历"></a>文件遍历</h2><p>文件遍历攻击（也称为目录遍历攻击、路径遍历攻击或. .&#x2F;攻击）是一种常见的Web应用程序攻击，其目的是访问服务器上未经授权的文件或目录。攻击者通过构造包含特殊字符（如..&#x2F;）的URL或输入表单，试图跳出Web应用程序根目录，访问服务器上的其他目录或文件。</p>
 <p>一旦攻击成功，攻击者可以访问包含敏感信息的文件，如配置文件、密码文件、数据库文件等，从而对系统进行进一步的攻击或窃取敏感信息。</p>
 <h2 id="点击劫持"><a href="#点击劫持" class="headerlink" title="点击劫持"></a>点击劫持</h2><p>点击劫持是一种基于界面的攻击，攻击者通过在诱骗网站上点击其他内容来欺骗用户点击一个隐藏网站上的可操作内容。考虑以下示例：一个网络用户访问了一个诱骗网站（可能是通过电子邮件提供的链接），并点击一个按钮以赢取奖品。不知情的用户被攻击者欺骗，实际上按下了一个隐藏按钮，导致在另一个网站上支付了一个账户。这就是点击劫持攻击的一个例子。这种技术依赖于将一个不可见的、可操作的网页（或多个页面）与一个包含按钮或隐藏链接的iframe结合起来。这个iframe会覆盖在用户预期的诱骗网页内容之上。这种攻击与CSRF攻击不同，因为用户需要执行一个动作，比如点击一个按钮，而CSRF攻击则依赖于在用户不知情或无需用户输入的情况下伪造一个完整的请求。</p>
@@ -494,15 +554,15 @@ ResultSet resultSet = statement.executeGuery();
 <p>总结来说，<strong>XSS漏洞的后果通常比CSRF漏洞更严重</strong>。XSS漏洞可以使攻击者执行任意操作并从中获取数据，而CSRF漏洞仅限于特定的受影响操作。因此，在开发和维护应用程序时，需要同时关注XSS和CSRF防御，并采取适当的安全措施来减轻这些漏洞的风险。</p>
 <p><em>单向与双向是考试重点！！！</em>****</p>
 <h3 id="详细解释单向，双向"><a href="#详细解释单向，双向" class="headerlink" title="详细解释单向，双向"></a>详细解释单向，双向</h3><ol>
-<li>CSRF - “单向”漏洞：</li>
+<li>CSRF - “<strong>单向</strong>“漏洞：</li>
 </ol>
-<p>CSRF攻击利用了目标网站对用户身份验证不足的问题，攻击者可以通过某种方式引导受害者在目标网站上执行非预期的操作。这些操作是由受害者的浏览器自动发送的，攻击者并不能直接获取到该请求的响应。攻击者通常构造恶意网页或链接，诱使受害者点击，从而触发了事先构造好的请求。</p>
-<p>例如，假设受害者在一个社交媒体网站上已经登录，并且在同一个浏览器上打开了一个恶意网页。该恶意网页包含一个图片标签，其<code>src</code>属性指向一个修改用户密码的请求。浏览器会自动发送该请求，但受害者并不知情。攻击者无法获取到该请求的响应，因此无法直接读取或窃取数据。</p>
+<p>CSRF攻击利用了目标网站对用户身份验证不足的问题，攻击者可以通过某种方式引导受害者在目标网站上执行非预期的操作。这些操作是由受害者的浏览器自动发送的，<strong>攻击者并不能直接获取到该请求的响应</strong>。攻击者通常构造恶意网页或链接，诱使受害者点击，从而触发了事先构造好的请求。</p>
+<p>例如，假设受害者在一个社交媒体网站上已经登录，并且在同一个浏览器上打开了一个恶意网页。该恶意网页包含一个图片标签，其<code>src</code>属性指向一个修改用户密码的请求。浏览器会自动发送该请求，但受害者并不知情。攻击者无法获取到该请求的响应，因此无法<strong>直接读取</strong>或窃取数据。</p>
 <ol start="2">
-<li>XSS - “双向”漏洞：</li>
+<li>XSS - “<strong>双向</strong>“漏洞：</li>
 </ol>
 <p>XSS攻击是通过在目标网站的页面中注入恶意脚本，然后在用户浏览器中执行该脚本来实现的。这使得攻击者可以与目标网站进行”双向”通信，包括发送请求、读取响应和窃取数据。</p>
-<p>通过XSS攻击，攻击者可以在受影响的网页中注入恶意脚本，并使其在用户的浏览器中执行。该脚本可以发起任意的HTTP请求，包括与目标网站的通信。攻击者可以通过这些请求读取目标网站的响应，并将获取到的数据发送到攻击者指定的外部域名。这使得攻击者能够窃取用户的敏感信息、劫持会话等。</p>
+<p>通过XSS攻击，攻击者可以在受影响的网页中注入恶意脚本，并使其在用户的浏览器中执行。该脚本可以发起任意的HTTP请求，包括与目标网站的通信。<strong>攻击者可以通过这些请求读取目标网站的响应</strong>，并将获取到的数据发送到攻击者指定的外部域名。这使得攻击者<strong>能够窃取</strong>用户的敏感信息、劫持会话等。</p>
 <p>需要注意的是，XSS攻击的成功注入和执行恶意脚本通常需要滥用目标网站上的输入字段、评论区或其他用户可输入的地方。通过注入恶意脚本，攻击者可以控制用户浏览器中的页面内容和行为，以达到自己的目的。</p>
 <h2 id="多方Web应用交互安全"><a href="#多方Web应用交互安全" class="headerlink" title="多方Web应用交互安全"></a>多方Web应用交互安全</h2><p>多方Web应用交互安全是指在Web应用程序中涉及多个参与方的交互过程中确保安全性的一种方法和实践。这些参与方可以是用户、服务器、第三方服务提供商或其他外部系统。</p>
 <p>分为Multi-Party E-Commerce Applications（多方电子商务应用）与单点登录（Single Sign-On，简称SSO）</p>
@@ -571,12 +631,33 @@ ResultSet resultSet = statement.executeGuery();
 <li>Bob发送<strong>另一半密文</strong>给Alice</li>
 <li>Alice组合后，用私钥解密</li>
 </ol>
-<p>为什么可以阻止中间人攻击？</p>
-<ol>
+<h5 id="为什么可以阻止中间人攻击？"><a href="#为什么可以阻止中间人攻击？" class="headerlink" title="为什么可以阻止中间人攻击？"></a>为什么可以阻止中间人攻击？</h5><ol>
 <li>在前两部分，Alice和Bob都拿到了假公钥（attacker的公钥）因为在步骤3，中间人无法恢复消息后再用Bob的公钥加密（因为Alice只发了密文的一半，只有拿到完整密文才能解密），所以只能<strong>虚构</strong>一个消息发送一半给Bob,..<strong>.对话就完全不同了</strong></li>
 <li>如果在步骤3 直接转发Alice消息给Bob，那么当Bob收齐后，发现<strong>无法解密</strong>，那么就不会把自己另一半密文发出去</li>
 <li>最常见的：中间人在第五步收齐Alice的之后，解密，根据语义伪造新消息，发送bob，但这样Bob只会以为这是一半的消息会一直等，总之会造成<strong>语义上的混乱</strong></li>
 <li>中间人不知道双方使用了传一半的方式，失败后<strong>直接放弃攻击</strong></li>
+</ol>
+<h4 id="Diffie-Hellman协议"><a href="#Diffie-Hellman协议" class="headerlink" title="Diffie-Hellman协议"></a>Diffie-Hellman协议</h4><ul>
+<li>DH算法用于密钥分配，不能用于加&#x2F;解密</li>
+<li>DH算法容易受到中间人攻击</li>
+<li>DH算法与RSA公钥算法不同，前者只能用于两个用户之间安全的交换密钥，而不能实现消息加密</li>
+</ul>
+<p>具体算法：</p>
+<ol>
+<li>选定并公开底数a，模数p</li>
+<li>Alice和Bob分别选择自己的私钥Xa，Xb</li>
+<li>计算公钥Ya &#x3D; a^(Xa) mod p，Yb &#x3D; a^(Xb) mod p</li>
+<li>交换公钥后，双方都可以计算出对称密钥k</li>
+<li>k &#x3D; Ya^(Xb) mod p &#x3D; Yb^(Xa) mod p &#x3D; a^(XaXb) mod p</li>
+</ol>
+<p>Diffie-Hellman中间人攻击：</p>
+<p>与之前的差不多，都是攻击者用自己的公钥调包之后，传输时解密后，在换上正确的公钥</p>
+<ol>
+<li>Attacker截获Alice，Bob的公钥Ya，Yb</li>
+<li>替换成自己的公钥Yc &#x3D; a^(Xc) mod p</li>
+<li>Alice得到的k1 &#x3D; a^(XcXa) mod p</li>
+<li>Bob得到的k2 &#x3D; a^(XcXb) mod p</li>
+<li>Attacker手里持有k1，k2</li>
 </ol>
 <h3 id="第三方CA认证（源头解决问题）"><a href="#第三方CA认证（源头解决问题）" class="headerlink" title="第三方CA认证（源头解决问题）"></a>第三方CA认证（源头解决问题）</h3><p>在会话密钥交换协议中采用第三方CA认证，即CA私钥数字签名技术（这也是SSL协议中会话密钥建立时使用的方法，是HTTPS抵抗中间人攻击的方法）</p>
 <ul>
@@ -588,7 +669,8 @@ ResultSet resultSet = statement.executeGuery();
 <p>假设Alice的公钥Kap，Trent对其进行hash计算得到摘要（指纹）H(Kap)然后使用Trent的私钥Kts加密后</p>
 <p>Kts(H(Kap)) 即为数字签名</p>
 <p>验证阶段：使用内置在系统里的CA证书中的Trent公钥Ktp解密后得到H(Kap)。由于Alice传输时是</p>
-<p>Kap | Kts(H(Kap)) 的形式传输的，因此对Kap进行Hash运算后，与解密得到的摘要（指纹）进行比对，就可以验证</p>
+<p><code>Kap | Kts(H(Kap)) </code></p>
+<p>的形式传输的，因此对Kap进行Hash运算后，与解密得到的<strong>摘要（指纹）</strong>进行比对，就可以验证</p>
 <p>Alice发给Bob的公钥是经过CA认证签名的，Bob收到后可以验证</p>
 <p>怎么验证呢？</p>
 <h3 id="CA和KDC的区别"><a href="#CA和KDC的区别" class="headerlink" title="CA和KDC的区别"></a>CA和KDC的区别</h3><p>KDC是一个用于<strong>身份验证的中心</strong>，而CA是负责<strong>颁发和管理数字证书的机构</strong>。它们在网络安全中扮演不同的角色，但在某些情况下可能会有一定的关联</p>
@@ -601,10 +683,10 @@ ResultSet resultSet = statement.executeGuery();
     <ul>
         <li><strong>Title:</strong> 网络安全复习笔记</li>
         <li><strong>Author:</strong> Jianbo</li>
-        <li><strong>Created at:</strong> 2023-06-04 18:03:53</li>
+        <li><strong>Created at:</strong> 2023-06-04 21:30:53</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-06-04 20:08:48
+                <strong>Updated at:</strong> 2023-06-05 19:16:35
             </li>
         
         <li>
@@ -626,14 +708,29 @@ ResultSet resultSet = statement.executeGuery();
             
                 <div class="article-nav">
                     
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/06/05/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%A4%8D%E4%B9%A0/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item"></span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
                     
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/05/09/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                            href="/2023/04/26/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item"></span>
+                                    <span class="post-nav-title-item">线性代数面试题目</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -699,7 +796,7 @@ ResultSet resultSet = statement.executeGuery();
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">网络安全复习笔记</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93"><span class="nav-text">题目总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E7%89%A9%E7%90%86%E5%B1%82%E6%94%BB%E5%87%BB"><span class="nav-text">针对物理层攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E4%B8%8EHTTPS%E5%8C%BA%E5%88%AB%EF%BC%8CSSL-%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="nav-text">HTTP与HTTPS区别，SSL 握手协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E7%B1%BBWeb%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E3%80%81SQL%E6%B3%A8%E5%85%A5%E6%A1%88%E4%BE%8B"><span class="nav-text">3类Web安全问题、SQL注入案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1%E6%8E%AA%E6%96%BD"><span class="nav-text">文件遍历流程与防御措施</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">ARP欺骗流程与防御</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%BA%8F%E5%88%97%E5%8F%B7%E6%AC%BA%E9%AA%97%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">IP序列号欺骗与防御</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diffie-Hellman%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">Diffie-Hellman协议以及中间人攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEP%E5%8A%A0%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B"><span class="nav-text">WEP加解密流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%B5%81%E7%A8%8B%E5%92%8C%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">缓冲区溢出流程和案例分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-text">TCP三次握手，四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%94%BB%E5%87%BB"><span class="nav-text">第二章 缓冲区溢出攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFshellcode"><span class="nav-text">什么是shellcode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%94%BB%E5%87%BB"><span class="nav-text">缓冲区溢出攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8strcpy%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%BE%97%E5%88%B0shell%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-text">利用strcpy栈溢出漏洞得到shell的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E8%87%B4%E6%B5%81%E7%A8%8B"><span class="nav-text">大致流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shellcode%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-text">shellcode的设计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BD%8E%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8"><span class="nav-text">第三章 低层协议安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%AB%98%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8"><span class="nav-text">第四章 高层协议安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E4%B8%8EHTTPS"><span class="nav-text">HTTP与HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-x2F-TLS%E5%AE%89%E5%85%A8%E5%A5%97%E6%8E%A5%E5%AD%97"><span class="nav-text">SSL&#x2F;TLS安全套接字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="nav-text">握手协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E5%8D%8F%E8%AE%AE"><span class="nav-text">记录协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AD%A6%E6%8A%A5%E5%8D%8F%E8%AE%AE"><span class="nav-text">警报协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS%E9%81%AD%E5%8F%97%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">HTTPS遭受中间人攻击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8"><span class="nav-text">第五章 Web应用安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="nav-text">注入攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="nav-text">命令注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B2SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">盲SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E7%9A%84%E9%A2%84%E9%98%B2"><span class="nav-text">SQL注入攻击的预防</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86"><span class="nav-text">文件遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81"><span class="nav-text">点击劫持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe"><span class="nav-text">iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81%E5%A6%82%E4%BD%95%E5%8E%BB%E9%98%B2%E5%BE%A1%EF%BC%9F"><span class="nav-text">点击劫持如何去防御？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BBXSS"><span class="nav-text">跨站脚本攻击XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS%E5%8F%8D%E5%B0%84%E5%9E%8B%E6%94%BB%E5%87%BB"><span class="nav-text">XSS反射型攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%9E%8BXSS"><span class="nav-text">存储型XSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0CSRF"><span class="nav-text">跨站请求伪造CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-%E6%94%BB%E5%87%BB%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-text">CSRF 攻击的工作原理如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF%E9%98%B2%E5%BE%A1%E6%8A%80%E6%9C%AF"><span class="nav-text">CSRF防御技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-token%E8%83%BD%E6%8A%B5%E5%BE%A1XSS%E6%94%BB%E5%87%BB%E5%90%97%EF%BC%9F"><span class="nav-text">CSRF token能抵御XSS攻击吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF%E4%B8%8EXSS%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">CSRF与XSS的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A%E5%8D%95%E5%90%91%EF%BC%8C%E5%8F%8C%E5%90%91"><span class="nav-text">详细解释单向，双向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%96%B9Web%E5%BA%94%E7%94%A8%E4%BA%A4%E4%BA%92%E5%AE%89%E5%85%A8"><span class="nav-text">多方Web应用交互安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%ACWeb%E6%94%BB%E5%87%BB"><span class="nav-text">基本Web攻击</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%BD%91%E7%BB%9C%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"><span class="nav-text">第六章 网络加密与密钥管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D"><span class="nav-text">密钥分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8C%E9%92%A5%E4%BD%93%E5%88%B6"><span class="nav-text">什么是双钥体制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E9%92%A5%E4%BD%93%E5%88%B6%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">双钥体制的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%BC%8F"><span class="nav-text">密钥分配的三种基本模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D%E5%8D%8F%E8%AE%AE"><span class="nav-text">密钥分配协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9CA%E8%AE%A4%E8%AF%81%EF%BC%88%E6%BA%90%E5%A4%B4%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-text">第三方CA认证（源头解决问题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CA%E5%92%8CKDC%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">CA和KDC的区别</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%80%BB%E7%BB%93"><span class="nav-text">题目总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%92%88%E5%AF%B9%E7%89%A9%E7%90%86%E5%B1%82%E6%94%BB%E5%87%BB"><span class="nav-text">针对物理层攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E4%B8%8EHTTPS%E5%8C%BA%E5%88%AB%EF%BC%8CSSL-%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="nav-text">HTTP与HTTPS区别，SSL 握手协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E7%B1%BBWeb%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E3%80%81SQL%E6%B3%A8%E5%85%A5%E6%A1%88%E4%BE%8B"><span class="nav-text">3类Web安全问题、SQL注入案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1%E6%8E%AA%E6%96%BD"><span class="nav-text">文件遍历流程与防御措施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E6%B5%81%E7%A8%8B%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">ARP欺骗流程与防御</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IP%E5%BA%8F%E5%88%97%E5%8F%B7%E6%AC%BA%E9%AA%97%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="nav-text">IP序列号欺骗与防御</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Diffie-Hellman%E5%8D%8F%E8%AE%AE%E4%BB%A5%E5%8F%8A%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">Diffie-Hellman协议以及中间人攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WEP%E5%8A%A0%E8%A7%A3%E5%AF%86%E6%B5%81%E7%A8%8B"><span class="nav-text">WEP加解密流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%B5%81%E7%A8%8B%E5%92%8C%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90"><span class="nav-text">缓冲区溢出流程和案例分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%EF%BC%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-text">TCP三次握手，四次挥手</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%94%BB%E5%87%BB"><span class="nav-text">第二章 缓冲区溢出攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFshellcode"><span class="nav-text">什么是shellcode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA%E6%94%BB%E5%87%BB"><span class="nav-text">缓冲区溢出攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8strcpy%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E%E5%BE%97%E5%88%B0shell%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="nav-text">利用strcpy栈溢出漏洞得到shell的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%A7%E8%87%B4%E6%B5%81%E7%A8%8B"><span class="nav-text">大致流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shellcode%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-text">shellcode的设计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BD%8E%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8"><span class="nav-text">第三章 低层协议安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-x2F-IP%E5%8D%8F%E8%AE%AE%E6%A0%88"><span class="nav-text">TCP&#x2F;IP协议栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-x2F-IP%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90"><span class="nav-text">TCP&#x2F;IP安全分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP"><span class="nav-text">ARP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E7%9A%84mac%E5%9C%B0%E5%9D%80%E6%98%AF%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E7%9A%84%EF%BC%9F"><span class="nav-text">目的mac地址是如何得到的？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E2%80%94%E2%80%94%E5%81%87%E5%86%92%E7%BD%91%E5%85%B3%EF%BC%88%E7%BD%91%E5%85%B3-%E7%94%A8%E6%88%B7%EF%BC%89"><span class="nav-text">ARP欺骗——假冒网关（网关-用户）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E2%80%94%E2%80%94%E6%AC%BA%E9%AA%97%E7%BD%91%E5%85%B3%EF%BC%88%E7%94%A8%E6%88%B7-%E7%BD%91%E5%85%B3%EF%BC%89"><span class="nav-text">ARP欺骗——欺骗网关（用户-网关）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E2%80%94%E2%80%94%E6%AC%BA%E9%AA%97%E7%BB%88%E7%AB%AF%E7%94%A8%E6%88%B7%EF%BC%88%E7%94%A8%E6%88%B7-%E7%94%A8%E6%88%B7%EF%BC%89"><span class="nav-text">ARP欺骗——欺骗终端用户（用户-用户）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E6%AC%BA%E9%AA%97%E2%80%94%E2%80%94%E5%A6%82%E4%BD%95%E9%98%B2%E5%BE%A1%EF%BC%9F"><span class="nav-text">ARP欺骗——如何防御？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS%E4%B8%8EDDoS%E6%94%BB%E5%87%BB"><span class="nav-text">DNS与DDoS攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP"><span class="nav-text">UDP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS"><span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8UDP%E5%8F%91%E5%8A%A8DoS%E6%94%BB%E5%87%BB"><span class="nav-text">利用UDP发动DoS攻击</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E9%AB%98%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8"><span class="nav-text">第四章 高层协议安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP%E4%B8%8EHTTPS"><span class="nav-text">HTTP与HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL-x2F-TLS%E5%AE%89%E5%85%A8%E5%A5%97%E6%8E%A5%E5%AD%97"><span class="nav-text">SSL&#x2F;TLS安全套接字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%A1%E6%89%8B%E5%8D%8F%E8%AE%AE"><span class="nav-text">握手协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E5%8D%8F%E8%AE%AE"><span class="nav-text">记录协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AD%A6%E6%8A%A5%E5%8D%8F%E8%AE%AE"><span class="nav-text">警报协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTPS%E9%81%AD%E5%8F%97%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-text">HTTPS遭受中间人攻击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8"><span class="nav-text">第五章 Web应用安全</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="nav-text">注入攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5"><span class="nav-text">命令注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B2SQL-%E6%B3%A8%E5%85%A5"><span class="nav-text">盲SQL 注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E7%9A%84%E9%A2%84%E9%98%B2"><span class="nav-text">SQL注入攻击的预防</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%81%8D%E5%8E%86"><span class="nav-text">文件遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81"><span class="nav-text">点击劫持</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe"><span class="nav-text">iframe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%8A%AB%E6%8C%81%E5%A6%82%E4%BD%95%E5%8E%BB%E9%98%B2%E5%BE%A1%EF%BC%9F"><span class="nav-text">点击劫持如何去防御？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC%E6%94%BB%E5%87%BBXSS"><span class="nav-text">跨站脚本攻击XSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS%E5%8F%8D%E5%B0%84%E5%9E%8B%E6%94%BB%E5%87%BB"><span class="nav-text">XSS反射型攻击</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%9E%8BXSS"><span class="nav-text">存储型XSS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E7%AB%99%E8%AF%B7%E6%B1%82%E4%BC%AA%E9%80%A0CSRF"><span class="nav-text">跨站请求伪造CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-%E6%94%BB%E5%87%BB%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-text">CSRF 攻击的工作原理如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF%E9%98%B2%E5%BE%A1%E6%8A%80%E6%9C%AF"><span class="nav-text">CSRF防御技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-token%E8%83%BD%E6%8A%B5%E5%BE%A1XSS%E6%94%BB%E5%87%BB%E5%90%97%EF%BC%9F"><span class="nav-text">CSRF token能抵御XSS攻击吗？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF%E4%B8%8EXSS%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">CSRF与XSS的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A%E5%8D%95%E5%90%91%EF%BC%8C%E5%8F%8C%E5%90%91"><span class="nav-text">详细解释单向，双向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E6%96%B9Web%E5%BA%94%E7%94%A8%E4%BA%A4%E4%BA%92%E5%AE%89%E5%85%A8"><span class="nav-text">多方Web应用交互安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%ACWeb%E6%94%BB%E5%87%BB"><span class="nav-text">基本Web攻击</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%BD%91%E7%BB%9C%E5%8A%A0%E5%AF%86%E4%B8%8E%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86"><span class="nav-text">第六章 网络加密与密钥管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D"><span class="nav-text">密钥分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8C%E9%92%A5%E4%BD%93%E5%88%B6"><span class="nav-text">什么是双钥体制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E9%92%A5%E4%BD%93%E5%88%B6%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">双钥体制的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D%E7%9A%84%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%BC%8F"><span class="nav-text">密钥分配的三种基本模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D%E5%8D%8F%E8%AE%AE"><span class="nav-text">密钥分配协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9CA%E8%AE%A4%E8%AF%81%EF%BC%88%E6%BA%90%E5%A4%B4%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-text">第三方CA认证（源头解决问题）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CA%E5%92%8CKDC%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-text">CA和KDC的区别</span></a></li></ol></li></ol></li></ol>
 
     </div>
 </div>
